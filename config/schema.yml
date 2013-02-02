@@ -1,0 +1,120 @@
+propel:
+  _attributes:
+    package: lib.model
+    defaultIdMethod: native
+  answer:
+    _attributes: { phpName: Answer }
+    id_answer: { phpName: IdAnswer, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    answer: { phpName: Answer, type: VARCHAR, size: '200', required: false, defaultValue: '0' }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '11', required: false, defaultValue: '0', foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
+    correct: { phpName: Correct, type: VARCHAR, size: '1', required: false, defaultValue: '0' }
+    _indexes: { FK__question: [id_question] }
+  correct_answer_question:
+    _attributes: { phpName: CorrectAnswerQuestion }
+    id_correct_answer_question: { phpName: IdCorrectAnswerQuestion, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '10', required: false, foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_answer: { phpName: IdAnswer, type: INTEGER, size: '10', required: false, foreignTable: answer, foreignReference: id_answer, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { FK_correct_answer_question_question: [id_question], FK_correct_answer_question_answer: [id_answer] }
+  dificulty:
+    _attributes: { phpName: Dificulty }
+    id_dificulty: { phpName: IdDificulty, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    name: { phpName: Name, type: VARCHAR, size: '100', required: false }
+    value: { phpName: Value, type: FLOAT, required: false }
+  dificulty_quiz:
+    _attributes: { phpName: DificultyQuiz }
+    id_dif_quiz: { phpName: IdDifQuiz, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    easy: { phpName: Easy, type: INTEGER, size: '11', required: false }
+    medium: { phpName: Medium, type: INTEGER, size: '11', required: false }
+    hard: { phpName: Hard, type: INTEGER, size: '11', required: false }
+    id_quiz: { phpName: IdQuiz, type: INTEGER, size: '11', required: false, foreignTable: quiz, foreignReference: id_quiz, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { id_quiz_idx: [id_quiz] }
+  instructions:
+    _attributes: { phpName: Instructions }
+    id_instruction: { phpName: IdInstruction, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    instruction: { phpName: Instruction, type: LONGVARCHAR, required: false }
+  question:
+    _attributes: { phpName: Question }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    question: { phpName: Question, type: LONGVARCHAR, required: false }
+    id_dificultad: { phpName: IdDificultad, type: INTEGER, size: '11', required: false, foreignTable: dificulty, foreignReference: id_dificulty, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { FK_question_dificulty: [id_dificultad] }
+  questions_quiz:
+    _attributes: { phpName: QuestionsQuiz }
+    id_questions_quiz: { phpName: IdQuestionsQuiz, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    id_quiz: { phpName: IdQuiz, type: INTEGER, size: '10', required: false, defaultValue: '0', foreignTable: quiz, foreignReference: id_quiz, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '10', required: false, defaultValue: '0', foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { FK_questions_quiz_quiz: [id_quiz], FK_questions_quiz_question: [id_question] }
+  quiz:
+    _attributes: { phpName: Quiz }
+    id_quiz: { phpName: IdQuiz, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    description: { phpName: Description, type: LONGVARCHAR, required: false }
+    inicial_time: { phpName: InicialTime, type: TIMESTAMP, required: false }
+    final_time: { phpName: FinalTime, type: TIMESTAMP, required: false }
+  quiz_usr:
+    _attributes: { phpName: QuizUsr }
+    id_quiz_usr: { phpName: IdQuizUsr, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    id_usr: { phpName: IdUsr, type: INTEGER, size: '11', required: false, foreignTable: sf_guard_user, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '11', required: false, foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_answer: { phpName: IdAnswer, type: INTEGER, size: '11', required: false, foreignTable: answer, foreignReference: id_answer, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { id__idx: [id_usr], id_question_idx: [id_question], id_answer_idx: [id_answer] }
+  quiz_usr_log:
+    _attributes: { phpName: QuizUsrLog }
+    id_quiz_usr_log: { phpName: IdQuizUsrLog, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    id_quiz: { phpName: IdQuiz, type: INTEGER, size: '11', required: false, foreignTable: quiz, foreignReference: id_quiz, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_usr: { phpName: IdUsr, type: INTEGER, size: '11', required: false, foreignTable: sf_guard_user, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    status: { phpName: Status, type: INTEGER, size: '11', required: false, defaultValue: '1' }
+    result: { phpName: Result, type: FLOAT, required: false, defaultValue: '0' }
+    _indexes: { id_quiz_log_idx: [id_quiz], id_usr_log_idx: [id_usr] }
+  sf_guard_group:
+    _attributes: { phpName: SfGuardGroup }
+    id: { phpName: Id, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { phpName: Name, type: VARCHAR, size: '255', required: true }
+    description: { phpName: Description, type: LONGVARCHAR, required: false }
+    _uniques: { sf_guard_group_U_1: [name] }
+  sf_guard_group_permission:
+    _attributes: { phpName: SfGuardGroupPermission }
+    group_id: { phpName: GroupId, type: INTEGER, size: '11', primaryKey: true, required: true, foreignTable: sf_guard_group, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    permission_id: { phpName: PermissionId, type: INTEGER, size: '11', primaryKey: true, required: true, foreignTable: sf_guard_permission, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    _indexes: { sf_guard_group_permission_FI_2: [permission_id] }
+  sf_guard_permission:
+    _attributes: { phpName: SfGuardPermission }
+    id: { phpName: Id, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { phpName: Name, type: VARCHAR, size: '255', required: true }
+    description: { phpName: Description, type: LONGVARCHAR, required: false }
+    _uniques: { sf_guard_permission_U_1: [name] }
+  sf_guard_remember_key:
+    _attributes: { phpName: SfGuardRememberKey }
+    user_id: { phpName: UserId, type: INTEGER, size: '11', primaryKey: true, required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    remember_key: { phpName: RememberKey, type: VARCHAR, size: '32', required: false }
+    ip_address: { phpName: IpAddress, type: VARCHAR, size: '50', primaryKey: true, required: true }
+    created_at: { phpName: CreatedAt, type: TIMESTAMP, required: false }
+  sf_guard_user:
+    _attributes: { phpName: SfGuardUser }
+    id: { phpName: Id, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    username: { phpName: Username, type: VARCHAR, size: '128', required: true }
+    algorithm: { phpName: Algorithm, type: VARCHAR, size: '128', required: true, defaultValue: sha1 }
+    salt: { phpName: Salt, type: VARCHAR, size: '128', required: true }
+    password: { phpName: Password, type: VARCHAR, size: '128', required: true }
+    created_at: { phpName: CreatedAt, type: TIMESTAMP, required: false }
+    last_login: { phpName: LastLogin, type: TIMESTAMP, required: false }
+    is_active: { phpName: IsActive, type: TINYINT, size: '4', required: true, defaultValue: '1' }
+    is_super_admin: { phpName: IsSuperAdmin, type: TINYINT, size: '4', required: true, defaultValue: '0' }
+    _uniques: { sf_guard_user_U_1: [username] }
+  sf_guard_user_group:
+    _attributes: { phpName: SfGuardUserGroup }
+    user_id: { phpName: UserId, type: INTEGER, size: '11', primaryKey: true, required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    group_id: { phpName: GroupId, type: INTEGER, size: '11', primaryKey: true, required: true, foreignTable: sf_guard_group, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    _indexes: { sf_guard_user_group_FI_2: [group_id] }
+  sf_guard_user_permission:
+    _attributes: { phpName: SfGuardUserPermission }
+    user_id: { phpName: UserId, type: INTEGER, size: '11', primaryKey: true, required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    permission_id: { phpName: PermissionId, type: INTEGER, size: '11', primaryKey: true, required: true, foreignTable: sf_guard_permission, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    _indexes: { sf_guard_user_permission_FI_2: [permission_id] }
+  sf_guard_user_profile:
+    _attributes: { phpName: SfGuardUserProfile }
+    id: { phpName: Id, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    user_id: { phpName: UserId, type: INTEGER, size: '11', required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    first_name: { phpName: FirstName, type: VARCHAR, size: '20', required: false }
+    last_name: { phpName: LastName, type: VARCHAR, size: '20', required: false }
+    birthday: { phpName: Birthday, type: DATE, required: false }
+    _indexes: { sf_guard_user_profile_FI_1: [user_id] }

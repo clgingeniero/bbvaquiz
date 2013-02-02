@@ -1,0 +1,28 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           question
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              question
+    plural:                questions
+    route_prefix:          question
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:   
+        peer_method: doSelectJoinDificulty
+        title: Administrador de preguntas
+        display: [question, dificulty_name]
+      filter:  ~
+      form:
+        display:
+          Content: [question, id_dificultad]
+      edit:    
+        title: Edición de "%%question%%"
+      new:     
+        title: Nueva pregunta

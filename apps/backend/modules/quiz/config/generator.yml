@@ -1,0 +1,36 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           quiz
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              quiz
+    plural:                quizs
+    route_prefix:          quiz
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        fields:  
+          inicial_time:                 
+            { name: inicio,type: plain, params: date_format='dd/MM/yy' }
+          final_time:                    
+            { type: plain, params: date_format='dd/MM/yy' }
+      list:
+        title: Administrador de examenes
+      filter:  
+        fields:  
+          inicial_time:                 
+            { name: inicio,type: plain, params: date_format='dd/MM/yy' }
+          final_time:                    
+            { type: plain, params: date_format='dd/MM/yy' }
+      form:    ~
+      edit:
+        title: Edición de "%%description%%"
+        fields:  
+          inicial_time: { label: Inicio }
+          final_time:   { label: Fin, type: input_date_tag, params: date_format='dd/MM/yy' }
+      new:     ~

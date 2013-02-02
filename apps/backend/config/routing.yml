@@ -1,0 +1,100 @@
+instructions:
+  class: sfPropelRouteCollection
+  options:
+    model:                instructions
+    module:               instructions
+    prefix_path:          /instructions
+    column:               id_instruction
+    with_wildcard_routes: true
+
+dificulty_quiz:
+  class: sfPropelRouteCollection
+  options:
+    model:                DificultyQuiz
+    module:               dificulty_quiz
+    prefix_path:          /dificulty_quiz
+    column:               id_dif_quiz
+    with_wildcard_routes: true
+
+questions_quiz:
+  class: sfPropelRouteCollection
+  options:
+    model:                questionsQuiz
+    module:               questions_quiz
+    prefix_path:          /questions_quiz
+    column:               id_questions_quiz
+    with_wildcard_routes: true
+
+quiz:
+  class: sfPropelRouteCollection
+  options:
+    model:                quiz
+    module:               quiz
+    prefix_path:          /quiz
+    column:               id_quiz
+    with_wildcard_routes: true
+
+correct_answer_question:
+  class: sfPropelRouteCollection
+  options:
+    model:                correctAnswerQuestion
+    module:               correct_answer_question
+    prefix_path:          /correct_answer_question
+    column:               id_correct_answer_question
+    with_wildcard_routes: true
+
+dificulty:
+  class: sfPropelRouteCollection
+  options:
+    model:                dificulty
+    module:               dificulty
+    prefix_path:          /dificulty
+    column:               id_dificulty
+    with_wildcard_routes: true
+
+answer:
+  class: sfPropelRouteCollection
+  options:
+    model:                answer
+    module:               answer
+    prefix_path:          /answer
+    column:               id_answer
+    with_wildcard_routes: true
+
+question:
+  class: sfPropelRouteCollection
+  options:
+    model:                question
+    module:               question
+    prefix_path:          /question
+    column:               id_question
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: dificulty_quiz, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+  
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+ 
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+ 
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }

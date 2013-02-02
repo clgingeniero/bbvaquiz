@@ -1,0 +1,19 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/07-Databases
+
+dev:
+      propel:
+        class: sfPropelDatabase
+        param:
+          classname: DebugPDO
+all:
+  propel:
+    class:        sfPropelDatabase
+    param:
+      classname:  PropelPDO
+      dsn:        mysql:dbname=bbvaquiz;host=localhost
+      username:   root
+      password:   root
+      encoding:   utf8
+      persistent: true
+      pooling:    true

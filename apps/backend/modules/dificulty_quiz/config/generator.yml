@@ -1,0 +1,27 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           DificultyQuiz
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              DificultyQuiz
+    plural:                DificultyQuizs
+    route_prefix:          dificulty_quiz
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields: ~
+      list: 
+        peer_method:  doSelectJoinQuiz
+        display:  [quiz, easy, medium, hard]
+      filter:  ~
+      form:    
+        display:
+          Content: [id_quiz, easy, medium, hard]
+      edit:   
+         title: Edición de dificultad para "%%id_quiz%%"
+      new:     
+        title: Nueva opción de dificultad para la actividad

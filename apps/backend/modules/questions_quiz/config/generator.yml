@@ -1,0 +1,27 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           questionsQuiz
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              questionsQuiz
+    plural:                questionsQuizs
+    route_prefix:          questions_quiz
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:   
+        title: Administrador de preguntas
+        display: [quiz_name, question_name]
+      filter:  ~
+      form:
+        display:
+          Content: [id_quiz, id_question]
+      edit:    
+        title: Edición de "%%quiz_name%%"
+      new:     
+        title: Nueva pregunta para el examen

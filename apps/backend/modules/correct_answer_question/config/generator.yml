@@ -1,0 +1,28 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           correctAnswerQuestion
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              correctAnswerQuestion
+    plural:                correctAnswerQuestions
+    route_prefix:          correct_answer_question
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:   
+        peer_method: doSelectJoinQuestion
+        title: Administrador de respuestas correctas
+        display: [question, answer]
+      filter:  ~
+      form:
+        display:
+          Content: [id_question, id_answer]
+      edit:    
+        title: Edición de "%%answer%%"
+      new:     
+        title: Nueva respuesta correcta pregunta

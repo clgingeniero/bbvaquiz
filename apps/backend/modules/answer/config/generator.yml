@@ -1,0 +1,28 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           answer
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              answer
+    plural:                answers
+    route_prefix:          answer
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:   
+        peer_method: doSelectJoinQuestion
+        title: Administrador de respuestas
+        display: [answer, question_name, correct]
+      filter:  ~
+      form:
+        display:
+          Content: [answer, id_question, correct]
+      edit:    
+        title: Edición de "%%answer%%"
+      new:     
+        title: Nueva respuesta
