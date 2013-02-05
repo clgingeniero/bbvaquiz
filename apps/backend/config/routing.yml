@@ -1,3 +1,21 @@
+quizusr:
+  class: sfPropelRouteCollection
+  options:
+    model:                quizusr
+    module:               quizusr
+    prefix_path:          /quizusr
+    column:               id_quiz_usr
+    with_wildcard_routes: true
+
+quizlog:
+  class: sfPropelRouteCollection
+  options:
+    model:                quizlog
+    module:               quizlog
+    prefix_path:          /quizlog
+    column:               id_quiz_usr_log
+    with_wildcard_routes: true
+
 instructions:
   class: sfPropelRouteCollection
   options:

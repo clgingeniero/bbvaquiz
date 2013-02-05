@@ -168,5 +168,56 @@ CREATE TABLE `quiz`
 	PRIMARY KEY (`id_quiz`)
 )Type=InnoDB;
 
+#-----------------------------------------------------------------------------
+#-- quizlog
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `quizlog`;
+
+
+CREATE TABLE `quizlog`
+(
+	`id_quiz_usr_log` INTEGER(11)  NOT NULL AUTO_INCREMENT,
+	`id_quizlog` INTEGER(11),
+	`id_usrql` INTEGER(11)  NOT NULL,
+	`status` INTEGER(11) default 1,
+	`result` FLOAT default 0,
+	PRIMARY KEY (`id_quiz_usr_log`),
+	KEY `id_quiz_log_idx`(`id_quizlog`),
+	CONSTRAINT `quizlog_FK_1`
+		FOREIGN KEY (`id_quizlog`)
+		REFERENCES `quiz` (`id_quiz`)
+		ON UPDATE RESTRICT
+		ON DELETE RESTRICT
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- quizusr
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `quizusr`;
+
+
+CREATE TABLE `quizusr`
+(
+	`id_quiz_usr` INTEGER(11)  NOT NULL AUTO_INCREMENT,
+	`id_usr_qu` INTEGER(11)  NOT NULL,
+	`id_question` INTEGER(11),
+	`id_answer` INTEGER(11),
+	PRIMARY KEY (`id_quiz_usr`),
+	KEY `id_question_idx`(`id_question`),
+	KEY `id_answer_idx`(`id_answer`),
+	CONSTRAINT `quizusr_FK_1`
+		FOREIGN KEY (`id_question`)
+		REFERENCES `question` (`id_question`)
+		ON UPDATE RESTRICT
+		ON DELETE RESTRICT,
+	CONSTRAINT `quizusr_FK_2`
+		FOREIGN KEY (`id_answer`)
+		REFERENCES `answer` (`id_answer`)
+		ON UPDATE RESTRICT
+		ON DELETE RESTRICT
+)Type=InnoDB;
+
 # This restores the fkey checks, after having unset them earlier
 SET FOREIGN_KEY_CHECKS = 1;
