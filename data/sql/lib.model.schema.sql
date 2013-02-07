@@ -15,7 +15,7 @@ CREATE TABLE `answer`
 	`id_answer` INTEGER(10)  NOT NULL AUTO_INCREMENT,
 	`answer` VARCHAR(200) default '0',
 	`id_question` INTEGER(11) default 0,
-	`correct` VARCHAR(1) default '0',
+	`correct` VARCHAR(1),
 	PRIMARY KEY (`id_answer`),
 	KEY `FK__question`(`id_question`),
 	CONSTRAINT `answer_FK_1`
@@ -204,9 +204,11 @@ CREATE TABLE `quizusr`
 	`id_usr_qu` INTEGER(11)  NOT NULL,
 	`id_question` INTEGER(11),
 	`id_answer` INTEGER(11),
+	`id_quiz` INTEGER(11),
 	PRIMARY KEY (`id_quiz_usr`),
 	KEY `id_question_idx`(`id_question`),
 	KEY `id_answer_idx`(`id_answer`),
+	KEY `idquiz_idx`(`id_quiz`),
 	CONSTRAINT `quizusr_FK_1`
 		FOREIGN KEY (`id_question`)
 		REFERENCES `question` (`id_question`)
@@ -216,7 +218,185 @@ CREATE TABLE `quizusr`
 		FOREIGN KEY (`id_answer`)
 		REFERENCES `answer` (`id_answer`)
 		ON UPDATE RESTRICT
+		ON DELETE RESTRICT,
+	CONSTRAINT `quizusr_FK_3`
+		FOREIGN KEY (`id_quiz`)
+		REFERENCES `quiz` (`id_quiz`)
+		ON UPDATE RESTRICT
 		ON DELETE RESTRICT
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- sf_guard_group
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sf_guard_group`;
+
+
+CREATE TABLE `sf_guard_group`
+(
+	`id` INTEGER(11)  NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(255)  NOT NULL,
+	`description` TEXT,
+	PRIMARY KEY (`id`),
+	UNIQUE KEY `sf_guard_group_U_1` (`name`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- sf_guard_group_permission
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sf_guard_group_permission`;
+
+
+CREATE TABLE `sf_guard_group_permission`
+(
+	`group_id` INTEGER(11)  NOT NULL,
+	`permission_id` INTEGER(11)  NOT NULL,
+	PRIMARY KEY (`group_id`,`permission_id`),
+	KEY `sf_guard_group_permission_FI_2`(`permission_id`),
+	CONSTRAINT `sf_guard_group_permission_FK_1`
+		FOREIGN KEY (`group_id`)
+		REFERENCES `sf_guard_group` (`id`)
+		ON UPDATE RESTRICT
+		ON DELETE CASCADE,
+	CONSTRAINT `sf_guard_group_permission_FK_2`
+		FOREIGN KEY (`permission_id`)
+		REFERENCES `sf_guard_permission` (`id`)
+		ON UPDATE RESTRICT
+		ON DELETE CASCADE
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- sf_guard_permission
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sf_guard_permission`;
+
+
+CREATE TABLE `sf_guard_permission`
+(
+	`id` INTEGER(11)  NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(255)  NOT NULL,
+	`description` TEXT,
+	PRIMARY KEY (`id`),
+	UNIQUE KEY `sf_guard_permission_U_1` (`name`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- sf_guard_remember_key
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sf_guard_remember_key`;
+
+
+CREATE TABLE `sf_guard_remember_key`
+(
+	`user_id` INTEGER(11)  NOT NULL,
+	`remember_key` VARCHAR(32),
+	`ip_address` VARCHAR(50)  NOT NULL,
+	`created_at` DATETIME,
+	PRIMARY KEY (`user_id`,`ip_address`),
+	CONSTRAINT `sf_guard_remember_key_FK_1`
+		FOREIGN KEY (`user_id`)
+		REFERENCES `sf_guard_user` (`id`)
+		ON UPDATE RESTRICT
+		ON DELETE CASCADE
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- sf_guard_user
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sf_guard_user`;
+
+
+CREATE TABLE `sf_guard_user`
+(
+	`id` INTEGER(11)  NOT NULL AUTO_INCREMENT,
+	`username` VARCHAR(128)  NOT NULL,
+	`algorithm` VARCHAR(128) default 'sha1' NOT NULL,
+	`salt` VARCHAR(128)  NOT NULL,
+	`password` VARCHAR(128)  NOT NULL,
+	`created_at` DATETIME,
+	`last_login` DATETIME,
+	`is_active` TINYINT(4) default 1 NOT NULL,
+	`is_super_admin` TINYINT(4) default 0 NOT NULL,
+	PRIMARY KEY (`id`),
+	UNIQUE KEY `sf_guard_user_U_1` (`username`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- sf_guard_user_group
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sf_guard_user_group`;
+
+
+CREATE TABLE `sf_guard_user_group`
+(
+	`user_id` INTEGER(11)  NOT NULL,
+	`group_id` INTEGER(11)  NOT NULL,
+	PRIMARY KEY (`user_id`,`group_id`),
+	KEY `sf_guard_user_group_FI_2`(`group_id`),
+	CONSTRAINT `sf_guard_user_group_FK_1`
+		FOREIGN KEY (`user_id`)
+		REFERENCES `sf_guard_user` (`id`)
+		ON UPDATE RESTRICT
+		ON DELETE CASCADE,
+	CONSTRAINT `sf_guard_user_group_FK_2`
+		FOREIGN KEY (`group_id`)
+		REFERENCES `sf_guard_group` (`id`)
+		ON UPDATE RESTRICT
+		ON DELETE CASCADE
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- sf_guard_user_permission
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sf_guard_user_permission`;
+
+
+CREATE TABLE `sf_guard_user_permission`
+(
+	`user_id` INTEGER(11)  NOT NULL,
+	`permission_id` INTEGER(11)  NOT NULL,
+	PRIMARY KEY (`user_id`,`permission_id`),
+	KEY `sf_guard_user_permission_FI_2`(`permission_id`),
+	CONSTRAINT `sf_guard_user_permission_FK_1`
+		FOREIGN KEY (`user_id`)
+		REFERENCES `sf_guard_user` (`id`)
+		ON UPDATE RESTRICT
+		ON DELETE CASCADE,
+	CONSTRAINT `sf_guard_user_permission_FK_2`
+		FOREIGN KEY (`permission_id`)
+		REFERENCES `sf_guard_permission` (`id`)
+		ON UPDATE RESTRICT
+		ON DELETE CASCADE
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- sf_guard_user_profile
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `sf_guard_user_profile`;
+
+
+CREATE TABLE `sf_guard_user_profile`
+(
+	`id` INTEGER(11)  NOT NULL AUTO_INCREMENT,
+	`user_id` INTEGER(11)  NOT NULL,
+	`first_name` VARCHAR(20),
+	`last_name` VARCHAR(20),
+	`birthday` DATE,
+	PRIMARY KEY (`id`),
+	KEY `sf_guard_user_profile_FI_1`(`user_id`),
+	CONSTRAINT `sf_guard_user_profile_FK_1`
+		FOREIGN KEY (`user_id`)
+		REFERENCES `sf_guard_user` (`id`)
+		ON UPDATE RESTRICT
+		ON DELETE CASCADE
 )Type=InnoDB;
 
 # This restores the fkey checks, after having unset them earlier

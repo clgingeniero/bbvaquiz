@@ -4,7 +4,7 @@
 
 <?php foreach($quiz_active_list as $quiz): ?>
         
-<a href=""><?php echo $quiz->getDescription()?></a>
+<a href="<?php echo url_for('quiz/do?id=' . $quiz->getIdQuiz()) ?>"><?php echo $quiz->getDescription()?></a>
 
 <?php 
 $fecha1 = new DateTime(date("d-m-Y H:i:s"));

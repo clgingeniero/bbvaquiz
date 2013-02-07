@@ -18,6 +18,7 @@ abstract class BaseQuizusrForm extends BaseFormPropel
       'id_usr_qu'   => new sfWidgetFormInputText(),
       'id_question' => new sfWidgetFormPropelChoice(array('model' => 'Question', 'add_empty' => true)),
       'id_answer'   => new sfWidgetFormPropelChoice(array('model' => 'Answer', 'add_empty' => true)),
+      'id_quiz'     => new sfWidgetFormPropelChoice(array('model' => 'Quiz', 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
@@ -25,6 +26,7 @@ abstract class BaseQuizusrForm extends BaseFormPropel
       'id_usr_qu'   => new sfValidatorInteger(array('min' => -2147483648, 'max' => 2147483647)),
       'id_question' => new sfValidatorPropelChoice(array('model' => 'Question', 'column' => 'id_question', 'required' => false)),
       'id_answer'   => new sfValidatorPropelChoice(array('model' => 'Answer', 'column' => 'id_answer', 'required' => false)),
+      'id_quiz'     => new sfValidatorPropelChoice(array('model' => 'Quiz', 'column' => 'id_quiz', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('quizusr[%s]');
