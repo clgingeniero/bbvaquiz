@@ -1,484 +1,176 @@
-Feb 07 11:24:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 11:24:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 11:24:29 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 11:24:29 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 11:24:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 11:24:29 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 11:24:29 symfony [info] {sfBasicSecurityFilter} Action "quiz/do" requires authentication, forwarding to "sfGuardAuth/signin"
-Feb 07 11:24:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 11:24:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 11:24:29 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
-Feb 07 11:24:29 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
-Feb 07 11:24:29 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 11:24:29 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 11:24:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 11:24:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 11:24:29 symfony [info] {sfWebResponse} Send content (32006 o)
-Feb 07 11:24:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 11:24:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 11:24:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 11:24:35 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
-Feb 07 11:24:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 11:24:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 11:24:35 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
-Feb 07 11:24:35 symfony [info] {myUser} User is authenticated
-Feb 07 11:24:35 symfony [info] {myUser} Add credential(s) "Usuarios"
-Feb 07 11:24:35 symfony [info] {sfFrontWebController} Redirect to "http://bbvaquiz.local/index.php/quiz/do/id/1"
-Feb 07 11:24:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
-Feb 07 11:24:36 symfony [info] {sfWebResponse} Send header "Location: http://bbvaquiz.local/index.php/quiz/do/id/1"
-Feb 07 11:24:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 11:24:36 symfony [info] {sfWebResponse} Send content (115 o)
-Feb 07 11:24:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 11:24:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 11:24:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 11:24:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 11:24:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 11:24:36 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 11:24:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 11:24:36 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 11:24:36 symfony [info] {quizActions} Change template to "CURRENT/finish"
-Feb 07 11:24:36 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/finishSuccess.php"
-Feb 07 11:24:36 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 11:24:36 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 11:24:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 11:24:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 11:24:36 symfony [info] {sfWebResponse} Send content (30071 o)
-Feb 07 11:25:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 11:25:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 11:25:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 11:25:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 11:25:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 11:25:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 11:25:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 11:25:03 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 11:25:03 symfony [info] {quizActions} Change template to "CURRENT/do"
-Feb 07 11:25:03 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
-Feb 07 11:25:04 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 11:25:04 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 11:25:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 11:25:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 11:25:04 symfony [info] {sfWebResponse} Send content (33591 o)
-Feb 07 11:25:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 11:25:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 11:25:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 11:25:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/viewans/id/1 with parameters array (  'module' => 'quiz',  'action' => 'viewans',  'id' => '1',)
-Feb 07 11:25:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 11:25:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 11:25:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 11:25:47 symfony [info] {quizActions} Call "quizActions->executeViewans()"
-Feb 07 11:25:47 symfony [warning] {sfWebDebugLogger}  Warning at /Applications/MAMP/htdocs/bbvaquiz/cache/frontend/dev/config/config_core_compile.yml.php on line 345 (Missing argument 1 for sfAction::renderText(), called in /Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/actions/actions.class.php on line 202 and defined)
-Feb 07 11:25:47 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/bbvaquiz/cache/frontend/dev/config/config_core_compile.yml.php on line 347 (Undefined variable: text)
-Feb 07 11:25:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 11:25:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 11:25:47 symfony [info] {sfWebResponse} Send content (0 o)
-Feb 07 12:22:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 12:22:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 12:22:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 12:22:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 12:22:27 symfony [info] {myUser} Automatic user logout due to timeout
-Feb 07 12:22:27 symfony [info] {myUser} User is not authenticated
-Feb 07 12:22:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 12:22:30 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 12:22:30 symfony [info] {sfBasicSecurityFilter} Action "quiz/do" requires authentication, forwarding to "sfGuardAuth/signin"
-Feb 07 12:22:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 12:22:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 12:22:30 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
-Feb 07 12:22:31 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
-Feb 07 12:22:32 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 12:22:32 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 12:22:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 12:22:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 12:22:32 symfony [info] {sfWebResponse} Send content (32683 o)
-Feb 07 16:12:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:12:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:12:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:12:34 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
-Feb 07 16:12:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:12:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:12:35 symfony [info] {sfBasicSecurityFilter} Action "quiz/list" requires authentication, forwarding to "sfGuardAuth/signin"
-Feb 07 16:12:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:12:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:12:35 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
-Feb 07 16:12:36 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
-Feb 07 16:12:36 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:12:36 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:12:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:12:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:12:37 symfony [info] {sfWebResponse} Send content (31003 o)
-Feb 07 16:12:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:12:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:12:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:12:50 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
-Feb 07 16:12:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:12:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:12:50 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
-Feb 07 16:12:51 symfony [info] {myUser} User is authenticated
-Feb 07 16:12:51 symfony [info] {myUser} Add credential(s) "Usuarios"
-Feb 07 16:12:51 symfony [info] {sfFrontWebController} Redirect to "http://bbvaquiz.local/"
-Feb 07 16:12:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
-Feb 07 16:12:51 symfony [info] {sfWebResponse} Send header "Location: http://bbvaquiz.local/"
-Feb 07 16:12:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:12:51 symfony [info] {sfWebResponse} Send content (93 o)
-Feb 07 16:12:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:12:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:12:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:12:51 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
-Feb 07 16:12:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:12:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:12:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:12:51 symfony [info] {quizActions} Call "quizActions->executeList()"
-Feb 07 16:12:52 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/listSuccess.php"
-Feb 07 16:12:52 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:12:52 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:12:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:12:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:12:52 symfony [info] {sfWebResponse} Send content (29298 o)
-Feb 07 16:12:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:12:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:12:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:12:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
-Feb 07 16:12:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:12:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:12:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:12:59 symfony [info] {quizActions} Call "quizActions->executeList()"
-Feb 07 16:12:59 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:12:59 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.INICIAL_TIME<'2013-02-07 16:12:59' AND quiz.FINAL_TIME>'2013-02-07 16:12:59'
-Feb 07 16:12:59 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.FINAL_TIME<'2013-02-07 16:12:59'
-Feb 07 16:12:59 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/listSuccess.php"
-Feb 07 16:12:59 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:12:59 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:12:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:12:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:12:59 symfony [info] {sfWebDebugLogger} Configuration 3.10 ms (9)
-Feb 07 16:12:59 symfony [info] {sfWebDebugLogger} Factories 188.04 ms (1)
-Feb 07 16:12:59 symfony [info] {sfWebDebugLogger} Action "quiz/list" 57.80 ms (1)
-Feb 07 16:12:59 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/list" 16.76 ms (1)
-Feb 07 16:12:59 symfony [info] {sfWebResponse} Send content (33673 o)
-Feb 07 16:13:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:13:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:13:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:13:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 16:13:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:13:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:13:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:13:01 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 16:13:01 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:13:01 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.ID_QUIZ='1'
-Feb 07 16:13:01 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:13:01 symfony [debug] {sfPropelLogger} SELECT quizusr.ID_QUIZ_USR, quizusr.ID_USR_QU, quizusr.ID_QUESTION, quizusr.ID_ANSWER, quizusr.ID_QUIZ FROM `quizusr` WHERE quizusr.ID_QUIZ='1' AND quizusr.ID_USR_QU=2
-Feb 07 16:13:01 symfony [debug] {sfPropelLogger} SELECT question.ID_QUESTION, question.QUESTION, question.ID_DIFICULTAD FROM `question`, `questions_quiz` WHERE questions_quiz.ID_QUIZ='1' AND questions_quiz.ID_QUESTION NOT IN (2,3) AND questions_quiz.ID_QUESTION=question.ID_QUESTION LIMIT 1
-Feb 07 16:13:01 symfony [info] {quizActions} Change template to "CURRENT/finish"
-Feb 07 16:13:01 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/finishSuccess.php"
-Feb 07 16:13:01 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:13:01 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:13:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:13:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:13:01 symfony [info] {sfWebDebugLogger} Configuration 1.93 ms (9)
-Feb 07 16:13:01 symfony [info] {sfWebDebugLogger} Factories 29.15 ms (1)
-Feb 07 16:13:01 symfony [info] {sfWebDebugLogger} Action "quiz/do" 222.63 ms (1)
-Feb 07 16:13:01 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/do" 21.30 ms (1)
-Feb 07 16:13:01 symfony [info] {sfWebResponse} Send content (36415 o)
-Feb 07 16:13:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:13:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:13:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:13:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 16:13:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:13:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:13:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:13:22 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 16:13:22 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:13:22 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.ID_QUIZ='1'
-Feb 07 16:13:22 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:13:22 symfony [debug] {sfPropelLogger} SELECT quizusr.ID_QUIZ_USR, quizusr.ID_USR_QU, quizusr.ID_QUESTION, quizusr.ID_ANSWER, quizusr.ID_QUIZ FROM `quizusr` WHERE quizusr.ID_QUIZ='1' AND quizusr.ID_USR_QU=2
-Feb 07 16:13:22 symfony [debug] {sfPropelLogger} SELECT question.ID_QUESTION, question.QUESTION, question.ID_DIFICULTAD FROM `question`, `questions_quiz` WHERE questions_quiz.ID_QUIZ='1' AND questions_quiz.ID_QUESTION NOT IN (2) AND questions_quiz.ID_QUESTION=question.ID_QUESTION LIMIT 1
-Feb 07 16:13:23 symfony [debug] {sfPropelLogger} SELECT answer.ID_ANSWER, answer.ANSWER, answer.ID_QUESTION, answer.CORRECT FROM `answer` WHERE answer.ID_QUESTION=3
-Feb 07 16:13:23 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.INICIAL_TIME<'2013-02-07 16:13:23' AND quiz.FINAL_TIME>'2013-02-07 16:13:23'
-Feb 07 16:13:23 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.FINAL_TIME<'2013-02-07 16:13:23'
-Feb 07 16:13:23 symfony [info] {quizActions} Change template to "CURRENT/do"
-Feb 07 16:13:23 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
-Feb 07 16:13:23 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:13:23 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:13:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:13:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:13:23 symfony [info] {sfWebDebugLogger} Configuration 2.59 ms (9)
-Feb 07 16:13:23 symfony [info] {sfWebDebugLogger} Factories 320.63 ms (1)
-Feb 07 16:13:23 symfony [info] {sfWebDebugLogger} Action "quiz/do" 579.62 ms (1)
-Feb 07 16:13:23 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/do" 313.21 ms (1)
-Feb 07 16:13:23 symfony [info] {sfWebResponse} Send content (43505 o)
-Feb 07 16:14:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:14:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:14:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:14:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/viewans/id/1 with parameters array (  'module' => 'quiz',  'action' => 'viewans',  'id' => '1',)
-Feb 07 16:14:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:14:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:14:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:14:06 symfony [info] {quizActions} Call "quizActions->executeViewans()"
-Feb 07 16:14:06 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/action/sfAction.class.php on line 264 (Missing argument 1 for sfAction::renderText(), called in /Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/actions/actions.class.php on line 202 and defined)
-Feb 07 16:14:06 symfony [notice] {sfWebDebugLogger}  Notice at /usr/lib/php/pear/symfony/action/sfAction.class.php on line 266 (Undefined variable: text)
-Feb 07 16:14:06 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /usr/lib/php/pear/symfony/action/sfAction.class.php:264))
-Feb 07 16:14:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:14:06 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /usr/lib/php/pear/symfony/action/sfAction.class.php:264))
-Feb 07 16:14:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:14:06 symfony [info] {sfWebDebugLogger} Configuration 1.48 ms (8)
-Feb 07 16:14:06 symfony [info] {sfWebDebugLogger} Factories 74.92 ms (1)
-Feb 07 16:14:06 symfony [info] {sfWebDebugLogger} Action "quiz/viewans" 36.46 ms (1)
-Feb 07 16:14:06 symfony [info] {sfWebDebugLogger} View "None" for "quiz/viewans" 0.02 ms (1)
-Feb 07 16:14:06 symfony [info] {sfWebResponse} Send content (0 o)
-Feb 07 16:15:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:15:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:15:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:15:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 16:15:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:15:20 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:15:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:15:20 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 16:15:20 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:15:20 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.ID_QUIZ='1'
-Feb 07 16:15:20 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:15:20 symfony [debug] {sfPropelLogger} SELECT quizusr.ID_QUIZ_USR, quizusr.ID_USR_QU, quizusr.ID_QUESTION, quizusr.ID_ANSWER, quizusr.ID_QUIZ FROM `quizusr` WHERE quizusr.ID_QUIZ='1' AND quizusr.ID_USR_QU=2
-Feb 07 16:15:20 symfony [debug] {sfPropelLogger} SELECT question.ID_QUESTION, question.QUESTION, question.ID_DIFICULTAD FROM `question`, `questions_quiz` WHERE questions_quiz.ID_QUIZ='1' AND questions_quiz.ID_QUESTION NOT IN (2) AND questions_quiz.ID_QUESTION=question.ID_QUESTION LIMIT 1
-Feb 07 16:15:20 symfony [debug] {sfPropelLogger} SELECT answer.ID_ANSWER, answer.ANSWER, answer.ID_QUESTION, answer.CORRECT FROM `answer` WHERE answer.ID_QUESTION=3
-Feb 07 16:15:20 symfony [info] {quizActions} Change template to "CURRENT/do"
-Feb 07 16:15:20 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
-Feb 07 16:15:20 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:15:20 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:15:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:15:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:15:20 symfony [info] {sfWebDebugLogger} Configuration 1.78 ms (9)
-Feb 07 16:15:20 symfony [info] {sfWebDebugLogger} Factories 98.65 ms (1)
-Feb 07 16:15:20 symfony [info] {sfWebDebugLogger} Action "quiz/do" 88.42 ms (1)
-Feb 07 16:15:20 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/do" 36.76 ms (1)
-Feb 07 16:15:20 symfony [info] {sfWebResponse} Send content (41518 o)
-Feb 07 16:15:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:15:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:15:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:15:28 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/viewans/id/1 with parameters array (  'module' => 'quiz',  'action' => 'viewans',  'id' => '1',)
-Feb 07 16:15:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:15:28 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:15:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:15:28 symfony [info] {quizActions} Call "quizActions->executeViewans()"
-Feb 07 16:15:28 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/action/sfAction.class.php on line 264 (Missing argument 1 for sfAction::renderText(), called in /Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/actions/actions.class.php on line 202 and defined)
-Feb 07 16:15:28 symfony [notice] {sfWebDebugLogger}  Notice at /usr/lib/php/pear/symfony/action/sfAction.class.php on line 266 (Undefined variable: text)
-Feb 07 16:15:28 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /usr/lib/php/pear/symfony/action/sfAction.class.php:264))
-Feb 07 16:15:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:15:28 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /usr/lib/php/pear/symfony/action/sfAction.class.php:264))
-Feb 07 16:15:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:15:28 symfony [info] {sfWebDebugLogger} Configuration 1.57 ms (8)
-Feb 07 16:15:28 symfony [info] {sfWebDebugLogger} Factories 34.15 ms (1)
-Feb 07 16:15:28 symfony [info] {sfWebDebugLogger} Action "quiz/viewans" 29.89 ms (1)
-Feb 07 16:15:28 symfony [info] {sfWebDebugLogger} View "None" for "quiz/viewans" 0.03 ms (1)
-Feb 07 16:15:28 symfony [info] {sfWebResponse} Send content (0 o)
-Feb 07 16:17:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:17:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:17:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:17:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 16:17:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:17:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:17:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:17:31 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 16:17:31 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:17:31 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.ID_QUIZ='1'
-Feb 07 16:17:31 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:17:31 symfony [debug] {sfPropelLogger} SELECT quizusr.ID_QUIZ_USR, quizusr.ID_USR_QU, quizusr.ID_QUESTION, quizusr.ID_ANSWER, quizusr.ID_QUIZ FROM `quizusr` WHERE quizusr.ID_QUIZ='1' AND quizusr.ID_USR_QU=2
-Feb 07 16:17:31 symfony [debug] {sfPropelLogger} SELECT question.ID_QUESTION, question.QUESTION, question.ID_DIFICULTAD FROM `question`, `questions_quiz` WHERE questions_quiz.ID_QUIZ='1' AND questions_quiz.ID_QUESTION NOT IN (2) AND questions_quiz.ID_QUESTION=question.ID_QUESTION LIMIT 1
-Feb 07 16:17:31 symfony [debug] {sfPropelLogger} SELECT answer.ID_ANSWER, answer.ANSWER, answer.ID_QUESTION, answer.CORRECT FROM `answer` WHERE answer.ID_QUESTION=3
-Feb 07 16:17:31 symfony [info] {quizActions} Change template to "CURRENT/do"
-Feb 07 16:17:31 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
-Feb 07 16:17:31 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:17:31 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:17:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:17:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:17:31 symfony [info] {sfWebDebugLogger} Configuration 2.12 ms (9)
-Feb 07 16:17:31 symfony [info] {sfWebDebugLogger} Factories 33.95 ms (1)
-Feb 07 16:17:31 symfony [info] {sfWebDebugLogger} Action "quiz/do" 88.27 ms (1)
-Feb 07 16:17:31 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/do" 14.42 ms (1)
-Feb 07 16:17:31 symfony [info] {sfWebResponse} Send content (41525 o)
-Feb 07 16:17:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:17:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:17:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:17:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/viewans/id/1 with parameters array (  'module' => 'quiz',  'action' => 'viewans',  'id' => '1',)
-Feb 07 16:17:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:17:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:17:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:17:44 symfony [info] {quizActions} Call "quizActions->executeViewans()"
-Feb 07 16:17:44 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/action/sfAction.class.php on line 264 (Missing argument 1 for sfAction::renderText(), called in /Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/actions/actions.class.php on line 202 and defined)
-Feb 07 16:17:44 symfony [notice] {sfWebDebugLogger}  Notice at /usr/lib/php/pear/symfony/action/sfAction.class.php on line 266 (Undefined variable: text)
-Feb 07 16:17:44 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /usr/lib/php/pear/symfony/action/sfAction.class.php:264))
-Feb 07 16:17:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:17:44 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /usr/lib/php/pear/symfony/action/sfAction.class.php:264))
-Feb 07 16:17:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:17:44 symfony [info] {sfWebDebugLogger} Configuration 1.84 ms (8)
-Feb 07 16:17:44 symfony [info] {sfWebDebugLogger} Factories 38.21 ms (1)
-Feb 07 16:17:44 symfony [info] {sfWebDebugLogger} Action "quiz/viewans" 20.49 ms (1)
-Feb 07 16:17:44 symfony [info] {sfWebDebugLogger} View "None" for "quiz/viewans" 0.03 ms (1)
-Feb 07 16:17:44 symfony [info] {sfWebResponse} Send content (0 o)
-Feb 07 16:20:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:20:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:20:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:20:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 16:20:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:20:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:20:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:20:37 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 16:20:37 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:20:37 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.ID_QUIZ='1'
-Feb 07 16:20:37 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:20:37 symfony [debug] {sfPropelLogger} SELECT quizusr.ID_QUIZ_USR, quizusr.ID_USR_QU, quizusr.ID_QUESTION, quizusr.ID_ANSWER, quizusr.ID_QUIZ FROM `quizusr` WHERE quizusr.ID_QUIZ='1' AND quizusr.ID_USR_QU=2
-Feb 07 16:20:37 symfony [debug] {sfPropelLogger} SELECT question.ID_QUESTION, question.QUESTION, question.ID_DIFICULTAD FROM `question`, `questions_quiz` WHERE questions_quiz.ID_QUIZ='1' AND questions_quiz.ID_QUESTION NOT IN (2) AND questions_quiz.ID_QUESTION=question.ID_QUESTION LIMIT 1
-Feb 07 16:20:37 symfony [debug] {sfPropelLogger} SELECT answer.ID_ANSWER, answer.ANSWER, answer.ID_QUESTION, answer.CORRECT FROM `answer` WHERE answer.ID_QUESTION=3
-Feb 07 16:20:37 symfony [info] {quizActions} Change template to "CURRENT/do"
-Feb 07 16:20:37 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
-Feb 07 16:20:37 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:20:37 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:20:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:20:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:20:37 symfony [info] {sfWebDebugLogger} Configuration 2.96 ms (9)
-Feb 07 16:20:37 symfony [info] {sfWebDebugLogger} Factories 589.02 ms (1)
-Feb 07 16:20:37 symfony [info] {sfWebDebugLogger} Action "quiz/do" 545.51 ms (1)
-Feb 07 16:20:37 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/do" 148.35 ms (1)
-Feb 07 16:20:37 symfony [info] {sfWebResponse} Send content (41528 o)
-Feb 07 16:20:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:20:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:20:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:20:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /do/next/id/1 with parameters array (  'module' => 'do',  'action' => 'next',  'id' => '1',)
-Feb 07 16:20:49 symfony [info] {sfFrontWebController} Action "do/next" does not exist
-Feb 07 16:20:49 symfony [err] {sfError404Exception} Action "do/next" does not exist.
-Feb 07 16:20:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
-Feb 07 16:20:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:20:49 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (5)
-Feb 07 16:20:49 symfony [info] {sfWebDebugLogger} Factories 32.66 ms (1)
-Feb 07 16:21:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:21:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:21:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:21:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 16:21:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:21:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:21:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:21:08 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 16:21:08 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:21:08 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.ID_QUIZ='1'
-Feb 07 16:21:08 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:21:08 symfony [debug] {sfPropelLogger} SELECT quizusr.ID_QUIZ_USR, quizusr.ID_USR_QU, quizusr.ID_QUESTION, quizusr.ID_ANSWER, quizusr.ID_QUIZ FROM `quizusr` WHERE quizusr.ID_QUIZ='1' AND quizusr.ID_USR_QU=2
-Feb 07 16:21:08 symfony [debug] {sfPropelLogger} SELECT question.ID_QUESTION, question.QUESTION, question.ID_DIFICULTAD FROM `question`, `questions_quiz` WHERE questions_quiz.ID_QUIZ='1' AND questions_quiz.ID_QUESTION NOT IN (2) AND questions_quiz.ID_QUESTION=question.ID_QUESTION LIMIT 1
-Feb 07 16:21:08 symfony [debug] {sfPropelLogger} SELECT answer.ID_ANSWER, answer.ANSWER, answer.ID_QUESTION, answer.CORRECT FROM `answer` WHERE answer.ID_QUESTION=3
-Feb 07 16:21:08 symfony [info] {quizActions} Change template to "CURRENT/do"
-Feb 07 16:21:08 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
-Feb 07 16:21:09 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:21:09 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:21:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:21:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:21:09 symfony [info] {sfWebDebugLogger} Configuration 2.19 ms (9)
-Feb 07 16:21:09 symfony [info] {sfWebDebugLogger} Factories 31.05 ms (1)
-Feb 07 16:21:09 symfony [info] {sfWebDebugLogger} Action "quiz/do" 402.36 ms (1)
-Feb 07 16:21:09 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/do" 291.20 ms (1)
-Feb 07 16:21:09 symfony [info] {sfWebResponse} Send content (41526 o)
-Feb 07 16:22:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:22:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:22:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:22:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 16:22:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:22:53 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:22:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:22:53 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 16:22:53 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:22:53 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.ID_QUIZ='1'
-Feb 07 16:22:54 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:22:54 symfony [debug] {sfPropelLogger} SELECT quizusr.ID_QUIZ_USR, quizusr.ID_USR_QU, quizusr.ID_QUESTION, quizusr.ID_ANSWER, quizusr.ID_QUIZ FROM `quizusr` WHERE quizusr.ID_QUIZ='1' AND quizusr.ID_USR_QU=2
-Feb 07 16:22:54 symfony [debug] {sfPropelLogger} SELECT question.ID_QUESTION, question.QUESTION, question.ID_DIFICULTAD FROM `question`, `questions_quiz` WHERE questions_quiz.ID_QUIZ='1' AND questions_quiz.ID_QUESTION NOT IN (2) AND questions_quiz.ID_QUESTION=question.ID_QUESTION LIMIT 1
-Feb 07 16:22:54 symfony [debug] {sfPropelLogger} SELECT answer.ID_ANSWER, answer.ANSWER, answer.ID_QUESTION, answer.CORRECT FROM `answer` WHERE answer.ID_QUESTION=3
-Feb 07 16:22:54 symfony [info] {quizActions} Change template to "CURRENT/do"
-Feb 07 16:22:54 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
-Feb 07 16:22:54 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:22:54 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:22:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:22:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:22:54 symfony [info] {sfWebDebugLogger} Configuration 3.01 ms (9)
-Feb 07 16:22:54 symfony [info] {sfWebDebugLogger} Factories 1296.92 ms (1)
-Feb 07 16:22:54 symfony [info] {sfWebDebugLogger} Action "quiz/do" 556.23 ms (1)
-Feb 07 16:22:54 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/do" 291.05 ms (1)
-Feb 07 16:22:54 symfony [info] {sfWebResponse} Send content (41876 o)
-Feb 07 16:23:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:23:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:23:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:23:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 16:23:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:23:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:23:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:23:13 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 16:23:13 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:23:13 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.ID_QUIZ='1'
-Feb 07 16:23:14 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:23:14 symfony [debug] {sfPropelLogger} SELECT quizusr.ID_QUIZ_USR, quizusr.ID_USR_QU, quizusr.ID_QUESTION, quizusr.ID_ANSWER, quizusr.ID_QUIZ FROM `quizusr` WHERE quizusr.ID_QUIZ='1' AND quizusr.ID_USR_QU=2
-Feb 07 16:23:14 symfony [debug] {sfPropelLogger} SELECT question.ID_QUESTION, question.QUESTION, question.ID_DIFICULTAD FROM `question`, `questions_quiz` WHERE questions_quiz.ID_QUIZ='1' AND questions_quiz.ID_QUESTION NOT IN (2) AND questions_quiz.ID_QUESTION=question.ID_QUESTION LIMIT 1
-Feb 07 16:23:14 symfony [debug] {sfPropelLogger} SELECT answer.ID_ANSWER, answer.ANSWER, answer.ID_QUESTION, answer.CORRECT FROM `answer` WHERE answer.ID_QUESTION=3
-Feb 07 16:23:14 symfony [info] {quizActions} Change template to "CURRENT/do"
-Feb 07 16:23:14 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
-Feb 07 16:23:14 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:23:14 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:23:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:23:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:23:14 symfony [info] {sfWebDebugLogger} Configuration 1.69 ms (9)
-Feb 07 16:23:14 symfony [info] {sfWebDebugLogger} Factories 32.99 ms (1)
-Feb 07 16:23:14 symfony [info] {sfWebDebugLogger} Action "quiz/do" 125.09 ms (1)
-Feb 07 16:23:14 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/do" 76.91 ms (1)
-Feb 07 16:23:14 symfony [info] {sfWebResponse} Send content (41823 o)
-Feb 07 16:23:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:23:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:23:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:23:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/viewans/id/1 with parameters array (  'module' => 'quiz',  'action' => 'viewans',  'id' => '1',)
-Feb 07 16:23:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:23:21 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:23:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:23:21 symfony [info] {quizActions} Call "quizActions->executeViewans()"
-Feb 07 16:23:21 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:23:21 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:23:21 symfony [debug] {sfPropelLogger} INSERT INTO quizusr (`ID_QUIZ_USR`,`ID_USR_QU`,`ID_QUESTION`,`ID_ANSWER`,`ID_QUIZ`) VALUES (NULL,2,3,4,1)
-Feb 07 16:23:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:23:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:23:21 symfony [info] {sfWebDebugLogger} Configuration 1.43 ms (8)
-Feb 07 16:23:21 symfony [info] {sfWebDebugLogger} Factories 30.91 ms (1)
-Feb 07 16:23:21 symfony [info] {sfWebDebugLogger} Action "quiz/viewans" 69.17 ms (1)
-Feb 07 16:23:21 symfony [info] {sfWebDebugLogger} View "None" for "quiz/viewans" 0.02 ms (1)
-Feb 07 16:23:21 symfony [info] {sfWebResponse} Send content (1 o)
-Feb 07 16:23:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:23:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:23:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:23:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/viewans/id/1 with parameters array (  'module' => 'quiz',  'action' => 'viewans',  'id' => '1',)
-Feb 07 16:23:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:23:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:23:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:23:23 symfony [info] {quizActions} Call "quizActions->executeViewans()"
-Feb 07 16:23:23 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:23:23 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:23:23 symfony [debug] {sfPropelLogger} INSERT INTO quizusr (`ID_QUIZ_USR`,`ID_USR_QU`,`ID_QUESTION`,`ID_ANSWER`,`ID_QUIZ`) VALUES (NULL,2,3,4,1)
-Feb 07 16:23:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:23:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:23:23 symfony [info] {sfWebDebugLogger} Configuration 1.67 ms (8)
-Feb 07 16:23:23 symfony [info] {sfWebDebugLogger} Factories 31.33 ms (1)
-Feb 07 16:23:23 symfony [info] {sfWebDebugLogger} Action "quiz/viewans" 31.23 ms (1)
-Feb 07 16:23:23 symfony [info] {sfWebDebugLogger} View "None" for "quiz/viewans" 0.02 ms (1)
-Feb 07 16:23:23 symfony [info] {sfWebResponse} Send content (1 o)
-Feb 07 16:23:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
-Feb 07 16:23:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
-Feb 07 16:23:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
-Feb 07 16:23:30 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
-Feb 07 16:23:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
-Feb 07 16:23:30 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
-Feb 07 16:23:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
-Feb 07 16:23:30 symfony [info] {quizActions} Call "quizActions->executeDo()"
-Feb 07 16:23:30 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
-Feb 07 16:23:30 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.ID_QUIZ='1'
-Feb 07 16:23:30 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=2
-Feb 07 16:23:30 symfony [debug] {sfPropelLogger} SELECT quizusr.ID_QUIZ_USR, quizusr.ID_USR_QU, quizusr.ID_QUESTION, quizusr.ID_ANSWER, quizusr.ID_QUIZ FROM `quizusr` WHERE quizusr.ID_QUIZ='1' AND quizusr.ID_USR_QU=2
-Feb 07 16:23:30 symfony [debug] {sfPropelLogger} SELECT question.ID_QUESTION, question.QUESTION, question.ID_DIFICULTAD FROM `question`, `questions_quiz` WHERE questions_quiz.ID_QUIZ='1' AND questions_quiz.ID_QUESTION NOT IN (2,3,3) AND questions_quiz.ID_QUESTION=question.ID_QUESTION LIMIT 1
-Feb 07 16:23:30 symfony [info] {quizActions} Change template to "CURRENT/finish"
-Feb 07 16:23:30 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/finishSuccess.php"
-Feb 07 16:23:30 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:23:30 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
-Feb 07 16:23:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
-Feb 07 16:23:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
-Feb 07 16:23:30 symfony [info] {sfWebDebugLogger} Configuration 1.78 ms (9)
-Feb 07 16:23:30 symfony [info] {sfWebDebugLogger} Factories 31.75 ms (1)
-Feb 07 16:23:30 symfony [info] {sfWebDebugLogger} Action "quiz/do" 163.67 ms (1)
-Feb 07 16:23:30 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/do" 56.45 ms (1)
-Feb 07 16:23:30 symfony [info] {sfWebResponse} Send content (36856 o)
+Feb 12 17:17:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:17:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:17:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:17:11 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 12 17:17:11 symfony [info] {myUser} Automatic user logout due to timeout
+Feb 12 17:17:11 symfony [info] {myUser} User is not authenticated
+Feb 12 17:17:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:17:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:17:12 symfony [info] {sfBasicSecurityFilter} Action "quiz/list" requires authentication, forwarding to "sfGuardAuth/signin"
+Feb 12 17:17:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:17:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:17:13 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 12 17:17:14 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Feb 12 17:17:14 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:17:15 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:17:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 12 17:17:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:17:15 symfony [info] {sfWebDebugLogger} Configuration 1572.67 ms (13)
+Feb 12 17:17:15 symfony [info] {sfWebDebugLogger} Factories 3961.08 ms (1)
+Feb 12 17:17:15 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 714.09 ms (1)
+Feb 12 17:17:15 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 1137.46 ms (1)
+Feb 12 17:17:15 symfony [info] {sfWebResponse} Send content (33323 o)
+Feb 12 17:17:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:17:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:17:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:17:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:17:18 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:17:18 symfony [info] {sfBasicSecurityFilter} Action "default/error404" requires authentication, forwarding to "sfGuardAuth/signin"
+Feb 12 17:17:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:17:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:17:18 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 12 17:17:18 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Feb 12 17:17:18 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:17:18 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:17:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 17:17:18 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 17:17:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:17:18 symfony [info] {sfWebResponse} Send content (31250 o)
+Feb 12 17:17:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:17:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:17:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:17:33 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Feb 12 17:17:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:17:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:17:34 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 12 17:17:34 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 12 17:17:35 symfony [debug] {sfPropelLogger} SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.USERNAME='test' AND sf_guard_user.IS_ACTIVE=1 LIMIT 1
+Feb 12 17:17:35 symfony [debug] {sfPropelLogger} SELECT sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `sf_guard_user_profile` WHERE sf_guard_user_profile.USER_ID=2 LIMIT 1
+Feb 12 17:17:35 symfony [info] {myUser} User is authenticated
+Feb 12 17:17:36 symfony [debug] {sfPropelLogger} SELECT sf_guard_user_permission.USER_ID, sf_guard_user_permission.PERMISSION_ID, sf_guard_permission.ID, sf_guard_permission.NAME, sf_guard_permission.DESCRIPTION FROM `sf_guard_user_permission` LEFT JOIN sf_guard_permission ON (sf_guard_user_permission.PERMISSION_ID=sf_guard_permission.ID) WHERE sf_guard_user_permission.USER_ID=2
+Feb 12 17:17:36 symfony [debug] {sfPropelLogger} SELECT sf_guard_user_group.USER_ID, sf_guard_user_group.GROUP_ID, sf_guard_group.ID, sf_guard_group.NAME, sf_guard_group.DESCRIPTION FROM `sf_guard_user_group` LEFT JOIN sf_guard_group ON (sf_guard_user_group.GROUP_ID=sf_guard_group.ID) WHERE sf_guard_user_group.USER_ID=2
+Feb 12 17:17:36 symfony [debug] {sfPropelLogger} SELECT sf_guard_group_permission.GROUP_ID, sf_guard_group_permission.PERMISSION_ID, sf_guard_permission.ID, sf_guard_permission.NAME, sf_guard_permission.DESCRIPTION FROM `sf_guard_group_permission` LEFT JOIN sf_guard_permission ON (sf_guard_group_permission.PERMISSION_ID=sf_guard_permission.ID) WHERE sf_guard_group_permission.GROUP_ID=3
+Feb 12 17:17:37 symfony [info] {myUser} Add credential(s) "Usuarios"
+Feb 12 17:17:37 symfony [debug] {sfPropelLogger} UPDATE sf_guard_user SET `LAST_LOGIN`='2013-02-12 17:17:37' WHERE sf_guard_user.ID=2
+Feb 12 17:17:37 symfony [info] {sfFrontWebController} Redirect to "http://bbvaquiz.local/favicon.ico"
+Feb 12 17:17:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Feb 12 17:17:37 symfony [info] {sfWebResponse} Send header "Location: http://bbvaquiz.local/favicon.ico"
+Feb 12 17:17:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:17:37 symfony [info] {sfWebDebugLogger} Configuration 1.98 ms (8)
+Feb 12 17:17:37 symfony [info] {sfWebDebugLogger} Factories 327.82 ms (1)
+Feb 12 17:17:37 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 3564.15 ms (1)
+Feb 12 17:17:37 symfony [info] {sfWebResponse} Send content (104 o)
+Feb 12 17:17:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:17:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:17:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:17:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:17:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:17:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:17:37 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 17:17:37 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 17:17:38 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:17:38 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:17:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 17:17:38 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 17:17:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:17:38 symfony [info] {sfWebResponse} Send content (29782 o)
+Feb 12 17:17:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:17:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:17:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:17:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:17:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:17:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:17:38 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 17:17:38 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 17:17:38 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:17:38 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:17:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 17:17:38 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 17:17:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:17:38 symfony [info] {sfWebResponse} Send content (29623 o)
+Feb 12 17:17:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:17:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:17:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:17:52 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 12 17:17:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:17:53 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:17:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:17:53 symfony [info] {quizActions} Call "quizActions->executeList()"
+Feb 12 17:17:54 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/listSuccess.php"
+Feb 12 17:17:54 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:17:54 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:17:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 12 17:17:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:17:54 symfony [info] {sfWebResponse} Send content (29334 o)
+Feb 12 17:17:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:17:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:17:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:17:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
+Feb 12 17:17:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:17:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:17:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:17:57 symfony [info] {quizActions} Call "quizActions->executeDo()"
+Feb 12 17:17:59 symfony [info] {quizActions} Change template to "CURRENT/do"
+Feb 12 17:17:59 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
+Feb 12 17:18:00 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:18:00 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:18:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 12 17:18:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:18:00 symfony [info] {sfWebResponse} Send content (33194 o)
+Feb 12 17:18:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:18:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:18:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:18:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:18:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:18:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:18:03 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 17:18:03 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 17:18:03 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:18:03 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:18:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 17:18:03 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 17:18:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:18:03 symfony [info] {sfWebResponse} Send content (29781 o)
+Feb 12 17:18:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:18:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:18:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:18:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:18:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:18:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:18:04 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 17:18:04 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 17:18:04 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:18:04 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:18:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 17:18:04 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 17:18:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:18:04 symfony [info] {sfWebResponse} Send content (29781 o)
+Feb 12 17:22:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:22:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:22:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:22:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quiz/do/id/1 with parameters array (  'module' => 'quiz',  'action' => 'do',  'id' => '1',)
+Feb 12 17:22:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:22:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:22:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:22:48 symfony [info] {quizActions} Call "quizActions->executeDo()"
+Feb 12 17:22:49 symfony [info] {quizActions} Change template to "CURRENT/do"
+Feb 12 17:22:49 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/doSuccess.php"
+Feb 12 17:22:49 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:22:49 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 17:22:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 12 17:22:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:22:49 symfony [info] {sfWebResponse} Send content (33254 o)
+Feb 12 17:22:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 17:22:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 17:22:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 17:22:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 17:22:50 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 17:22:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 17:22:50 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 17:22:50 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 17:22:50 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:22:50 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 17:22:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 17:22:50 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 17:22:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 17:22:50 symfony [info] {sfWebResponse} Send content (29781 o)

@@ -9,12 +9,20 @@ propel:
     id_question: { phpName: IdQuestion, type: INTEGER, size: '11', required: false, defaultValue: '0', foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
     correct: { phpName: Correct, type: SMALLINT, size: '6', required: false, defaultValue: '0' }
     _indexes: { FK__question: [id_question] }
+  area:
+    _attributes: { phpName: Area }
+    id_area: { phpName: IdArea, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    area: { phpName: Area, type: VARCHAR, size: '145', required: true }
   correct_answer_question:
     _attributes: { phpName: CorrectAnswerQuestion }
     id_correct_answer_question: { phpName: IdCorrectAnswerQuestion, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
     id_question: { phpName: IdQuestion, type: INTEGER, size: '10', required: false, foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
     id_answer: { phpName: IdAnswer, type: INTEGER, size: '10', required: false, foreignTable: answer, foreignReference: id_answer, onDelete: RESTRICT, onUpdate: RESTRICT }
     _indexes: { FK_correct_answer_question_question: [id_question], FK_correct_answer_question_answer: [id_answer] }
+  depto:
+    _attributes: { phpName: Depto }
+    id_depto: { phpName: IdDepto, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    depto: { phpName: Depto, type: VARCHAR, size: '200', required: true }
   dificulty:
     _attributes: { phpName: Dificulty }
     id_dificulty: { phpName: IdDificulty, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
@@ -32,6 +40,10 @@ propel:
     _attributes: { phpName: Instructions }
     id_instruction: { phpName: IdInstruction, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
     instruction: { phpName: Instruction, type: LONGVARCHAR, required: false }
+  position:
+    _attributes: { phpName: Position }
+    id_position: { phpName: IdPosition, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    position: { phpName: Position, type: VARCHAR, size: '100', required: true }
   question:
     _attributes: { phpName: Question }
     id_question: { phpName: IdQuestion, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
@@ -118,4 +130,16 @@ propel:
     first_name: { phpName: FirstName, type: VARCHAR, size: '20', required: false }
     last_name: { phpName: LastName, type: VARCHAR, size: '20', required: false }
     birthday: { phpName: Birthday, type: DATE, required: false }
+    id_zone: { phpName: IdZone, type: INTEGER, size: '11', required: true }
+    email: { phpName: Email, type: VARCHAR, size: '100', required: true }
+    gender: { phpName: Gender, type: VARCHAR, size: '10', required: true }
+    user_bank_id: { phpName: UserBankId, type: VARCHAR, size: '45', required: true }
+    id_position: { phpName: IdPosition, type: INTEGER, size: '11', required: true }
+    id_center_cost: { phpName: IdCenterCost, type: VARCHAR, size: '45', required: true }
+    id_depto: { phpName: IdDepto, type: INTEGER, size: '11', required: true }
+    id_area: { phpName: IdArea, type: INTEGER, size: '11', required: true }
     _indexes: { sf_guard_user_profile_FI_1: [user_id] }
+  zone:
+    _attributes: { phpName: Zone }
+    id_zone: { phpName: IdZone, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    zone: { phpName: Zone, type: VARCHAR, size: '100', required: true }

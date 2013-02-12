@@ -24,7 +24,7 @@ abstract class BaseAnswerForm extends BaseFormPropel
       'id_answer'   => new sfValidatorChoice(array('choices' => array($this->getObject()->getIdAnswer()), 'empty_value' => $this->getObject()->getIdAnswer(), 'required' => false)),
       'answer'      => new sfValidatorString(array('max_length' => 200, 'required' => false)),
       'id_question' => new sfValidatorPropelChoice(array('model' => 'Question', 'column' => 'id_question', 'required' => false)),
-      'correct'     => new sfValidatorString(array('max_length' => 1, 'required' => false)),
+      'correct'     => new sfValidatorInteger(array('min' => -32768, 'max' => 32767, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('answer[%s]');
