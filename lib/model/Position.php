@@ -17,5 +17,11 @@
  * @package    lib.model
  */
 class Position extends BasePosition {
+    
+     public function __toString()
+     {
+            return $this->getPosition();
+            
+     }
 
 } // Position

@@ -1,0 +1,21 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           area
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              area
+    plural:                areas
+    route_prefix:          area
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

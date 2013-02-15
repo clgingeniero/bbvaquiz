@@ -9,5 +9,6 @@ all:
     routes_register: on
     profile_class:      sfGuardUserProfile
     profile_field_name: user_id
+    profile_email_name: email
     signin_form:    sfGuardFormSignin
 

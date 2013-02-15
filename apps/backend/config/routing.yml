@@ -1,3 +1,48 @@
+position:
+  class: sfPropelRouteCollection
+  options:
+    model:                position
+    module:               position
+    prefix_path:          /position
+    column:               id_position
+    with_wildcard_routes: true
+
+zone:
+  class: sfPropelRouteCollection
+  options:
+    model:                zone
+    module:               zone
+    prefix_path:          /zone
+    column:               id_zone
+    with_wildcard_routes: true
+
+depto:
+  class: sfPropelRouteCollection
+  options:
+    model:                depto
+    module:               depto
+    prefix_path:          /depto
+    column:               id_depto
+    with_wildcard_routes: true
+
+area:
+  class: sfPropelRouteCollection
+  options:
+    model:                area
+    module:               area
+    prefix_path:          /area
+    column:               id_area
+    with_wildcard_routes: true
+
+sf_guard_user_profile:
+  class: sfPropelRouteCollection
+  options:
+    model:                sfGuardUserProfile
+    module:               sf_guard_user_profile
+    prefix_path:          /sf_guard_user_profile
+    column:               id
+    with_wildcard_routes: true
+
 quizusr:
   class: sfPropelRouteCollection
   options:

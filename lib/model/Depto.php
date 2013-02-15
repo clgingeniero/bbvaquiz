@@ -17,5 +17,11 @@
  * @package    lib.model
  */
 class Depto extends BaseDepto {
+    
+    public function __toString()
+     {
+            return $this->getDepto();
+            
+     }
 
 } // Depto

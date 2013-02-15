@@ -20,7 +20,7 @@ abstract class BaseAnswerFormFilter extends BaseFormFilterPropel
     $this->setValidators(array(
       'answer'      => new sfValidatorPass(array('required' => false)),
       'id_question' => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Question', 'column' => 'id_question')),
-      'correct'     => new sfValidatorPass(array('required' => false)),
+      'correct'     => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
 
     $this->widgetSchema->setNameFormat('answer_filters[%s]');
@@ -41,7 +41,7 @@ abstract class BaseAnswerFormFilter extends BaseFormFilterPropel
       'id_answer'   => 'Number',
       'answer'      => 'Text',
       'id_question' => 'ForeignKey',
-      'correct'     => 'Text',
+      'correct'     => 'Number',
     );
   }
 }

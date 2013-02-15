@@ -17,5 +17,11 @@
  * @package    lib.model
  */
 class Area extends BaseArea {
+    
+    public function __toString()
+     {
+            return $this->getArea();
+            
+     }
 
 } // Area

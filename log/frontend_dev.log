@@ -174,3 +174,435 @@ Feb 12 17:22:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Fou
 Feb 12 17:22:50 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
 Feb 12 17:22:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 Feb 12 17:22:50 symfony [info] {sfWebResponse} Send content (29781 o)
+Feb 12 20:16:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:16:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:16:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:16:12 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 12 20:16:13 symfony [info] {myUser} Automatic user logout due to timeout
+Feb 12 20:16:13 symfony [info] {myUser} User is not authenticated
+Feb 12 20:16:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 20:16:13 symfony [info] {sfBasicSecurityFilter} Action "quiz/list" requires authentication, forwarding to "sfGuardAuth/signin"
+Feb 12 20:16:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:16:13 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 12 20:16:13 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Feb 12 20:16:13 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 20:16:13 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 20:16:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 12 20:16:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:16:13 symfony [info] {sfWebResponse} Send content (32234 o)
+Feb 12 20:16:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:16:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:16:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:16:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:14 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 20:16:14 symfony [info] {sfBasicSecurityFilter} Action "default/error404" requires authentication, forwarding to "sfGuardAuth/signin"
+Feb 12 20:16:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:16:14 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 12 20:16:14 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Feb 12 20:16:14 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 20:16:14 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 20:16:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:16:14 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 20:16:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:16:14 symfony [info] {sfWebResponse} Send content (31399 o)
+Feb 12 20:16:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:16:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:16:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:16:23 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Feb 12 20:16:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:16:23 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 12 20:16:23 symfony [info] {myUser} User is authenticated
+Feb 12 20:16:23 symfony [info] {myUser} Add credential(s) "Usuarios"
+Feb 12 20:16:23 symfony [info] {sfFrontWebController} Redirect to "http://bbvaquiz.local/favicon.ico"
+Feb 12 20:16:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Feb 12 20:16:23 symfony [info] {sfWebResponse} Send header "Location: http://bbvaquiz.local/favicon.ico"
+Feb 12 20:16:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:16:23 symfony [info] {sfWebResponse} Send cookie "sfRemember": "oxsg9uj3kqow40cwkww0o0o0ooocck0"
+Feb 12 20:16:23 symfony [info] {sfWebResponse} Send content (104 o)
+Feb 12 20:16:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:16:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:16:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:16:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 20:16:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:16:23 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 20:16:23 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 20:16:23 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:16:23 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:16:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:16:23 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 20:16:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:16:23 symfony [info] {sfWebResponse} Send content (30026 o)
+Feb 12 20:16:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:16:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:16:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:16:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:24 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 20:16:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:16:24 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 20:16:24 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 20:16:24 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:16:24 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:16:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:16:24 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 20:16:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:16:24 symfony [info] {sfWebResponse} Send content (29883 o)
+Feb 12 20:16:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:16:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:16:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:16:30 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 12 20:16:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:30 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 20:16:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:16:30 symfony [info] {quizActions} Call "quizActions->executeList()"
+Feb 12 20:16:30 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 12 20:16:30 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.INICIAL_TIME<'2013-02-12 20:16:30' AND quiz.FINAL_TIME>'2013-02-12 20:16:30'
+Feb 12 20:16:30 symfony [debug] {sfPropelLogger} SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME FROM `quiz` WHERE quiz.FINAL_TIME<'2013-02-12 20:16:30'
+Feb 12 20:16:30 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/listSuccess.php"
+Feb 12 20:16:30 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 20:16:30 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 12 20:16:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 12 20:16:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:16:30 symfony [info] {sfWebDebugLogger} Configuration 46.51 ms (10)
+Feb 12 20:16:30 symfony [info] {sfWebDebugLogger} Factories 165.27 ms (1)
+Feb 12 20:16:30 symfony [info] {sfWebDebugLogger} Action "quiz/list" 75.76 ms (1)
+Feb 12 20:16:30 symfony [info] {sfWebDebugLogger} View "Success" for "quiz/list" 107.13 ms (1)
+Feb 12 20:16:30 symfony [info] {sfWebResponse} Send content (33958 o)
+Feb 12 20:16:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:16:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:16:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:16:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 20:16:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:16:31 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 20:16:31 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 20:16:31 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:16:31 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:16:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:16:31 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 20:16:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:16:31 symfony [info] {sfWebResponse} Send content (29883 o)
+Feb 12 20:16:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:16:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:16:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:16:45 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /sf_guard_user_profile with parameters array (  'module' => 'sf_guard_user_profile',  'action' => 'index',)
+Feb 12 20:16:45 symfony [info] {sfFrontWebController} Action "sf_guard_user_profile/index" does not exist
+Feb 12 20:16:45 symfony [err] {sfError404Exception} Action "sf_guard_user_profile/index" does not exist.
+Feb 12 20:16:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:16:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:16:45 symfony [info] {sfWebDebugLogger} Configuration 1.32 ms (5)
+Feb 12 20:16:45 symfony [info] {sfWebDebugLogger} Factories 34.80 ms (1)
+Feb 12 20:16:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:16:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:16:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:16:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:16:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 20:16:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:16:45 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 20:16:45 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 20:16:45 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:16:45 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:16:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:16:45 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 20:16:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:16:45 symfony [info] {sfWebResponse} Send content (29883 o)
+Feb 12 20:17:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:17:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:17:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:17:45 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/sf_guard_user_profile/" (/).
+Feb 12 20:17:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:17:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:17:45 symfony [info] {sfWebDebugLogger} Configuration 1.10 ms (5)
+Feb 12 20:17:45 symfony [info] {sfWebDebugLogger} Factories 32.11 ms (1)
+Feb 12 20:17:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:17:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:17:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:17:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:17:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 20:17:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:17:45 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 20:17:45 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 20:17:45 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:17:45 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:17:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:17:45 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 20:17:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:17:45 symfony [info] {sfWebResponse} Send content (29883 o)
+Feb 12 20:25:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:25:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:25:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:25:04 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /sf_guard_user_profile with parameters array (  'module' => 'sf_guard_user_profile',  'action' => 'index',)
+Feb 12 20:25:04 symfony [info] {sfFrontWebController} Action "sf_guard_user_profile/index" does not exist
+Feb 12 20:25:04 symfony [err] {sfError404Exception} Action "sf_guard_user_profile/index" does not exist.
+Feb 12 20:25:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:25:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:25:04 symfony [info] {sfWebDebugLogger} Configuration 1.64 ms (5)
+Feb 12 20:25:04 symfony [info] {sfWebDebugLogger} Factories 699.10 ms (1)
+Feb 12 20:25:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 12 20:25:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 12 20:25:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 12 20:25:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 12 20:25:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 12 20:25:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 12 20:25:05 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 12 20:25:05 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 12 20:25:05 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:25:05 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 12 20:25:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 12 20:25:05 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 12 20:25:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 12 20:25:05 symfony [info] {sfWebResponse} Send content (29883 o)
+Feb 13 12:22:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 13 12:22:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 13 12:22:54 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 13 12:22:54 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 13 12:22:54 symfony [info] {myUser} Automatic user logout due to timeout
+Feb 13 12:22:54 symfony [info] {myUser} User is not authenticated
+Feb 13 12:22:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 13 12:22:54 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 13 12:22:54 symfony [info] {sfBasicSecurityFilter} Action "quiz/list" requires authentication, forwarding to "sfGuardAuth/signin"
+Feb 13 12:22:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 13 12:22:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 13 12:22:55 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 13 12:22:55 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Feb 13 12:22:55 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 13 12:22:55 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 13 12:22:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 13 12:22:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 13 12:22:56 symfony [info] {sfWebResponse} Send content (32336 o)
+Feb 14 18:37:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 18:37:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 18:37:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 18:37:56 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 14 18:37:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:37:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 18:37:57 symfony [info] {sfBasicSecurityFilter} Action "quiz/list" requires authentication, forwarding to "sfGuardAuth/signin"
+Feb 14 18:37:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:37:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 18:37:57 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 14 18:37:57 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Feb 14 18:37:57 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 18:37:57 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 18:37:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 14 18:37:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 18:37:58 symfony [info] {sfWebResponse} Send content (31192 o)
+Feb 14 18:37:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 18:37:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 18:37:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 18:37:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:37:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 18:37:59 symfony [info] {sfBasicSecurityFilter} Action "default/error404" requires authentication, forwarding to "sfGuardAuth/signin"
+Feb 14 18:37:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:37:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 18:37:59 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 14 18:37:59 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Feb 14 18:37:59 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 18:37:59 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 18:37:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 14 18:37:59 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 14 18:37:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 18:37:59 symfony [info] {sfWebResponse} Send content (31339 o)
+Feb 14 18:38:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 18:38:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 18:38:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 18:38:13 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Feb 14 18:38:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:38:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 18:38:13 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 14 18:38:13 symfony [info] {myUser} User is authenticated
+Feb 14 18:38:14 symfony [info] {myUser} Add credential(s) "Usuarios"
+Feb 14 18:38:14 symfony [info] {sfFrontWebController} Redirect to "http://bbvaquiz.local/favicon.ico"
+Feb 14 18:38:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Feb 14 18:38:14 symfony [info] {sfWebResponse} Send header "Location: http://bbvaquiz.local/favicon.ico"
+Feb 14 18:38:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 18:38:14 symfony [info] {sfWebResponse} Send content (104 o)
+Feb 14 18:38:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 18:38:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 18:38:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 18:38:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:38:14 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 18:38:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 18:38:14 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 14 18:38:14 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 14 18:38:14 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 18:38:14 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 18:38:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 14 18:38:14 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 14 18:38:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 18:38:14 symfony [info] {sfWebResponse} Send content (29868 o)
+Feb 14 18:38:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 18:38:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 18:38:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 18:38:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:38:14 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 18:38:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 18:38:14 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 14 18:38:14 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 14 18:38:15 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 18:38:15 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 18:38:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 14 18:38:15 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 14 18:38:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 18:38:15 symfony [info] {sfWebResponse} Send content (29725 o)
+Feb 14 18:38:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 18:38:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 18:38:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 18:38:19 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 14 18:38:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:38:19 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 18:38:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 18:38:19 symfony [info] {quizActions} Call "quizActions->executeList()"
+Feb 14 18:38:20 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/listSuccess.php"
+Feb 14 18:38:20 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 18:38:20 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 18:38:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 14 18:38:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 18:38:20 symfony [info] {sfWebResponse} Send content (29328 o)
+Feb 14 18:38:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 18:38:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 18:38:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 18:38:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:38:20 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 18:38:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 18:38:20 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 14 18:38:20 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 14 18:38:20 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 18:38:20 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 18:38:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 14 18:38:20 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 14 18:38:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 18:38:20 symfony [info] {sfWebResponse} Send content (29725 o)
+Feb 14 18:38:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 18:38:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 18:38:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 18:38:45 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 14 18:38:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:38:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 18:38:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 18:38:45 symfony [info] {quizActions} Call "quizActions->executeList()"
+Feb 14 18:38:45 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/listSuccess.php"
+Feb 14 18:38:45 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 18:38:45 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 18:38:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 14 18:38:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 18:38:45 symfony [info] {sfWebResponse} Send content (29379 o)
+Feb 14 18:38:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 18:38:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 18:38:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 18:38:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 18:38:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 18:38:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 18:38:45 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 14 18:38:45 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 14 18:38:45 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 18:38:45 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 18:38:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 14 18:38:45 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 14 18:38:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 18:38:45 symfony [info] {sfWebResponse} Send content (29725 o)
+Feb 14 20:54:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 20:54:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 20:54:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 20:54:45 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 14 20:54:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 20:54:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 20:54:45 symfony [info] {sfBasicSecurityFilter} Action "quiz/list" requires authentication, forwarding to "sfGuardAuth/signin"
+Feb 14 20:54:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 20:54:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 20:54:45 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 14 20:54:45 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Feb 14 20:54:46 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 20:54:46 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 20:54:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 14 20:54:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 20:54:46 symfony [info] {sfWebResponse} Send content (31192 o)
+Feb 14 20:54:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 20:54:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 20:54:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 20:54:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 20:54:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 20:54:47 symfony [info] {sfBasicSecurityFilter} Action "default/error404" requires authentication, forwarding to "sfGuardAuth/signin"
+Feb 14 20:54:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 20:54:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 20:54:47 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 14 20:54:47 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/plugins/sfGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Feb 14 20:54:47 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 20:54:47 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 20:54:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 14 20:54:47 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 14 20:54:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 20:54:47 symfony [info] {sfWebResponse} Send content (31339 o)
+Feb 14 20:55:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 20:55:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 20:55:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 20:55:03 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Feb 14 20:55:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 20:55:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 20:55:03 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Feb 14 20:55:04 symfony [info] {myUser} User is authenticated
+Feb 14 20:55:04 symfony [info] {myUser} Add credential(s) ""
+Feb 14 20:55:04 symfony [info] {sfFrontWebController} Redirect to "http://bbvaquiz.local/favicon.ico"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send header "Location: http://bbvaquiz.local/favicon.ico"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send content (104 o)
+Feb 14 20:55:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 20:55:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 20:55:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 20:55:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 20:55:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 20:55:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 20:55:04 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 14 20:55:04 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 14 20:55:04 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 20:55:04 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send content (29862 o)
+Feb 14 20:55:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 20:55:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 20:55:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 20:55:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 20:55:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 20:55:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 20:55:04 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 14 20:55:04 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 14 20:55:04 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 20:55:04 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 20:55:04 symfony [info] {sfWebResponse} Send content (29719 o)
+Feb 14 20:55:07 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 20:55:07 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 20:55:07 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 20:55:07 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'quiz',  'action' => 'list',)
+Feb 14 20:55:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 20:55:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 20:55:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 20:55:07 symfony [info] {quizActions} Call "quizActions->executeList()"
+Feb 14 20:55:08 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quiz/templates/listSuccess.php"
+Feb 14 20:55:08 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 20:55:08 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 14 20:55:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 14 20:55:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 20:55:08 symfony [info] {sfWebResponse} Send content (29322 o)
+Feb 14 20:55:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 14 20:55:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 14 20:55:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 14 20:55:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 14 20:55:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 14 20:55:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 14 20:55:08 symfony [info] {defaultActions} Call "defaultActions->executeError404()"
+Feb 14 20:55:08 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/error404Success.php"
+Feb 14 20:55:08 symfony [info] {sfPHPView} Decorate content with "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 20:55:08 symfony [info] {sfPHPView} Render "/usr/lib/php/pear/symfony/controller/default/templates/defaultLayout.php"
+Feb 14 20:55:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 14 20:55:08 symfony [info] {sfWebResponse} Send header "Status: 404 Not Found"
+Feb 14 20:55:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 14 20:55:08 symfony [info] {sfWebResponse} Send content (29719 o)

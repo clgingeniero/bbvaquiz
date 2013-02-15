@@ -17,5 +17,11 @@
  * @package    lib.model
  */
 class Zone extends BaseZone {
+    
+    public function __toString()
+     {
+            return $this->getZone();
+            
+     }
 
 } // Zone
