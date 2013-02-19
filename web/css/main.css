@@ -1,0 +1,117 @@
+.menu{ float: right;}
+.men-home{ background: url('../images/menu-gral_03.jpg'); background-repeat: no-repeat; width: 40px; height: 33px; float: left; padding-left: 13px;}
+.men-acco{ background: url('../images/menu-gral_05.jpg'); background-repeat: no-repeat; width: 40px; height: 33px; float: left; padding-left: 13px;}
+.men-inst{ background: url('../images/menu-gral_07.jpg'); background-repeat: no-repeat; width: 40px; height: 33px; float: left; padding-left: 13px;}
+.men-help{ background: url('../images/menu-gral_09.jpg'); background-repeat: no-repeat; width: 40px; height: 33px; float: left; padding-left: 13px;}
+.men-clos{ background: url('../images/menu-gral_11.jpg'); background-repeat: no-repeat; width: 40px; height: 33px; float: left; padding-left: 13px;}
+.home{width: 900px; height: 500px; }
+.men-ppal {color: #FFFFFF;
+    float: left;
+    padding-left: 5px;
+    padding-top: 153px;
+    text-decoration: none;}
+.men-ppal a {color:#fff; text-decoration: none;}
+.men-ppal a :visited{color:#fff; text-decoration: none;}
+.pers-home{background: url("../images/1.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 462px;
+    margin-left: -68px;
+    margin-top: 101px;
+    width: 358px;
+}
+.btnhomeInicio{background: url('../images/home_03.jpg'); background-repeat: no-repeat; height: 32px; width: 111px; margin-bottom: 10px;}
+.btnhomeInstru{background: url('../images/home_06.jpg'); background-repeat: no-repeat; height: 32px; width: 184px; margin-bottom: 10px;}
+.btnhomeInfo{background: url('../images/home_09.jpg'); background-repeat: no-repeat; height: 33px; width: 167px;}
+.layout{width: 900px; height: 600px;  margin: 0 auto; border: #cacbc8 solid 8px;}
+.line-home{background: url("../images/lineas2.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 175px;
+    margin-left: 70px;
+    margin-top: 126px;
+    width: 283px;
+}
+.fond-home{    background-color: #CACBC8;
+    float: left;
+    height: 607px;
+    margin-top: -44px;
+    width: 68px;}
+.tit-home{padding-top: 37px;}
+.tit{color: #86C82D;
+    font-size: 34px;
+    margin: 0 auto;}
+.subtit{color: #1D4FA4;
+    font-family: caa;
+    font-size: 29px;
+    margin: 0 auto 0 398px;}
+.pers-inst{background: url("../images/10.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 462px;
+    margin-left: -68px;
+    margin-top: 101px;
+    width: 358px;
+}
+.tit-instru{color: #86C82D;
+    font-size: 20px;
+    margin-left: 81px;
+    margin-top: -36px;
+    position: absolute;
+    }
+.titulo-inst{
+        color: #86C82D;
+    font-size: 20px;
+    }
+.subtit-inst{color: #1D4FA4;
+    
+    font-size: 19px;
+    margin-left: 15px;
+    }
+.titimageinstru{background: url("../images/instrucciones_03.png") no-repeat scroll 0 0 transparent;
+width: 329px; height: 44px;}
+
+.content-instru{
+    padding-right: 20px;
+    padding-top: 130px;
+    text-align: justify;
+}
+
+.vineta{background: url("../images/vineta_07.jpg") no-repeat scroll 0 0 transparent;
+width: 20px; height: 21px; float: left;}
+
+.textoi{color: #1D4FA4;
+    margin-bottom: 20px;
+    margin-left: 400px;}
+
+.inst-tit{color: #1D4FA4;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-left: 500px;}
+
+.footer{background: url("../images/logos.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 36px;
+    padding-right: 20px;
+    width: 159px;}
+
+.back{background: url("../images/atras_13.jpg") no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 27px;
+    margin-top: 10px;
+    padding-right: 30px;
+    width: 89px;}
+
+.pers-help{background: url("../images/9.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 462px;
+    margin-left: -68px;
+    margin-top: 115px;
+    width: 358px;}
+
+.tit-help{background: url("../images/ayuda_03.png") no-repeat scroll 0 0 transparent;
+width: 329px; height: 44px;}
+
+.cont-help{background: url("../images/ayuda_07.png") no-repeat scroll 0 0 transparent;
+    height: 370px;
+    margin-left: 350px;
+    width: 495px;}
+
+

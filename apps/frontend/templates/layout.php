@@ -10,23 +10,41 @@
   </head>
     
   <body>
+      <div class="layout">
       <div class="menu">
-        <ul>
-            <li>
-            <a href="<?php echo url_for('quiz/list') ?>">Inicio</a>
-            </li>
-            <li>
-            <a href="<?php echo url_for('instructions/index') ?>">Instrucciones</a>
-            </li>
-            <li>
-            <a href="<?php echo url_for('quiz/list') ?>">Ranking</a>
-            </li>
-            <li>
-            <a href="<?php echo url_for('quiz/list') ?>">Información</a>
-            </li>
-       </ul>
+       
+            <a href="<?php echo url_for('/') ?>">
+                <div class="men-home"></div>
+            </a>
+            
+            <a href="<?php echo url_for('instructions/index') ?>">
+                <div class="men-acco"></div>
+            </a>
+           
+            <a href="<?php echo url_for('instructions/index') ?>">
+                <div class="men-inst"></div>
+            </a>
+            
+            <a href="<?php echo url_for('help') ?>">
+                <div class="men-help"></div>
+            </a>
+            
+            <a href="<?php echo url_for('quiz/list') ?>">
+                <div class="men-clos"></div>
+            </a>
+           
+      
       </div> <br></br>
-    <?php echo $sf_content ?>
-
+      <div class="home">
+        <?php echo $sf_content ?>
+      </div>
+ 
+      <div class="footer"></div>
+      <?php //if() ?> 
+      <a href="<?php echo url_for('/') ?>">
+        <div class="back"></div>
+      </a>
+          
+  </div>
   </body>
 </html>

@@ -4,7 +4,11 @@
 # default rules
 homepage:
   url:   /
-  param: { module: quiz, action: list }
+  param: { module: instructions, action: home }
+  
+help:
+  url:   /help
+  param: { module: instructions, action: help }
 
 # generic rules
 # please, remove them by adding more specific rules
