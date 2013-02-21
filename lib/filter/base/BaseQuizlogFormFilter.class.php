@@ -13,14 +13,14 @@ abstract class BaseQuizlogFormFilter extends BaseFormFilterPropel
   {
     $this->setWidgets(array(
       'id_quizlog'      => new sfWidgetFormPropelChoice(array('model' => 'Quiz', 'add_empty' => true)),
-      'id_usrql'        => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'id_usrql'        => new sfWidgetFormPropelChoice(array('model' => 'SfGuardUserProfile', 'add_empty' => true, 'key_method' => 'getUserId')),
       'status'          => new sfWidgetFormFilterInput(),
       'result'          => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
       'id_quizlog'      => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Quiz', 'column' => 'id_quiz')),
-      'id_usrql'        => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'id_usrql'        => new sfValidatorPropelChoice(array('required' => false, 'model' => 'SfGuardUserProfile', 'column' => 'user_id')),
       'status'          => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'result'          => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
     ));
@@ -42,7 +42,7 @@ abstract class BaseQuizlogFormFilter extends BaseFormFilterPropel
     return array(
       'id_quiz_usr_log' => 'Number',
       'id_quizlog'      => 'ForeignKey',
-      'id_usrql'        => 'Number',
+      'id_usrql'        => 'ForeignKey',
       'status'          => 'Number',
       'result'          => 'Number',
     );

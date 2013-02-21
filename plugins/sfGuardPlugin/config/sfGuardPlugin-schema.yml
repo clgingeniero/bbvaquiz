@@ -2,4 +2,62 @@ propel:
   _attributes:
     package: plugins.sfGuardPlugin.lib.model
     defaultIdMethod: native
-
+  sf_guard_group:
+    _attributes: { phpName: sfGuardGroup }
+    id: { type: integer, required: true, primaryKey: true, autoIncrement: true }
+    name: { type: varchar, size: '255', required: true }
+    description: { type: longvarchar }
+    _uniques: { '': [name] }
+  sf_guard_permission:
+    _attributes: { phpName: sfGuardPermission }
+    id: { type: integer, required: true, primaryKey: true, autoIncrement: true }
+    name: { type: varchar, size: '255', required: true }
+    description: { type: longvarchar }
+    _uniques: { '': [name] }
+  sf_guard_group_permission:
+    _attributes: { phpName: sfGuardGroupPermission }
+    group_id: { type: integer, primaryKey: true, required: true, foreignTable: sf_guard_group, foreignReference: id, onDelete: cascade }
+    permission_id: { type: integer, primaryKey: true, required: true, foreignTable: sf_guard_permission, foreignReference: id, onDelete: cascade }
+  sf_guard_user:
+    _attributes: { phpName: sfGuardUser }
+    id: { type: integer, required: true, primaryKey: true, autoIncrement: true }
+    username: { type: varchar, size: '128', required: true }
+    algorithm: { type: varchar, size: '128', required: true, default: sha1 }
+    salt: { type: varchar, size: '128', required: true }
+    password: { type: varchar, size: '128', required: true }
+    created_at: { type: timestamp }
+    last_login: { type: timestamp }
+    is_active: { type: boolean, required: true, default: '1' }
+    is_super_admin: { type: boolean, required: true, default: '0' }
+    _uniques: { '': [username] }
+  sf_guard_user_permission:
+    _attributes: { phpName: sfGuardUserPermission }
+    user_id: { type: integer, primaryKey: true, required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: cascade }
+    permission_id: { type: integer, primaryKey: true, required: true, foreignTable: sf_guard_permission, foreignReference: id, onDelete: cascade }
+  sf_guard_user_group:
+    _attributes: { phpName: sfGuardUserGroup }
+    user_id: { type: integer, primaryKey: true, required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: cascade }
+    group_id: { type: integer, primaryKey: true, required: true, foreignTable: sf_guard_group, foreignReference: id, onDelete: cascade }
+  sf_guard_remember_key:
+    _attributes: { phpName: sfGuardRememberKey }
+    user_id: { type: integer, primaryKey: true, required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: cascade }
+    remember_key: { type: varchar, size: '32' }
+    ip_address: { type: varchar, size: '50', primaryKey: true }
+    created_at: { type: timestamp }
+  sf_guard_user_profile:
+    _attributes: { phpName: SfGuardUserProfile }
+    id: { phpName: Id, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    user_id: { phpName: UserId, type: INTEGER, size: '11', required: true, foreignTable: sf_guard_user, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    first_name: { phpName: FirstName, type: VARCHAR, size: '20', required: false }
+    last_name: { phpName: LastName, type: VARCHAR, size: '20', required: false }
+    birthday: { phpName: Birthday, type: DATE, required: false }
+    id_zone: { phpName: IdZone, type: INTEGER, size: '11', required: true, foreignTable: zone, foreignReference: id_zone, onDelete: RESTRICT, onUpdate: RESTRICT }
+    email: { phpName: Email, type: VARCHAR, size: '100', required: true }
+    gender: { phpName: Gender, type: VARCHAR, size: '10', required: true }
+    user_bank_id: { phpName: UserBankId, type: VARCHAR, size: '45', required: true }
+    id_position: { phpName: IdPosition, type: INTEGER, size: '11', required: true, foreignTable: position, foreignReference: id_position, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_center_cost: { phpName: IdCenterCost, type: VARCHAR, size: '45', required: true }
+    id_depto: { phpName: IdDepto, type: INTEGER, size: '11', required: true, foreignTable: depto, foreignReference: id_depto, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_area: { phpName: IdArea, type: INTEGER, size: '11', required: true, foreignTable: area, foreignReference: id_area, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { sf_guard_user_profile_FI_1: [user_id], position_idx: [id_position], area_idx: [id_area], depto_idx: [id_depto], zone_idx: [id_zone] }
+  

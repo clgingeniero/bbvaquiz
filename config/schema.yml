@@ -2,18 +2,97 @@ propel:
   _attributes:
     package: lib.model
     defaultIdMethod: native
+  answer:
+    _attributes: { phpName: Answer }
+    id_answer: { phpName: IdAnswer, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    answer: { phpName: Answer, type: VARCHAR, size: '200', required: false, defaultValue: '0' }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '11', required: false, defaultValue: '0', foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
+    correct: { phpName: Correct, type: SMALLINT, size: '6', required: false, defaultValue: '0' }
+    _indexes: { FK__question: [id_question] }
   area:
     _attributes: { phpName: Area }
     id_area: { phpName: IdArea, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
     area: { phpName: Area, type: VARCHAR, size: '145', required: true }
+  correct_answer_question:
+    _attributes: { phpName: CorrectAnswerQuestion }
+    id_correct_answer_question: { phpName: IdCorrectAnswerQuestion, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '10', required: false, foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_answer: { phpName: IdAnswer, type: INTEGER, size: '10', required: false, foreignTable: answer, foreignReference: id_answer, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { FK_correct_answer_question_question: [id_question], FK_correct_answer_question_answer: [id_answer] }
   depto:
     _attributes: { phpName: Depto }
     id_depto: { phpName: IdDepto, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
     depto: { phpName: Depto, type: VARCHAR, size: '200', required: true }
+  dificulty:
+    _attributes: { phpName: Dificulty }
+    id_dificulty: { phpName: IdDificulty, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    name: { phpName: Name, type: VARCHAR, size: '100', required: false }
+    value: { phpName: Value, type: FLOAT, required: false }
+  dificulty_quiz:
+    _attributes: { phpName: DificultyQuiz }
+    id_dif_quiz: { phpName: IdDifQuiz, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    easy: { phpName: Easy, type: INTEGER, size: '11', required: false }
+    medium: { phpName: Medium, type: INTEGER, size: '11', required: false }
+    hard: { phpName: Hard, type: INTEGER, size: '11', required: false }
+    id_quiz: { phpName: IdQuiz, type: INTEGER, size: '11', required: false, foreignTable: quiz, foreignReference: id_quiz, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { id_quiz_idx: [id_quiz] }
+  instructions:
+    _attributes: { phpName: Instructions }
+    id_instruction: { phpName: IdInstruction, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    instruction: { phpName: Instruction, type: LONGVARCHAR, required: false }
+  perfil:
+    _attributes: { phpName: Perfil }
+    correo: { phpName: Correo, type: VARCHAR, size: '145', required: false }
+    nombre: { phpName: Nombre, type: VARCHAR, size: '145', required: false }
+    sexo: { phpName: Sexo, type: VARCHAR, size: '45', required: false }
+    usuario: { phpName: Usuario, type: VARCHAR, size: '145', required: false }
+    cargo: { phpName: Cargo, type: VARCHAR, size: '145', required: false }
+    costo: { phpName: Costo, type: VARCHAR, size: '145', required: false }
+    oficina: { phpName: Oficina, type: VARCHAR, size: '145', required: false }
+    zona: { phpName: Zona, type: VARCHAR, size: '145', required: false }
+    area: { phpName: Area, type: VARCHAR, size: '245', required: false }
+    id_zona: { phpName: IdZona, type: VARCHAR, size: '45', required: false }
+    id_oficina: { phpName: IdOficina, type: VARCHAR, size: '45', required: false }
+    id_area: { phpName: IdArea, type: VARCHAR, size: '45', required: false }
+    id_cargo: { phpName: IdCargo, type: VARCHAR, size: '45', required: false }
   position:
     _attributes: { phpName: Position }
     id_position: { phpName: IdPosition, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
     position: { phpName: Position, type: VARCHAR, size: '100', required: true }
+  question:
+    _attributes: { phpName: Question }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    question: { phpName: Question, type: LONGVARCHAR, required: false }
+    id_dificultad: { phpName: IdDificultad, type: INTEGER, size: '11', required: false, foreignTable: dificulty, foreignReference: id_dificulty, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { FK_question_dificulty: [id_dificultad] }
+  questions_quiz:
+    _attributes: { phpName: QuestionsQuiz }
+    id_questions_quiz: { phpName: IdQuestionsQuiz, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    id_quiz: { phpName: IdQuiz, type: INTEGER, size: '10', required: false, defaultValue: '0', foreignTable: quiz, foreignReference: id_quiz, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '10', required: false, defaultValue: '0', foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { FK_questions_quiz_quiz: [id_quiz], FK_questions_quiz_question: [id_question] }
+  quiz:
+    _attributes: { phpName: Quiz }
+    id_quiz: { phpName: IdQuiz, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    description: { phpName: Description, type: LONGVARCHAR, required: false }
+    inicial_time: { phpName: InicialTime, type: TIMESTAMP, required: false }
+    final_time: { phpName: FinalTime, type: TIMESTAMP, required: false }
+  quizlog:
+    _attributes: { phpName: Quizlog }
+    id_quiz_usr_log: { phpName: IdQuizUsrLog, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    id_quizlog: { phpName: IdQuizlog, type: INTEGER, size: '11', required: false, foreignTable: quiz, foreignReference: id_quiz, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_usrql: { phpName: IdUsrql, type: INTEGER, size: '11', required: true, foreignTable: sf_guard_user_profile, foreignReference: user_id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    status: { phpName: Status, type: INTEGER, size: '11', required: false, defaultValue: '1' }
+    result: { phpName: Result, type: FLOAT, required: false, defaultValue: '0' }
+    _indexes: { id_usr_idx: [id_usrql], quiz_idx: [id_quizlog] }
+  quizusr:
+    _attributes: { phpName: Quizusr }
+    id_quiz_usr: { phpName: IdQuizUsr, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    id_usr_qu: { phpName: IdUsrQu, type: INTEGER, size: '11', required: true }
+    id_question: { phpName: IdQuestion, type: INTEGER, size: '11', required: false, foreignTable: question, foreignReference: id_question, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_answer: { phpName: IdAnswer, type: INTEGER, size: '11', required: false, foreignTable: answer, foreignReference: id_answer, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id_quiz: { phpName: IdQuiz, type: INTEGER, size: '11', required: false, foreignTable: quiz, foreignReference: id_quiz, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { id_question_idx: [id_question], id_answer_idx: [id_answer], idquiz_idx: [id_quiz] }
   zone:
     _attributes: { phpName: Zone }
     id_zone: { phpName: IdZone, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }

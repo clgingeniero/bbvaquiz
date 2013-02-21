@@ -77,49 +77,41 @@ class quizlogActions extends sfActions
     {
         $type = $request->getParameter('t');
         $id_quiz = $request->getParameter('id');
-        $result = '';
-        $criteria = '';
+        $c = new Criteria();
+        $c->addJoin(QuizlogPeer::ID_USRQL, sfGuardUserProfilePeer::USER_ID);
+        
+        
         switch ($type) {
             case 'u': // user
-                $result = $this->ranking($criteria, $id_quiz);
+                
                 break;
             case 'o': // office
-                $result = $this->ranking($criteria, $id_quiz);
+               
                 break;
             
             case 'z': // zone
-                $result = $this->ranking($criteria, $id_quiz);
+                $zona = 3; // $request->getParameter('z');
+                $c->add(sfGuardUserProfilePeer::ID_ZONE,  $zona);
                 break;
             
             case 't': // territorial
-                $result = $this->ranking($criteria, $id_quiz);
+                $depto = 501; // $request->getParameter('z');
+               $c->add(sfGuardUserProfilePeer::ID_DEPTO,  $depto);
                 break;
             
             case 'p': //
-                $result = $this->ranking($criteria, $id_quiz);
+                
                 break;
         }
         
-        $this->report = $result;
-        $this->setTemplate('report');
         
-    }
-    
-    public function ranking($criteria, $id_quiz)
-    {
-        $c = new Criteria();
-        $c->clearSelectColumns();
-        //$c->add($criteria);
-       
-        //$c->addJoin(QuizlogPeer::ID_QUIZ_USR_LOG, QuizPeer::ID_QUIZ);
-        $c->addJoin(QuizlogPeer::ID_USRQL, sfGuardUserProfilePeer::USER_ID);
-        //$c->addAsColumn('first_name', sfGuardUserProfilePeer::FIRST_NAME);
-        //sfGuardUserProfilePeer::addSelectColumns($c);
-        //QuizlogPeer::addSelectColumns($c);
         $c->add(QuizlogPeer::ID_QUIZLOG, $id_quiz);
         $c->add(QuizlogPeer::STATUS, self::finish);
         $c->addAscendingOrderByColumn(QuizlogPeer::RESULT);
-        return QuizlogPeer::doSelect($c);
+        $this->report =  QuizlogPeer::doSelectJoinsfGuardUserProfile($c);
+        
+        $this->setTemplate('report');
+        
     }
     
     

@@ -1746,3 +1746,444 @@ Feb 21 02:09:25 symfony [info] {sfWebDebugLogger} Factories 31.44 ms (1)
 Feb 21 02:09:25 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 28.79 ms (1)
 Feb 21 02:09:25 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 20.65 ms (1)
 Feb 21 02:09:25 symfony [info] {sfWebResponse} Send content (37215 o)
+Feb 21 02:29:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:29:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:29:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:29:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:29:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:29:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:29:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:29:26 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:29:26 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:29:27 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT FROM `quizlog`, `sf_guard_user_profile` WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:29:27 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:29:27 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:29:27 symfony [err] {sfException} Call to undefined method BaseQuizlog::getProfile
+Feb 21 02:29:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:29:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:29:27 symfony [info] {sfWebDebugLogger} Configuration 461.88 ms (11)
+Feb 21 02:29:27 symfony [info] {sfWebDebugLogger} Factories 483.83 ms (1)
+Feb 21 02:29:27 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 525.48 ms (1)
+Feb 21 02:29:27 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 699.60 ms (1)
+Feb 21 02:29:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:29:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:29:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:29:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:29:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:29:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:29:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:29:42 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:29:42 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:29:42 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT FROM `quizlog`, `sf_guard_user_profile` WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:29:42 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:29:42 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:29:42 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstname
+Feb 21 02:29:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:29:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:29:42 symfony [info] {sfWebDebugLogger} Configuration 2.67 ms (10)
+Feb 21 02:29:42 symfony [info] {sfWebDebugLogger} Factories 31.79 ms (1)
+Feb 21 02:29:42 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 27.55 ms (1)
+Feb 21 02:29:42 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 55.92 ms (1)
+Feb 21 02:30:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:30:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:30:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:30:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:30:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:30:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:30:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:30:46 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:30:46 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:30:46 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:30:46 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:30:46 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:30:46 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstname
+Feb 21 02:30:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:30:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:30:46 symfony [info] {sfWebDebugLogger} Configuration 2.59 ms (10)
+Feb 21 02:30:46 symfony [info] {sfWebDebugLogger} Factories 29.58 ms (1)
+Feb 21 02:30:46 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 30.06 ms (1)
+Feb 21 02:30:46 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 79.17 ms (1)
+Feb 21 02:31:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:31:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:31:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:31:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:31:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:31:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:31:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:31:46 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:31:46 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:31:47 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:31:47 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:31:47 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:31:47 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstname
+Feb 21 02:31:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:31:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:31:47 symfony [info] {sfWebDebugLogger} Configuration 2.70 ms (10)
+Feb 21 02:31:47 symfony [info] {sfWebDebugLogger} Factories 29.22 ms (1)
+Feb 21 02:31:47 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 29.76 ms (1)
+Feb 21 02:31:47 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 86.95 ms (1)
+Feb 21 02:32:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:32:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:32:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:32:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:32:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:32:19 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:32:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:32:19 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:32:19 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:32:19 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT FROM `quizlog`, `sf_guard_user_profile` WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:32:19 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:32:19 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:32:19 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 02:32:19 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 02:32:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 21 02:32:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:32:19 symfony [info] {sfWebDebugLogger} Configuration 2.41 ms (10)
+Feb 21 02:32:19 symfony [info] {sfWebDebugLogger} Factories 28.60 ms (1)
+Feb 21 02:32:19 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 26.45 ms (1)
+Feb 21 02:32:19 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 61.46 ms (1)
+Feb 21 02:32:19 symfony [info] {sfWebResponse} Send content (34579 o)
+Feb 21 02:32:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:32:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:32:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:32:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:32:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:32:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:32:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:32:49 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:32:49 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:32:49 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT FROM `quizlog`, `sf_guard_user_profile` WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:32:49 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:32:49 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:32:49 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstname
+Feb 21 02:32:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:32:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:32:49 symfony [info] {sfWebDebugLogger} Configuration 2.37 ms (10)
+Feb 21 02:32:49 symfony [info] {sfWebDebugLogger} Factories 29.37 ms (1)
+Feb 21 02:32:49 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 24.96 ms (1)
+Feb 21 02:32:49 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 56.31 ms (1)
+Feb 21 02:33:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:33:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:33:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:33:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:33:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:33:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:33:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:33:01 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:33:01 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:33:01 symfony [debug] {sfPropelLogger} SELECT sf_guard_user_profile.FIRST_NAME AS first_name FROM `quizlog`, `sf_guard_user_profile` WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:33:01 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php on line 306 (Undefined offset: 1)
+Feb 21 02:33:01 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php on line 307 (Undefined offset: 2)
+Feb 21 02:33:01 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php on line 308 (Undefined offset: 3)
+Feb 21 02:33:01 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php on line 309 (Undefined offset: 4)
+Feb 21 02:33:01 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php on line 306 (Undefined offset: 1)
+Feb 21 02:33:01 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php on line 307 (Undefined offset: 2)
+Feb 21 02:33:01 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php on line 308 (Undefined offset: 3)
+Feb 21 02:33:01 symfony [notice] {sfWebDebugLogger}  Notice at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php on line 309 (Undefined offset: 4)
+Feb 21 02:33:01 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:33:01 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:33:01 symfony [notice] {sfWebDebugLogger}  Notice at /usr/lib/php/pear/symfony/exception/sfException.class.php on line 97 (ob_end_clean(): failed to discard buffer of zlib output compression (0))
+Feb 21 02:33:01 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/exception/sfException.class.php on line 107 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php:308))
+Feb 21 02:33:01 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstname
+Feb 21 02:33:01 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/exception/sfException.class.php on line 161 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php:308))
+Feb 21 02:33:01 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php:308))
+Feb 21 02:33:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:33:01 symfony [warning] {sfWebDebugLogger}  Warning at /usr/lib/php/pear/symfony/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/bbvaquiz/lib/model/om/BaseQuizlog.php:308))
+Feb 21 02:33:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:33:01 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (10)
+Feb 21 02:33:01 symfony [info] {sfWebDebugLogger} Factories 30.51 ms (1)
+Feb 21 02:33:01 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 164.61 ms (1)
+Feb 21 02:33:01 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 74.14 ms (1)
+Feb 21 02:33:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:33:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:33:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:33:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:33:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:33:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:33:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:33:12 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:33:12 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:33:12 symfony [debug] {sfPropelLogger} SELECT sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `sf_guard_user_profile`, `quizlog` WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:33:12 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:33:12 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:33:12 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstname
+Feb 21 02:33:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:33:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:33:12 symfony [info] {sfWebDebugLogger} Configuration 2.50 ms (10)
+Feb 21 02:33:12 symfony [info] {sfWebDebugLogger} Factories 32.35 ms (1)
+Feb 21 02:33:12 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 27.38 ms (1)
+Feb 21 02:33:12 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 54.56 ms (1)
+Feb 21 02:33:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:33:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:33:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:33:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:33:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:33:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:33:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:33:49 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:33:50 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:33:50 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT FROM `quizlog`, `sf_guard_user_profile` WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:33:50 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:33:50 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:33:50 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstName
+Feb 21 02:33:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:33:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:33:50 symfony [info] {sfWebDebugLogger} Configuration 3.04 ms (10)
+Feb 21 02:33:50 symfony [info] {sfWebDebugLogger} Factories 1644.63 ms (1)
+Feb 21 02:33:50 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 582.61 ms (1)
+Feb 21 02:33:50 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 571.34 ms (1)
+Feb 21 02:36:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:36:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:36:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:36:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:36:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:36:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:36:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:36:06 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:36:06 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:36:06 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT FROM `quizlog`, `sf_guard_user_profile` WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:36:06 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:36:06 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:36:06 symfony [debug] {sfPropelLogger} SELECT sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `sf_guard_user_profile` WHERE sf_guard_user_profile.ID=2
+Feb 21 02:36:06 symfony [err] {sfWebDebugLogger}  Error at /usr/lib/php/pear/symfony/escaper/sfOutputEscaperObjectDecorator.class.php on line 98 (Object of class sfGuardUserProfile could not be converted to string)
+Feb 21 02:37:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:37:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:37:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:37:04 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:37:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:37:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:37:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:37:04 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:37:04 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:37:04 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT FROM `quizlog`, `sf_guard_user_profile` WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:37:04 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:37:04 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:37:04 symfony [debug] {sfPropelLogger} SELECT sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `sf_guard_user_profile` WHERE sf_guard_user_profile.ID=2
+Feb 21 02:37:04 symfony [debug] {sfPropelLogger} SELECT sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `sf_guard_user_profile` WHERE sf_guard_user_profile.ID=1
+Feb 21 02:37:04 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 02:37:04 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 02:37:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 21 02:37:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:37:04 symfony [info] {sfWebDebugLogger} Configuration 2.26 ms (10)
+Feb 21 02:37:04 symfony [info] {sfWebDebugLogger} Factories 48.07 ms (1)
+Feb 21 02:37:04 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 29.28 ms (1)
+Feb 21 02:37:04 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 57.82 ms (1)
+Feb 21 02:37:04 symfony [info] {sfWebResponse} Send content (35340 o)
+Feb 21 02:38:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:38:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:38:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:38:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:38:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:38:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:38:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:38:06 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:38:06 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:38:06 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `quizlog` LEFT JOIN quiz ON (quizlog.ID_QUIZLOG=quiz.ID_QUIZ) LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:38:06 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:38:06 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:38:06 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstName
+Feb 21 02:38:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:38:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:38:06 symfony [info] {sfWebDebugLogger} Configuration 2.42 ms (10)
+Feb 21 02:38:06 symfony [info] {sfWebDebugLogger} Factories 53.58 ms (1)
+Feb 21 02:38:06 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 78.91 ms (1)
+Feb 21 02:38:06 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 117.05 ms (1)
+Feb 21 02:38:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:38:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:38:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:38:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:38:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:38:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:38:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:38:46 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:38:46 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:38:46 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:38:46 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:38:46 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:38:46 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstName
+Feb 21 02:38:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:38:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:38:46 symfony [info] {sfWebDebugLogger} Configuration 2.36 ms (10)
+Feb 21 02:38:46 symfony [info] {sfWebDebugLogger} Factories 30.67 ms (1)
+Feb 21 02:38:46 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 27.26 ms (1)
+Feb 21 02:38:46 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 54.60 ms (1)
+Feb 21 02:40:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:40:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:40:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:40:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:40:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:40:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:40:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:40:45 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:40:45 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:40:45 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:40:45 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:40:45 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:40:45 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstName
+Feb 21 02:40:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:40:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:40:45 symfony [info] {sfWebDebugLogger} Configuration 287.48 ms (11)
+Feb 21 02:40:45 symfony [info] {sfWebDebugLogger} Factories 371.50 ms (1)
+Feb 21 02:40:45 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 70.99 ms (1)
+Feb 21 02:40:45 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 353.15 ms (1)
+Feb 21 02:42:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:42:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:42:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:42:04 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:42:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:42:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:42:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:42:05 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:42:05 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:42:05 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:42:05 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:42:05 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:42:05 symfony [err] {sfException} Call to undefined method BaseQuizlog::getFirstName
+Feb 21 02:42:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:42:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:42:05 symfony [info] {sfWebDebugLogger} Configuration 1396.13 ms (10)
+Feb 21 02:42:05 symfony [info] {sfWebDebugLogger} Factories 625.48 ms (1)
+Feb 21 02:42:05 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 127.25 ms (1)
+Feb 21 02:42:05 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 441.64 ms (1)
+Feb 21 02:43:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:43:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:43:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:43:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:43:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:43:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:43:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:43:00 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:43:00 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:43:00 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:43:00 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:43:00 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:43:00 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 02:43:00 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 02:43:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 21 02:43:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:43:00 symfony [info] {sfWebDebugLogger} Configuration 2.32 ms (10)
+Feb 21 02:43:00 symfony [info] {sfWebDebugLogger} Factories 28.06 ms (1)
+Feb 21 02:43:00 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 28.92 ms (1)
+Feb 21 02:43:00 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 61.88 ms (1)
+Feb 21 02:43:00 symfony [info] {sfWebResponse} Send content (33576 o)
+Feb 21 02:54:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:54:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:54:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:54:18 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/u/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'u',  'id' => '1',)
+Feb 21 02:54:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:54:18 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:54:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:54:18 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:54:18 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:54:18 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY, sf_guard_user_profile.ID_ZONE, sf_guard_user_profile.EMAIL, sf_guard_user_profile.GENDER, sf_guard_user_profile.USER_BANK_ID, sf_guard_user_profile.ID_POSITION, sf_guard_user_profile.ID_CENTER_COST, sf_guard_user_profile.ID_DEPTO, sf_guard_user_profile.ID_AREA FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE sf_guard_user_profile.ID_ZONE=3 AND quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 02:54:18 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 02:54:18 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 02:54:18 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 02:54:18 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 02:54:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 21 02:54:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:54:18 symfony [info] {sfWebDebugLogger} Configuration 274.67 ms (11)
+Feb 21 02:54:18 symfony [info] {sfWebDebugLogger} Factories 459.66 ms (1)
+Feb 21 02:54:18 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 91.78 ms (1)
+Feb 21 02:54:18 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 180.70 ms (1)
+Feb 21 02:54:18 symfony [info] {sfWebResponse} Send content (34178 o)
+Feb 21 02:55:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 02:55:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 02:55:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 02:55:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/z/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'z',  'id' => '1',)
+Feb 21 02:55:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 02:55:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 02:55:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 02:55:48 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 02:55:48 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 02:55:48 symfony [err] {sfPropelLogger} SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '::ID_ZONE, 3 IS NULL  AND quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlo' at line 1
+Feb 21 02:55:48 symfony [err] {PropelException}  [wrapped: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '::ID_ZONE, 3 IS NULL  AND quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlo' at line 1]
+Feb 21 02:55:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 21 02:55:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 02:55:48 symfony [info] {sfWebDebugLogger} Configuration 1.73 ms (9)
+Feb 21 02:55:48 symfony [info] {sfWebDebugLogger} Factories 29.71 ms (1)
+Feb 21 02:55:48 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 201.50 ms (1)
+Feb 21 03:04:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 03:04:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 03:04:39 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 03:04:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/z/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 'z',  'id' => '1',)
+Feb 21 03:04:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 03:04:39 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 03:04:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 03:04:39 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 03:04:39 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 03:04:39 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY, sf_guard_user_profile.ID_ZONE, sf_guard_user_profile.EMAIL, sf_guard_user_profile.GENDER, sf_guard_user_profile.USER_BANK_ID, sf_guard_user_profile.ID_POSITION, sf_guard_user_profile.ID_CENTER_COST, sf_guard_user_profile.ID_DEPTO, sf_guard_user_profile.ID_AREA FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE sf_guard_user_profile.ID_ZONE=3 AND quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 03:04:39 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 03:04:39 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 03:04:39 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 03:04:39 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 03:04:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 21 03:04:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 03:04:39 symfony [info] {sfWebDebugLogger} Configuration 3.37 ms (10)
+Feb 21 03:04:39 symfony [info] {sfWebDebugLogger} Factories 411.17 ms (1)
+Feb 21 03:04:39 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 273.93 ms (1)
+Feb 21 03:04:39 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 187.24 ms (1)
+Feb 21 03:04:40 symfony [info] {sfWebResponse} Send content (34177 o)
+Feb 21 03:04:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 03:04:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 03:04:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 03:04:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/t/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 't',  'id' => '1',)
+Feb 21 03:04:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 03:04:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 03:04:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 03:04:48 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 03:04:48 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 03:04:48 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY, sf_guard_user_profile.ID_ZONE, sf_guard_user_profile.EMAIL, sf_guard_user_profile.GENDER, sf_guard_user_profile.USER_BANK_ID, sf_guard_user_profile.ID_POSITION, sf_guard_user_profile.ID_CENTER_COST, sf_guard_user_profile.ID_DEPTO, sf_guard_user_profile.ID_AREA FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE sf_guard_user_profile.ID_DEPTO=18 AND quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 03:04:48 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 03:04:48 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 03:04:48 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 03:04:48 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 03:04:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 21 03:04:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 03:04:48 symfony [info] {sfWebDebugLogger} Configuration 2.66 ms (10)
+Feb 21 03:04:48 symfony [info] {sfWebDebugLogger} Factories 28.87 ms (1)
+Feb 21 03:04:48 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 56.41 ms (1)
+Feb 21 03:04:48 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 13.60 ms (1)
+Feb 21 03:04:48 symfony [info] {sfWebResponse} Send content (34094 o)
+Feb 21 03:05:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 03:05:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 03:05:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 03:05:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/t/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 't',  'id' => '1',)
+Feb 21 03:05:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 03:05:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 03:05:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 03:05:23 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 03:05:23 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 03:05:23 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY, sf_guard_user_profile.ID_ZONE, sf_guard_user_profile.EMAIL, sf_guard_user_profile.GENDER, sf_guard_user_profile.USER_BANK_ID, sf_guard_user_profile.ID_POSITION, sf_guard_user_profile.ID_CENTER_COST, sf_guard_user_profile.ID_DEPTO, sf_guard_user_profile.ID_AREA FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE sf_guard_user_profile.ID_DEPTO=155 AND quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 03:05:23 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 03:05:23 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 03:05:23 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 03:05:23 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 03:05:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 21 03:05:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 03:05:23 symfony [info] {sfWebDebugLogger} Configuration 2.18 ms (10)
+Feb 21 03:05:23 symfony [info] {sfWebDebugLogger} Factories 28.62 ms (1)
+Feb 21 03:05:23 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 35.40 ms (1)
+Feb 21 03:05:23 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 11.55 ms (1)
+Feb 21 03:05:23 symfony [info] {sfWebResponse} Send content (34137 o)
+Feb 21 03:05:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+Feb 21 03:05:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+Feb 21 03:05:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+Feb 21 03:05:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /quizlog/report/t/t/id/1 with parameters array (  'module' => 'quizlog',  'action' => 'report',  't' => 't',  'id' => '1',)
+Feb 21 03:05:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 21 03:05:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Feb 21 03:05:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 21 03:05:44 symfony [info] {quizlogActions} Call "quizlogActions->executeReport()"
+Feb 21 03:05:44 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 21 03:05:44 symfony [debug] {sfPropelLogger} SELECT quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, quizlog.RESULT, sf_guard_user_profile.ID, sf_guard_user_profile.USER_ID, sf_guard_user_profile.FIRST_NAME, sf_guard_user_profile.LAST_NAME, sf_guard_user_profile.BIRTHDAY, sf_guard_user_profile.ID_ZONE, sf_guard_user_profile.EMAIL, sf_guard_user_profile.GENDER, sf_guard_user_profile.USER_BANK_ID, sf_guard_user_profile.ID_POSITION, sf_guard_user_profile.ID_CENTER_COST, sf_guard_user_profile.ID_DEPTO, sf_guard_user_profile.ID_AREA FROM `quizlog` LEFT JOIN sf_guard_user_profile ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) WHERE sf_guard_user_profile.ID_DEPTO=501 AND quizlog.ID_QUIZLOG='1' AND quizlog.STATUS=1 AND quizlog.ID_USRQL=sf_guard_user_profile.USER_ID ORDER BY quizlog.RESULT ASC
+Feb 21 03:05:44 symfony [info] {quizlogActions} Change template to "CURRENT/report"
+Feb 21 03:05:44 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/modules/quizlog/templates/reportSuccess.php"
+Feb 21 03:05:44 symfony [info] {sfPHPView} Decorate content with "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 03:05:44 symfony [info] {sfPHPView} Render "/Applications/MAMP/htdocs/bbvaquiz/apps/frontend/templates/layout.php"
+Feb 21 03:05:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 21 03:05:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 21 03:05:44 symfony [info] {sfWebDebugLogger} Configuration 2.25 ms (10)
+Feb 21 03:05:44 symfony [info] {sfWebDebugLogger} Factories 30.15 ms (1)
+Feb 21 03:05:44 symfony [info] {sfWebDebugLogger} Action "quizlog/report" 33.35 ms (1)
+Feb 21 03:05:44 symfony [info] {sfWebDebugLogger} View "Success" for "quizlog/report" 12.00 ms (1)
+Feb 21 03:05:44 symfony [info] {sfWebResponse} Send content (34137 o)
