@@ -9,6 +9,9 @@
  */
 class quizlogActions extends sfActions
 {
+    const finish = 1;
+    const partial = 2;
+    
   public function executeIndex(sfWebRequest $request)
   {
     $this->quizusrs = QuizusrPeer::doSelect(new Criteria());
@@ -67,4 +70,58 @@ class quizlogActions extends sfActions
       $this->redirect('quizlog/edit?id_quiz_usr='.$quizusr->getIdQuizUsr());
     }
   }
+  
+  // -- reports
+    
+    public function executeReport(sfWebRequest $request)
+    {
+        $type = $request->getParameter('t');
+        $id_quiz = $request->getParameter('id');
+        $result = '';
+        $criteria = '';
+        switch ($type) {
+            case 'u': // user
+                $result = $this->ranking($criteria, $id_quiz);
+                break;
+            case 'o': // office
+                $result = $this->ranking($criteria, $id_quiz);
+                break;
+            
+            case 'z': // zone
+                $result = $this->ranking($criteria, $id_quiz);
+                break;
+            
+            case 't': // territorial
+                $result = $this->ranking($criteria, $id_quiz);
+                break;
+            
+            case 'p': //
+                $result = $this->ranking($criteria, $id_quiz);
+                break;
+        }
+        
+        $this->report = $result;
+        $this->setTemplate('report');
+        
+    }
+    
+    public function ranking($criteria, $id_quiz)
+    {
+        $c = new Criteria();
+        $c->clearSelectColumns();
+        //$c->add($criteria);
+       
+        //$c->addJoin(QuizlogPeer::ID_QUIZ_USR_LOG, QuizPeer::ID_QUIZ);
+        $c->addJoin(QuizlogPeer::ID_USRQL, sfGuardUserProfilePeer::USER_ID);
+        //$c->addAsColumn('first_name', sfGuardUserProfilePeer::FIRST_NAME);
+        //sfGuardUserProfilePeer::addSelectColumns($c);
+        //QuizlogPeer::addSelectColumns($c);
+        $c->add(QuizlogPeer::ID_QUIZLOG, $id_quiz);
+        $c->add(QuizlogPeer::STATUS, self::finish);
+        $c->addAscendingOrderByColumn(QuizlogPeer::RESULT);
+        return QuizlogPeer::doSelect($c);
+    }
+    
+    
+    
 }

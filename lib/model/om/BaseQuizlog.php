@@ -39,6 +39,8 @@ abstract class BaseQuizlog extends BaseObject  implements Persistent {
 	 * @var        int
 	 */
 	protected $id_usrql;
+        
+        protected $firstname;
 
 	/**
 	 * The value for the status field.
@@ -128,6 +130,35 @@ abstract class BaseQuizlog extends BaseObject  implements Persistent {
 	{
 		return $this->id_usrql;
 	}
+        
+        public function setFirstName($v)
+        {
+         
+		if ($v !== null) {
+			$v = (int) $v;
+		}
+
+		if ($this->firstName !== $v || $this->isNew()) {
+			$this->firstName = $v;
+			$this->modifiedColumns[] = sfGuardUserProfilePeer::FIRST_NAME;
+		}
+
+		return $this;
+	
+            
+           
+        }
+
+ 
+
+        public function getProfile()
+        {
+            //if (!$this->firstName)
+            $this->profile = sfGuardUserProfilePeer::retrieveByPk($this->getIdQuizUsrLog());
+            
+            return $this->profile;
+          
+        } 
 
 	/**
 	 * Get the [status] column value.
