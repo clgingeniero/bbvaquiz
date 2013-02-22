@@ -24,7 +24,7 @@
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt	LGPL
  * @version    ##VERSION##, ##DATE##
  */
-
+error_reporting(E_ALL ^ E_STRICT);
 
 /** PHPExcel_IComparable */
 require_once 'PHPExcel/IComparable.php';
@@ -271,7 +271,8 @@ class PHPExcel_Worksheet_HeaderFooterDrawing extends PHPExcel_Worksheet_Drawing 
      * @return string
      */
     public function getExtension() {
-    	return end(explode(".", basename($this->_path)));
+        
+    	return end(explode(".", basename($path = $this->_path)));
     }
     
     /**
