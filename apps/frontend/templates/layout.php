@@ -11,6 +11,7 @@
     
   <body>
       <div class="layout">
+          <div class="logo"></div>
       <div class="menu">
        
             <a href="<?php echo url_for('/') ?>">
@@ -34,16 +35,42 @@
             </a>
            
       
-      </div> <br></br>
+      </div> 
+     <div class="clear-boot"></div>
+      <div class="over-smenu">
+       
+           
+                <div class="over-men-home"></div>
+           
+            
+           
+                <div class="over-men-acco"></div>
+           
+           
+            
+                <div class="over-men-inst"></div>
+            
+            
+           
+                <div class="over-men-help"></div>
+           
+            
+           
+                <div class="over-men-clos"></div>
+           
+           
+      
+      </div> 
+         
       <div class="home">
         <?php echo $sf_content ?>
       </div>
  
       <div class="footer"></div>
       <?php //if() ?> 
-      <a href="<?php echo url_for('/') ?>">
+     <!-- <a href="<?php //echo url_for('/') ?>">
         <div class="back"></div>
-      </a>
+      </a> -->
           
   </div>
   </body>

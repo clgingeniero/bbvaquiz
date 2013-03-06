@@ -16,4 +16,4 @@
             <div class="btnhomeInfo"></div>
         </a>
     </div>
-    <div class="line-home"></div>
+    <!-- <div class="line-home"></div> -->
