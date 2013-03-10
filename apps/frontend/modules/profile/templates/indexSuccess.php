@@ -1,42 +1,34 @@
-<h1>SfGuardUserProfiles List</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>User</th>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Birthday</th>
-      <th>Id zone</th>
-      <th>Email</th>
-      <th>Gender</th>
-      <th>User bank</th>
-      <th>Id position</th>
-      <th>Id center cost</th>
-      <th>Id depto</th>
-      <th>Id area</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($sfGuardUserProfiles as $sfGuardUserProfile): ?>
-    <tr>
-      <td><a href="<?php echo url_for('profile/edit?id='.$sfGuardUserProfile->getId()) ?>"><?php echo $sfGuardUserProfile->getId() ?></a></td>
-      <td><?php echo $sfGuardUserProfile->getUserId() ?></td>
-      <td><?php echo $sfGuardUserProfile->getFirstName() ?></td>
-      <td><?php echo $sfGuardUserProfile->getLastName() ?></td>
-      <td><?php echo $sfGuardUserProfile->getBirthday() ?></td>
-      <td><?php echo $sfGuardUserProfile->getIdZone() ?></td>
-      <td><?php echo $sfGuardUserProfile->getEmail() ?></td>
-      <td><?php echo $sfGuardUserProfile->getGender() ?></td>
-      <td><?php echo $sfGuardUserProfile->getUserBankId() ?></td>
-      <td><?php echo $sfGuardUserProfile->getIdPosition() ?></td>
-      <td><?php echo $sfGuardUserProfile->getIdCenterCost() ?></td>
-      <td><?php echo $sfGuardUserProfile->getIdDepto() ?></td>
-      <td><?php echo $sfGuardUserProfile->getIdArea() ?></td>
-    </tr>
-    <?php endforeach; ?>
-  </tbody>
-</table>
+  
+  <div class="fond-home"></div>
+    <div class="pers-gen"></div>
+    <div class="tit-instru">
+        <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
+          <div class="linea"></div>
+        <p class="subtit-inst">Calidad eje fundamental del crecimiento</p>
+        <div class="tit-help"></div>
+        
+    </div>
+  
+<div class="content-profile">
+    <label>Nombre: </label><label><?php echo $sfGuardUserProfile->getFirstName() ?></label><br>
+    <label>Codigo: </label><label><?php echo $sfGuardUserProfile->getUserBankId() ?></label><br>
+    <label>Zona: </label><label><?php echo $sfGuardUserProfile->getIdZone() ?></label><br>
+    <label>Area: </label><label><?php echo $sfGuardUserProfile->getIdArea() ?></label><br>
+    <label>Cargo: </label><label><?php echo $sfGuardUserProfile->getIdPosition() ?></label><br>
+    
+    <div class="div-btns">
+    <div class="menu-btn">
+<?php echo link_to('Nuevas', '@nuevas') ?>
+</div>
+<div class="menu-btn">
+<?php echo link_to('Pendientes', '@pendientes') ?>
+</div>
 
-  <a href="<?php echo url_for('profile/new') ?>">New</a>
+<div class="menu-btn">
+<?php echo link_to('Finalizadas', '@finalizadas') ?>
+</div>
+    </div>
+
+   
+</div>

@@ -1,33 +1,31 @@
 #sf_admin_container a
 {
-  color: #464646;
+  color: #1C509D;
   text-decoration: none;
 }
 
 #sf_admin_container a:hover
 {
-  color: #000;
-  text-decoration: underline;
+  color: #1C509D;
+  text-decoration: none;
 }
 
 #sf_admin_container h1
 {
-  margin: 0;
+  margin: 8px 0 8px;
   padding: 0;
-  margin-bottom: 20px;
+ 
 }
 
 #sf_admin_container th
 {
-  background-color: #e7eef6;
+  background-color: #83D2EF;
   white-space: nowrap;
 }
 
 #sf_admin_container td, #sf_admin_container th
 {
-  border: 0;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+ 
   text-align: left;
   vertical-align: top;
 }
@@ -102,8 +100,8 @@
 
 #sf_admin_bar
 {
-  float: right;
-  margin-left: 20px;
+  float: left;
+    width: 536px;
 }
 
 .sf_admin_pagination
@@ -142,8 +140,8 @@
 #sf_admin_container ul.sf_admin_actions li a,
 #sf_admin_container ul.sf_admin_td_actions li a
 {
-  padding-left: 20px;
-  background: url(../images/default.png) no-repeat 0 0;
+  
+  /** background: url(../images/default.png) no-repeat 0 0; **/
 }
 
 #sf_admin_container ul li.sf_admin_action_new a
@@ -153,7 +151,7 @@
 
 #sf_admin_container ul li.sf_admin_action_delete a
 {
-  background: url(../images/delete.png) no-repeat 0 0;
+  /** background: url(../images/delete.png) no-repeat 0 0; **/
 }
 
 #sf_admin_container ul li.sf_admin_action_list a
@@ -163,7 +161,7 @@
 
 #sf_admin_container ul li.sf_admin_action_edit a
 {
-  background: url(../images/edit.png) no-repeat 0 0;
+  /** background: url(../images/edit.png) no-repeat 0 0; **/
 }
 
 #sf_admin_container .notice
@@ -226,7 +224,7 @@
   float: left;
   text-align: left;
   width: 8em;
-  color: #666;
+  color: #1C509D;
   font-weight: normal !important;
 }
 

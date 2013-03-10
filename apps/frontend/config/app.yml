@@ -3,3 +3,10 @@
 
 # default values
 #all:
+
+all:
+  sf_guard_plugin:
+    success_signin_url:  profile
+    success_signout_url: /
+  
+   

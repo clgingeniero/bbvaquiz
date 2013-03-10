@@ -13,26 +13,30 @@
       <div class="layout">
           <div class="logo"></div>
       <div class="menu">
-       
+        <a href="<?php echo url_for('logout') ?>">
+                <div class="men-clos"></div>
+            </a>
+          <a href="<?php echo url_for('help') ?>">
+                <div class="men-help"></div>
+            </a>
+           <a href="<?php echo url_for('instructions/index') ?>">
+                <div class="men-inst"></div>
+            </a>
+           <a href="<?php echo url_for('profile') ?>">
+                <div class="men-acco"></div>
+            </a>
+            
+          
             <a href="<?php echo url_for('/') ?>">
                 <div class="men-home"></div>
             </a>
             
-            <a href="<?php echo url_for('instructions/index') ?>">
-                <div class="men-acco"></div>
-            </a>
            
-            <a href="<?php echo url_for('instructions/index') ?>">
-                <div class="men-inst"></div>
-            </a>
+           
+           
             
-            <a href="<?php echo url_for('help') ?>">
-                <div class="men-help"></div>
-            </a>
             
-            <a href="<?php echo url_for('quiz/list') ?>">
-                <div class="men-clos"></div>
-            </a>
+           
            
       
       </div> 

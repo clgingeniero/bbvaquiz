@@ -83,6 +83,22 @@ class quizActions extends sfActions
         $this->quiz_end_list = QuizPeer::doSelect($criteriaEnd);
     }
   
+    public function executePending()
+    {
+        $criteria = new Criteria();
+        $criteria->add(QuizPeer::INICIAL_TIME, time(),Criteria::LESS_THAN);
+        $criteria->add(QuizPeer::FINAL_TIME, time(),Criteria::GREATER_THAN);
+        $this->quiz_active_list = QuizPeer::doSelect($criteria);
+       
+    }
+    
+    public function executeEnd()
+    {
+        $criteriaEnd = new Criteria();
+        $criteriaEnd->add(QuizPeer::FINAL_TIME, time(),Criteria::LESS_THAN);
+        $this->quiz_end_list = QuizPeer::doSelect($criteriaEnd);
+       
+    }
   
     public function executeDo(sfWebRequest $request, $action = '')
     {

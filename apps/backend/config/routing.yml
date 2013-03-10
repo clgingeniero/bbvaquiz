@@ -132,6 +132,7 @@ question:
     prefix_path:          /question
     column:               id_question
     with_wildcard_routes: true
+    
 
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
@@ -144,20 +145,32 @@ homepage:
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
-  url:   /:module
+  url:   /:dificulty
   param: { action: index }
 
 default:
-  url:   /:module/:action/*
+  url:   /:@dificulty/:index/*
   
 sf_guard_signin:
   url:   /login
   param: { module: sfGuardAuth, action: signin }
  
-sf_guard_signout:
+logout:
   url:   /logout
   param: { module: sfGuardAuth, action: signout }
  
 sf_guard_password:
   url:   /request_password
   param: { module: sfGuardAuth, action: password }
+  
+help:
+  url:   /help
+  param: { module: instructions, action: help }
+  
+register:
+  url:   /register
+  param: { module: sfGuardUser, action: new }
+  
+profile:
+  url:   /sf_guard_user
+  param: { module: sf_guard_user, action: index }

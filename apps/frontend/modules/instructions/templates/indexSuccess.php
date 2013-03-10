@@ -1,8 +1,9 @@
 <div class="fond-home"></div>
     <div class="pers-inst"></div>
     <div class="tit-instru">
-        <p class="titulo-inst">GANA EL MAYOR PUNTAJE!</p>
-        <p class="subtit-inst">en calidad de un buen servicio</p>
+        <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
+          <div class="linea"></div>
+        <p class="subtit-inst">Calidad eje fundamental del crecimiento</p>
         <div class="titimageinstru"></div>
         
     </div>

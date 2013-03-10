@@ -1,12 +1,15 @@
 
     <div class="fond-home"></div>
     <div class="pers-home"></div>
-    <div class="tit-home">
-        <p class="tit">GANA EL MAYOR PUNTAJE!</p>
-        <p class="subtit">en calidad de un buen servicio</p>
+   <div class="tit-instru">
+        <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
+          <div class="linea"></div>
+        <p class="subtit-inst">Calidad eje fundamental del crecimiento</p>
+        <div class="tit-help"></div>
+        
     </div>
     <div class="men-ppal">
-        <a href="<?php echo url_for('quiz/list') ?>">
+        <a href="<?php echo url_for('profile') ?>">
             <div class="btnhomeInicio"></div>
         </a>      
         <a href="<?php echo url_for('instructions/index') ?>">

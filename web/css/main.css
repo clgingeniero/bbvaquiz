@@ -8,11 +8,14 @@ src: url('../fonts/Catalogo.otf') format('opentype');
 
 body{
     font-family: Catalogo;
+    background: #fff;
 }
 
-p { margin:0; line-height:30px; font-size:11pt; }
-
-.menu{ float: right; padding-top: 22px;}
+p { margin:0; line-height:22px; font-size:11pt; }
+a {color: #fff;}
+a:hover{color: #fff; text-transform: none;}
+label{ line-height: 1.3em;}
+.menu{  padding-top: 22px;}
 .over-smenu{float: right;}
 .logo{background: url("../images/bbva.png") no-repeat scroll 0 0 transparent;
     float: left;
@@ -21,60 +24,60 @@ p { margin:0; line-height:30px; font-size:11pt; }
     margin-top: 22px;
     width: 112px;}
 .men-home{ background: url("../images/menu-gral_03.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 28px;
     margin-top: 7px;
     padding-left: 14px;
     width: 30px; }
 .men-acco{ background: url("../images/menu-gral_05.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 35px;
     padding-left: 14px;
     width: 30px;}
 .men-inst{ background: url("../images/menu-gral_07.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 34px;
     margin-top: 1px;
     padding-left: 14px;
     width: 33px;}
 .men-help{ background: url("../images/menu-gral_09.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 34px;
     margin-top: 1px;
     padding-left: 14px;
     width: 34px;}
 .men-clos{background: url("../images/menu-gral_11.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 34px;
     margin-top: 1px;
     padding-left: 14px;
     width: 34px;}
 .over-men-home{ background: url("../images/over-menu-gral_03.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 28px;
     display: none;
     padding-left: 14px;
     width: 30px; }
 .over-men-acco{ background: url("../images/over-menu-gral_05.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 35px;
     padding-left: 14px;
     display: none;
     width: 30px;}
 .over-men-inst{ background: url("../images/over-menu-gral_07.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 34px;
     display: none;
     padding-left: 14px;
     width: 33px;}
 .over-men-help{ background: url("../images/over-menu-gral_09.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 34px;
     display: none;
     padding-left: 14px;
     width: 34px;}
 .over-men-clos{background: url("../images/over-menu-gral_11.jpg") no-repeat scroll 0 0 transparent;
-    float: left;
+    float: right;
     height: 34px;
     display: none;
     padding-left: 14px;
@@ -128,6 +131,13 @@ p { margin:0; line-height:30px; font-size:11pt; }
     margin-top: 81px;
     width: 358px;
 }
+.pers-gen{   background: url("../images/4.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 462px;
+    margin-left: -68px;
+    margin-top: 81px;
+    width: 358px;
+}
 .tit-instru{ color: #86C82D;
     
     font-size: 20px;
@@ -138,12 +148,10 @@ p { margin:0; line-height:30px; font-size:11pt; }
     }
 .titulo-inst{
         color: #86C82D;
-    font-size: 20px;
+    font-size: 22px;
     }
-.subtit-inst{color: #1D4FA4;
-    
-    font-size: 19px;
-    margin-left: 15px;
+.subtit-inst{color: #99D2EF;
+    font-size: 16px;
     }
 .titimageinstru{background: url("../images/instrucciones_03.png") no-repeat scroll 0 0 transparent;
 width: 329px; height: 44px;}
@@ -189,6 +197,10 @@ width: 20px; height: 21px; float: left;}
 .tit-help{background: url("../images/ayuda_03.png") no-repeat scroll 0 0 transparent;
 width: 329px; height: 44px;}
 
+
+.tit-pending{background: url("../images/pendientes_03.png") no-repeat scroll 0 0 transparent;
+width: 329px; height: 44px;}
+
 .cont-help{background: url("../images/ayuda_07.png") no-repeat scroll 0 0 transparent;
     height: 370px;
     margin-left: 350px;
@@ -205,7 +217,7 @@ width: 329px; height: 44px;}
 }
 
 .tit-ini{   left: 461px;
-    padding-top: 37px;
+    padding-top: 94px;
     position: absolute;
     top: 37px;}
 .menu-inicio{
@@ -235,4 +247,53 @@ input[type="submit"]{
     font-size: 12px;
     padding: 5px 15px;
     text-decoration: none;}
+.linea{background: url("../images/linea-discontinua.jpg") no-repeat scroll 0 0 transparent;
+    height: 4px;
+    width: 309px;}
+.menu-btn{background: none repeat scroll 0 0 #1D509F;
+   
+    margin: 3px;
+    padding: 3px;
+    width: 86px;}
+.div-btns{float: left;
+    padding-top: 30px;}
+.content-profile{padding-right: 20px;
+    padding-top: 178px;
+    text-align: justify;}
+.tit-act{ color:#99D2EF;
+    float: left;
+    padding-right: 10px;
+    width: 200px;}
+.restart{
+         float: left;
+    padding-right: 10px;
+    width: 10px;}
+.time{color:#99D2EF; float: left;
+    padding-right: 10px;
+    width: 126px;}
+.avance{color:#99D2EF;
+        float: left;
+    padding-right: 10px;
+    width: 55px;}
+.activi{border-bottom: 1px solid #1D509F;
+        float: left;
+    padding-right: 10px;
+    width: 200px;}
+.btn-restart{float: left;
+    padding-right: 10px;
+    width: 10px;}
+.time-dv{border: 1px solid #1D509F;
+    float: left;
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 113px;}
+.avance-dv{  border: 1px solid #1D509F;
+    float: left;
+    padding-left: 3px;
+    width: 63px;}
+.clear-pending{height: 10px;
+    margin-bottom: 40px;
+    width: 100%;}
+.tit-end{background: url("../images/finalizadas_03.png") no-repeat scroll 0 0 transparent;
+width: 329px; height: 44px;}
 

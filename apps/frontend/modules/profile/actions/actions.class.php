@@ -11,7 +11,10 @@ class profileActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->sfGuardUserProfiles = SfGuardUserProfilePeer::doSelect(new Criteria());
+    $user_id = $this->getUser()->getGuardUser()->getId(); 
+    $criteria = new Criteria();
+    $criteria->add(SfGuardUserProfilePeer::USER_ID, $user_id);
+    $this->sfGuardUserProfile = SfGuardUserProfilePeer::doSelectOne($criteria);
   }
 
   public function executeNew(sfWebRequest $request)
