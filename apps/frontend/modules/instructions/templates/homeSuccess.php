@@ -1,12 +1,9 @@
 
     <div class="fond-home"></div>
     <div class="pers-home"></div>
-   <div class="tit-instru">
-        <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
-          <div class="linea"></div>
-        <p class="subtit-inst">Calidad eje fundamental del crecimiento</p>
-        <div class="tit-help"></div>
-        
+   <div class="tit-ini">
+        <p class="tit">GANA EL MAYOR PUNTAJE!</p>
+        <p class="subtit">Calidad eje fundamental del crecimiento</p>
     </div>
     <div class="men-ppal">
         <a href="<?php echo url_for('profile') ?>">

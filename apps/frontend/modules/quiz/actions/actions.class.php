@@ -114,6 +114,11 @@ class quizActions extends sfActions
             if($this->question != null)
               $this->answers = $this->getAnswers($this->question);
             else {
+              $this->calculeResult($request->getParameter('id'));
+              $this->saveUserLog($request);
+              //calcula la posicion del usuario en el ranking
+              $this->getUserPosition($quiz);
+        
               $this->setTemplate('finish');
               return;
             }
@@ -121,8 +126,9 @@ class quizActions extends sfActions
 
             $this->timesQuiz();
         } else {
-             $this->setTemplate('save');
-             return;
+            
+            $this->setTemplate('save');
+            return;
         } 
 
         $this->setTemplate('do');
@@ -194,9 +200,14 @@ class quizActions extends sfActions
     public function saveQuizLog($request)
     {
         $qusr = new Quizusr();
-       
-        if($request->getParameter('question') != '' && $request->getParameter('answers') != '' &&
+       /*echo "q: ". $request->getParameter('question'); 
+       echo "a: ". $request->getParameter('answers');
+       echo "u: ". $this->getUser()->getGuardUser()->getId();
+       echo "i: ". $request->getParameter('id'); */
+      
+       if($request->getParameter('question') != '' && $request->getParameter('answers') != '' &&
                 $this->getUser()->getGuardUser()->getId() != '' && $request->getParameter('id') != '') {
+            
             $qusr->setIdQuestion($request->getParameter('question'));
             $qusr->setIdAnswer($request->getParameter('answers'));
             $qusr->setIdUsrQu($this->getUser()->getGuardUser()->getId());
@@ -221,9 +232,112 @@ class quizActions extends sfActions
     
     public function executeNext(sfWebRequest $request)
     {
-        return $this->renderText('as results.');
+        $this->saveQuizLog($request);
+        $this->executeDo($request, false);
         
     }
+    
+    public function calculeResult($quiz)
+    {
+        $criteria = new Criteria();
+       
+        $criteria->add(QuestionsQuizPeer::ID_QUIZ, $quiz);
+        $criteria->addJoin(QuestionsQuizPeer::ID_QUESTION, QuestionPeer::ID_QUESTION);
+        $questions = QuestionPeer::doSelect($criteria);
+        
+        
+        $dif = $this->getValueDif($quiz);
+        
+        //puntaje total en la actividad
+        $this->totalActividad = $this->getValueActividad($questions, $dif[0]); 
+        
+        //puntaje obtenido
+        return $this->totalUser = $this->getValueActividad($this->getUserResult($quiz), $dif[0]);
+        
+        
+        
+        
+        //$this->setTemplate('finish');
+      
+        
+       
+     }
+     
+     public function getValueDif($quiz)
+     {
+        $criteriaValor = new Criteria();
+        $criteriaValor->add(DificultyQuizPeer::ID_QUIZ, $quiz);
+        return DificultyQuizPeer::doSelect($criteriaValor);
+     }
+
+     public function getUserResult($quiz)
+     {
+        $criteriaValor = new Criteria();
+        $criteriaValor->add(QuizusrPeer::ID_QUIZ, $quiz);
+        $criteriaValor->addJoin(QuestionPeer::ID_QUESTION, QuizusrPeer::ID_QUESTION);
+        return QuestionPeer::doSelect($criteriaValor);
+     }
+
+     public function getUserPosition($quiz)
+     {
+        
+        $criteriaValor = new Criteria();
+        $criteriaValor->clearSelectColumns();
+        //$criteriaValor->addSelectColumn(QuizlogPeer::ID_QUIZ_USR_LOG);
+        $criteriaValor->add(QuizlogPeer::ID_QUIZLOG, $quiz);
+        $criteriaValor->addDescendingOrderByColumn(QuizlogPeer::RESULT);
+       
+        $rs = QuizlogPeer::doSelect($criteriaValor);
+        //$a = QuizlogPeer::doSelect($criteriaValor);
+        $i = 0;
+        foreach($rs as $usr){
+            $i++;
+            if($usr->getIdUsrql() == $this->getUser()->getGuardUser()->getId())
+                break;
+        }
+        $this->position = $i;
+        $this->totUsers = sizeof($rs);
+        
+       return;
+         
+         
+     }
+
+     public function getValueActividad($questions, $valor){
+        
+         $vale = 0;
+         $easy = $valor->getEasy();
+         $medium = $valor->getMedium();
+         $hard = $valor->getHard(); 
+        
+         
+         
+         foreach($questions as $ques){
+            
+             switch ($ques->getIdDificultad()){
+                 case 1:
+                    $vale += $easy;
+                     break;
+                 case 2:
+                      $vale += $medium;
+                     break;
+                 case 3:
+                      $vale += $hard;
+                     break;
+             }
+            
+         }
+         
+         return $vale;
+         
+     }
+     
+     
+     public function saveUserLog()
+     {
+         //guardar puntaje de usuario
+     }
+     
     
     
     

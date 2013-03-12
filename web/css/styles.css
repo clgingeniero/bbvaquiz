@@ -18,10 +18,8 @@
 }
 
 .timer-area {
-  background: transparent url('../images/timer-area-pattern.png') left top;
-  text-align: center;
-  padding-top: 2em;
-  margin-bottom: 4em;
+  padding-left: 8%;
+  position: absolute;
 }
 .timer-area h1 {
   color: white;
@@ -44,36 +42,29 @@
 /* ---------- TIMER ---------- */
 ul#countdown li {
   display: inline-block;
-  background: transparent url('../images/timer-piece.png') no-repeat left top;
-  width: 104px;
-  margin-bottom: 4em;
+  background: url("../images/casillas-contador.png") no-repeat scroll left top transparent;
+  width: 41px;
   text-align: center;
 }
 ul#countdown li span {
-  font-size: 3em;
+  font-size: 14px;
   font-weight: bold;
-  color: #1f2225;
+  color: #fff;
   height: 108px;
-  line-height: 108px;
+  line-height: 27px;
   position: relative;
 }
 ul#countdown li span::before {
-  content: '';
-  width: 100%;
-  height: 1px;
-  border-top: 1px solid white;
-  position: absolute;
-  top: 31px;
+  
 }
 ul#countdown li p.timeRefDays,
 ul#countdown li p.timeRefHours,
 ul#countdown li p.timeRefMinutes,
 ul#countdown li p.timeRefSeconds {
-  margin-top: 1em;
-  color: #909091;
-  text-transform: uppercase;
-  font-size: .875em;
+ 
 }
 
-#progress-bar {border:1px solid #bebebe; background:#ffffff; width:300px; height:14px; -moz-border-radius:10px; -webkit-border-radius:10px; -khtml-border-radius:10px; border-radius:10px;}
-#status {background:#0066cc; width:0%; height:14px; -moz-border-radius:10px; -webkit-border-radius:10px; -khtml-border-radius:10px; border-radius:10px;}
+#progress-bar {background:none repeat scroll 0 0 #009FE0; width:100px; height:34px; float:left; margin-right: 10px}
+#status {background:#0066cc; width:0%; height:34px; margin-bottom: 7px;}
+
+ul#countdown li p{font-size: 11px !important; }

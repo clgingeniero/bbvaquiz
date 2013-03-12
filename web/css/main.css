@@ -138,10 +138,17 @@ label{ line-height: 1.3em;}
     margin-top: 81px;
     width: 358px;
 }
+
+.pers-finish{background: url("../images/8.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 462px;
+    margin-left: -68px;
+    margin-top: 81px;
+    width: 390px;}
 .tit-instru{ color: #86C82D;
     
     font-size: 20px;
-    left: 500px;
+    padding-left: 25%;
    
     margin-top: -36px;
     position: absolute;
@@ -159,6 +166,12 @@ width: 329px; height: 44px;}
 .content-instru{
     padding-right: 20px;
     padding-top: 130px;
+    text-align: justify;
+}
+
+.content-activi{
+    padding-right: 20px;
+    padding-top: 50px;
     text-align: justify;
 }
 
@@ -193,6 +206,13 @@ width: 20px; height: 21px; float: left;}
     margin-left: -68px;
     margin-top: 115px;
     width: 358px;}
+
+.pers-activ{background: url("../images/7.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 462px;
+    margin-left: -68px;
+    margin-top: 81px;
+    width: 394px;}
 
 .tit-help{background: url("../images/ayuda_03.png") no-repeat scroll 0 0 transparent;
 width: 329px; height: 44px;}
@@ -296,4 +316,55 @@ input[type="submit"]{
     width: 100%;}
 .tit-end{background: url("../images/finalizadas_03.png") no-repeat scroll 0 0 transparent;
 width: 329px; height: 44px;}
+.pregunta{color:#005485;}
+.dv-preg{float: left;
+    width: 552px;}
+.dv-cd{float: left;
+    margin-top: -20px;}
+.dv-actividad{padding-top: 60px;}
+.desc-ans{}
+.preg_1{float:left; background: url("../images/opciones_03.png") no-repeat scroll 0 0 transparent;
+width: 60px; height: 59px; float: left;}
+.preg_2{float:left; background: url("../images/opciones_06.png") no-repeat scroll 0 0 transparent;
+width: 60px; height: 59px; float: left;}
+.preg_3{float:left; background: url("../images/opciones_08.png") no-repeat scroll 0 0 transparent;
+width: 60px; height: 59px; float: left;}
+.preg_4{float:left; background: url("../images/opciones_10.png") no-repeat scroll 0 0 transparent;
+width: 60px; height: 59px; float: left;}
+.content-pregunta{height: 75px;}
+#caja-actv{border: 1px solid #005485;
+           float: left;
+           height: 51px;
+           margin-left: 10px;
+           padding-left: 10px;
+           padding-top: 7px;
+           width: 366px;
+}
 
+input[type="radio"]{
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  
+}
+#btnActi{background-color: #1D509F; color: #FFFFFF; float: left; width: 86px; margin-left: 7px; font-size: 13px; padding: 10px; text-align: center; }
+.barra-fin{padding-top: 32px;}
+.progreso{color: #fff; padding-left: 35px; padding-top: 10px; position: absolute; font-size: 13px;}
+.resultados{float: left;
+    margin-left: 60px;
+    margin-top: 100px;}
+.tit-resultados{background: url("../images/tusresultados_03.png") no-repeat scroll 0 0 transparent;
+    height: 44px;
+    margin-bottom: 20px;
+    width: 330px;}
+.txt-puntaje{color: #1D509F;
+    font-size: 32px;}
+.puntaje{color: #86C82C;
+    font-size: 32px;}
+.linea-resulta{background: url("../images/linea-discontinua.jpg") no-repeat scroll 0 0 transparent;
+    height: 4px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 309px;}
+.dv-puntaje{padding-left: 8px;}
+.dv-puesto{padding-left: 42px;}
