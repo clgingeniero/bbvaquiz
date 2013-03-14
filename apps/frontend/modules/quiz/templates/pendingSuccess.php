@@ -25,11 +25,11 @@
                 $fecha2 = new DateTime($quiz->getFinalTime());
                 $fecha = $fecha1->diff($fecha2);
                 ?>
-                <span><?php echo ($fecha->y > 0) ? $fecha->y . ' A' : '' ?></span>
-                <span><?php echo ($fecha->m > 0) ? $fecha->m . ' M' : '' ?></span>
-                <span><?php echo ($fecha->d > 0) ? $fecha->d . ' D' : '' ?></span>
-                <span><?php echo ($fecha->h > 0) ? $fecha->h . ' H' : '' ?></span>
-                <span><?php echo ($fecha->i > 0) ? $fecha->i . ' M' : '' ?></span>
+                <span><?php echo ($fecha->y > 0) ? $fecha->y . ' Años' : '' ?></span>
+                <span><?php echo ($fecha->m > 0) ? $fecha->m . ' Meses' : '' ?></span>
+                <span><?php echo ($fecha->d > 0) ? $fecha->d . ' Días' : '' ?></span>
+                <span><?php echo ($fecha->h > 0) ? $fecha->h . ' Horas' : '' ?></span>
+                <span><?php echo ($fecha->i > 0) ? $fecha->i . ' Minutos' : '' ?></span>
        </div>
        <div class="avance-dv"><?php echo "Avance" ?></div>
        

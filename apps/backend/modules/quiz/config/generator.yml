@@ -31,6 +31,6 @@ generator:
       edit:
         title: Edición de "%%description%%"
         fields:  
-          inicial_time: { label: Inicio }
-          final_time:   { label: Fin, type: input_date_tag, params: date_format='dd/MM/yy' }
+          inicial_time: { label: Inicio, type: plain, params: date_format='dd/MM/yy' }
+          final_time:   { label: Fin, type: plain, params: date_format='dd/MM/yy' }
       new:     ~

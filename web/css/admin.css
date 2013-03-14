@@ -3,17 +3,18 @@ a{
     color: #fff;
 }
 .menu-admin{
-   background: none repeat scroll 0 0 #1D509F;
+   background: none repeat scroll 0 0 #094FA4;
    
     float: left;
     margin: 3px;
-    padding: 3px;
+    padding: 4px;
 }
 
 .menu-admin a:hover{
    background: none repeat scroll 0 0 #009FE0;
    color: #fff;
-    padding: 3px;
+    float: left;
+  
    
 }
 
@@ -24,23 +25,23 @@ a{
    
 }
 
-.fond-admin{   background-color: #D0D0CE;
+.fond-admin{  background-color: #D0D0CE;
     float: left;
-    height: 600px;
+    height: 1604px;
     margin-top: -57px;
     width: 68px;}
 
-.pers-admin{background: url("../images/3-22.png") no-repeat scroll 0 0 transparent;
+.pers-admin{  background: url("../images/3-22.png") no-repeat scroll 0 0 transparent;
     float: left;
-    height: 462px;
+    height: 1462px;
     margin-left: -68px;
     margin-top: 77px;
     width: 320px;}
 .menu-2{float: left; padding-top: 70px; margin-left: -36px;}
-.content-admin{float: left; width: 536px;}
-#sf_admin_content{float: left;
-    height: 206px;
-    overflow: auto;
+.content-admin{ width: 536px; float: left;}
+#sf_admin_content{
+    min-height: 206px;
+   
     width: 580px;}
 
 #sf_admin_filter th, td {
@@ -48,7 +49,7 @@ a{
 }
 
 #sf_admin_content th, td {
-    border: 1px solid #1D509F;
+    border: 1px solid #094FA4;
     padding: 0.5em;
 }
 
@@ -60,4 +61,5 @@ width: 329px; height: 44px;}
     left: 440px;
     margin-top: -36px;
     position: absolute;
+     width: 345px;
     }

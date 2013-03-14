@@ -24,7 +24,9 @@ test:
 
 all:
   .settings:
-    enabled_modules:        [default, sfGuardAuth, sfGuardGroup, sfGuardPermission, sfGuardUser]
+    default_culture:  es
+    i18n:  true
+    enabled_modules:        [default, sfGuardAuth, sfGuardGroup, sfGuardPermission, sfGuardUser, sfGuardRegister]
    
     # Output escaping settings
     escaping_strategy:      true
@@ -45,5 +47,7 @@ all:
 
     # Enable the database manager
     use_database:           true
+    
+    
     
  

@@ -33,7 +33,7 @@
 			</li>
 			<li>
 				<span class="seconds">00</span>
-				<p class="timeRefSeconds">Segundos :</p>
+				<p class="timeRefSeconds">Seg :</p>
 			</li>
 		</ul>
             </div>

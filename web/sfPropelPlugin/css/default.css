@@ -19,7 +19,7 @@
 
 #sf_admin_container th
 {
-  background-color: #83D2EF;
+  background-color: #52bcec;
   white-space: nowrap;
 }
 
@@ -57,7 +57,7 @@
 
 #sf_admin_container tr:hover
 {
-  background-color: #ffe;
+  background-color: #B6E4F9;
 }
 
 #sf_admin_container input, #sf_admin_container textarea
@@ -100,7 +100,7 @@
 
 #sf_admin_bar
 {
-  float: left;
+  
     width: 536px;
 }
 
@@ -146,7 +146,7 @@
 
 #sf_admin_container ul li.sf_admin_action_new a
 {
-  background: url(../images/new.png) no-repeat 0 0;
+ 
 }
 
 #sf_admin_container ul li.sf_admin_action_delete a
@@ -156,7 +156,7 @@
 
 #sf_admin_container ul li.sf_admin_action_list a
 {
-  background: url(../images/list.png) no-repeat 0 0;
+  
 }
 
 #sf_admin_container ul li.sf_admin_action_edit a
@@ -196,11 +196,11 @@
 
 #sf_admin_container fieldset h2
 {
-  padding: 3px;
-  color: #333;
-  background-color: #ccf;
-  font-size: 11px;
-  margin: 0;
+   background-color: #1C4FA0;
+    color: #FFFFFF;
+    font-size: 11px;
+    margin: 0;
+    padding: 3px;
 }
 
 #sf_admin_container fieldset

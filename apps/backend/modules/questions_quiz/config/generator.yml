@@ -24,4 +24,4 @@ generator:
       edit:    
         title: Edición de "%%quiz_name%%"
       new:     
-        title: Nueva pregunta para el examen
+        title: Nueva pregunta para la actividad

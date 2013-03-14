@@ -6,16 +6,16 @@
         <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
           <div class="linea"></div>
         <p class="subtit-inst">Calidad eje fundamental del crecimiento</p>
-        <div class="tit-help"></div>
+        <div class="tit-profile"></div>
         
     </div>
   
 <div class="content-profile">
     <label>Nombre: </label><label><?php echo $sfGuardUserProfile->getFirstName() ?></label><br>
     <label>Codigo: </label><label><?php echo $sfGuardUserProfile->getUserBankId() ?></label><br>
-    <label>Zona: </label><label><?php echo $sfGuardUserProfile->getIdZone() ?></label><br>
-    <label>Area: </label><label><?php echo $sfGuardUserProfile->getIdArea() ?></label><br>
-    <label>Cargo: </label><label><?php echo $sfGuardUserProfile->getIdPosition() ?></label><br>
+    <label>Zona: </label><label><?php echo $sfGuardUserProfile->getZone() ?></label><br>
+    <label>Area: </label><label><?php echo $sfGuardUserProfile->getArea() ?></label><br>
+    <label>Cargo: </label><label><?php echo $sfGuardUserProfile->getPosition() ?></label><br>
     
     <div class="div-btns">
     <div class="menu-btn">

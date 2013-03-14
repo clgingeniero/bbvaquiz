@@ -8,9 +8,9 @@
         
     </div>
   
-<div class="content-instru">
-   <p class="titulo-inst">¡ Descubre tu desempeño !</p>
-   <p class="subtit-inst">has finalizado la actividad</p>
+<div class="content-final">
+   <p class="titulo-fin">¡ Descubre tu desempeño !</p>
+   <p class="subtit-fin">has finalizado la actividad</p>
    <div class="resultados">
        <div class="tit-resultados"></div>
        <div class="dv-puntaje">

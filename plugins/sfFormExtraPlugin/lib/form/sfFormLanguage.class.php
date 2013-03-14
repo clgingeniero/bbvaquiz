@@ -56,8 +56,8 @@ class sfFormLanguage extends sfForm
     {
       throw new RuntimeException(sprintf('%s requires a "languages" option.', get_class($this)));
     }
-
-    parent::__construct(array('language' => $user->getCulture()), $options, $CSRFSecret);
+//$user->getCulture()
+    parent::__construct(array('language' => 'es'), $options, $CSRFSecret);
   }
 
   /**

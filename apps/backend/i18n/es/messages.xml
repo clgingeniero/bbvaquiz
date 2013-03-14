@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2013-03-14T20:36:53Z" product-name="messages">
+    <header/>
+    <body>
+      <trans-unit id="1">
+        <source>Administrador de respuestas</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Edición de "%%answer%%"</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Nueva respuesta</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Administrador de respuestas correctas</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Nueva respuesta correcta pregunta</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Edición de dificultad para "%%id_quiz%%"</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Nueva opción de dificultad para la actividad</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Administrador de preguntas</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Edición de "%%question%%"</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Nueva pregunta</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Edición de "%%quiz_name%%"</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Nueva pregunta para el examen</source>
+        <target>Nueva pregunta para la actividad</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Administrador de examenes</source>
+        <target>Administrador de actividades<target/>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Edición de "%%description%%"</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Inicio</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Fin</source>
+        <target/>
+      </trans-unit>
+       <trans-unit id="17">
+        <source>Description</source>
+        <target>Descripción</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -19,7 +19,7 @@ $dispatcher = new sfEventDispatcher();
 $sessionPath = sys_get_temp_dir().'/sessions_'.rand(11111, 99999);
 $storage = new sfSessionTestStorage(array('session_path' => $sessionPath));
 $user = new sfUser($dispatcher, $storage);
-$user->setCulture('en');
+$user->setCulture('es');
 
 $request = new sfWebRequest($dispatcher);
 

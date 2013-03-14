@@ -14,7 +14,7 @@
   </head>
     
   <body>
-      <div class="layout">
+      <div class="layout-admin">
           <div class="logo"></div>
       <div class="menu">
         <a href="<?php echo url_for('logout') ?>">
@@ -62,7 +62,7 @@
       
       </div> 
          
-      <div class="home">
+      <div class="home-admin">
           <?php if ($sf_user->isAuthenticated()): ?>
           <div class="fond-admin"></div>
           <div class="pers-admin"></div>

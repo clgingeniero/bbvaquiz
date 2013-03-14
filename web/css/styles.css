@@ -43,7 +43,7 @@
 ul#countdown li {
   display: inline-block;
   background: url("../images/casillas-contador.png") no-repeat scroll left top transparent;
-  width: 41px;
+  width: 37px;
   text-align: center;
 }
 ul#countdown li span {
