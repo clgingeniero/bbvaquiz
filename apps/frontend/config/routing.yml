@@ -21,7 +21,7 @@ register:
   
 nuevas:
   url:   /nuevas
-  param: { module: quiz, action: list }
+  param: { module: quiz, action: new }
   
 pendientes:
   url:   /pendientes
@@ -34,6 +34,10 @@ finalizadas:
 profile:
   url:   /profile
   param: { module: profile, action: index }
+  
+newprofile:
+  url:   /newprofile
+  param: { module: profile, action: edit }
 
 # generic rules
 # please, remove them by adding more specific rules

@@ -45,18 +45,22 @@
 <div class="question">
    
     <?php $i = 0; foreach($answers as $answer): $i++; ?>
-    <div class="content-pregunta">
-        <div class="preg_<?php echo $i; ?>"></div> 
+    <div  class="content-pregunta">
+        <div id="btn_resp_<?php echo $i; ?>" onclick="oprime('<?php echo $i; ?>', <?php echo $answer->getIdAnswer(); ?> )" class="preg_<?php echo $i; ?>">
+            
+        </div> 
         <div id="caja-actv" >
-            <input type="radio" name="answers" value="<?php echo $answer->getIdAnswer(); ?>">
-            <div class="answer_<?php echo $answer->getIdAnswer(); ?>">
+            
+           
             <span class="desc-ans"><?php echo $answer->getAnswer(); ?></span>
             </div>
-        </div>
-   </div>
+         <div class="answer_<?php echo $answer->getIdAnswer(); ?>"></div>
+        
+</div>
     <?php endforeach;?>
 </div>
-   
+                
+   <input type="hidden" name="answers" value="">
    <input type="hidden" name="question" value="<?php echo $question->getIdQuestion(); ?>">
   
     
@@ -114,6 +118,20 @@
 
 <script>
     
+    function oprime(id, value){
+        $('#btn_resp_' + id).attr("class", "active_" + id);
+        for(i = 0; i < 5; i++){
+            if(i != id)
+                $('#btn_resp_' + i).attr("class", "preg_" + i);
+        }
+        
+        $('input[name=answers]').val(value);
+        
+    }
+    
+    
+    
+    
     $('.btnSave').click(function()
     {
         $("#questionform").attr("action", '<?php echo url_for('quiz/save?id=' . $quiz->getIdQuiz()) ?>')
@@ -132,10 +150,12 @@
         
                 <?php if($answer->getCorrect()){ ?>
                   
-                    $(".answer_<?php echo $answer->getIdAnswer(); ?>").toggleClass('answer_<?php echo $answer->getIdAnswer(); ?> answer_correct');
+                    //$(".answer_<?php //echo $answer->getIdAnswer(); ?>").toggleClass('answer_<?php //echo $answer->getIdAnswer(); ?> answer_correct');
+                    $(".answer_<?php echo $answer->getIdAnswer(); ?>").attr('id', 'answer_correct');
                     //alert('es correcta la ' + '<?php //echo $answer->getCorrect() . '<- esta ' . $answer->getAnswer() . ' ' . $answer->getIdAnswer()  ?>');
                 <?php }else { ?> 
-                    $(".answer_<?php echo $answer->getIdAnswer(); ?>").toggleClass('answer_<?php echo $answer->getIdAnswer(); ?> answer_incorrect');
+                    $(".answer_<?php echo $answer->getIdAnswer(); ?>").attr('id', 'answer_incorrect');
+                    //$(".answer_<?php //echo $answer->getIdAnswer(); ?>").toggleClass('answer_<?php //echo $answer->getIdAnswer(); ?> answer_incorrect');
                 <?php } ?>
                 <?php endforeach; ?>
             

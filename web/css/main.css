@@ -15,7 +15,7 @@ p { margin:0; line-height:22px; font-size:11pt; }
 a {color: #fff;}
 span{}
 a:hover{color: #fff; text-transform: none;}
-label{ line-height: 1.3em; color: #758087;}
+label{ line-height: 1.3em; color: #758087; }
 .menu{  padding-top: 22px;}
 .over-smenu{float: right;}
 .logo{background: url("../images/bbva.png") no-repeat scroll 0 0 transparent;
@@ -152,7 +152,7 @@ label{ line-height: 1.3em; color: #758087;}
     height: 462px;
     margin-left: -68px;
     margin-top: 81px;
-    width: 358px;
+    width: 323px;
 }
 
 .pers-finish{background: url("../images/8.png") no-repeat scroll 0 0 transparent;
@@ -314,7 +314,7 @@ input[type="submit"]{
     width: 126px;}
 .avance{ color: #1C51A2;
     float: left;
-    padding-left: 60px;
+    padding-left: 103px;
     width: 55px;}
 .activi{  border-bottom: 1px solid #094FA4;
     color: #758087;
@@ -359,6 +359,12 @@ width: 60px; height: 59px; float: left;}
 width: 60px; height: 59px; float: left;}
 .preg_4{float:left; background: url("../images/opciones_10.png") no-repeat scroll 0 0 transparent;
 width: 60px; height: 59px; float: left;}
+
+.active_1{width: 60px; height: 59px; float: left;  background: url("../images/opciones_03h.png") no-repeat scroll 0 0 transparent;}
+.active_2{width: 60px; height: 59px; float: left;  background: url("../images/opciones_06h.png") no-repeat scroll 0 0 transparent;}
+.active_3{width: 60px; height: 59px; float: left;  background: url("../images/opciones_08h.png") no-repeat scroll 0 0 transparent;}
+.active_4{width: 60px; height: 59px; float: left;  background: url("../images/opciones_10h.png") no-repeat scroll 0 0 transparent;}
+
 .content-pregunta{height: 75px;}
 #caja-actv{border: 1px solid #005485;
            float: left;
@@ -416,3 +422,15 @@ input[type="radio"]{
 .layout-admin{width: 900px; height: 1604px;/*height: 600px;*/  margin: 0 auto; border: 8px solid #094FA4; }
 .home-admin{ min-height: 500px;
     width: 900px;}
+#answer_incorrect{background: url("../images/correcta-incorrecta_03.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 32px;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 32px;}
+#answer_correct{background: url("../images/correcta-incorrecta_07.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 24px;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 32px;}

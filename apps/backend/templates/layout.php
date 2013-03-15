@@ -14,7 +14,8 @@
   </head>
     
   <body>
-      <div class="layout-admin">
+      <?php $clase = ($sf_user->isAuthenticated()) ? 'layout-admin' : 'layout' ; ?>
+      <div class="<?php echo $clase ?>">
           <div class="logo"></div>
       <div class="menu">
         <a href="<?php echo url_for('logout') ?>">
@@ -81,22 +82,22 @@
 <?php echo link_to('Puntaje', '@dificulty_quiz') ?>
 </div>
 <div class="menu-admin">
-<?php echo link_to('Preguntas', '@question') ?>
+<?php echo link_to('Actividad', '@quiz') ?>
 </div>
-
+              
 <div class="menu-admin">
 <?php echo link_to('Gestionar actividad', '@questions_quiz') ?>
 </div>
 <div class="menu-admin">
-<?php echo link_to('Actividad', '@quiz') ?>
+<?php echo link_to('Preguntas', '@question') ?>
 </div>
 <div class="menu-admin">
 <?php echo link_to('Opciones de respuestas', '@answer') ?>
 </div>
               <div class="clear-boot"></div>
-<div class="menu-admin">
-<?php echo link_to('Respuesta correcta', '@correct_answer_question') ?>
-</div>
+<!--<div class="menu-admin">
+<?php //echo link_to('Respuesta correcta', '@correct_answer_question') ?>
+</div> -->
 <div class="menu-admin">
 <?php echo link_to('Instrucciones', '@instructions') ?>
 </div>

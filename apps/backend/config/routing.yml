@@ -145,7 +145,7 @@ homepage:
 # generic rules
 # please, remove them by adding more specific rules
 default_index:
-  url:   /:dificulty
+  url:   /:dificulty_quiz
   param: { action: index }
 
 default:
@@ -174,3 +174,7 @@ register:
 profile:
   url:   /sf_guard_user
   param: { module: sf_guard_user, action: index }
+  
+sf_guard_register:
+  url:   /register
+  param: { module: sfGuardRegister, action: register }

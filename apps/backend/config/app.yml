@@ -11,4 +11,6 @@ all:
     profile_field_name: user_id
     profile_email_name: email
     signin_form:    sfGuardFormSignin
+    success_signin_url:  dificulty
+    success_signout_url: /
 

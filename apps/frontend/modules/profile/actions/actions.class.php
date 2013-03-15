@@ -35,7 +35,11 @@ class profileActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($sfGuardUserProfile = SfGuardUserProfilePeer::retrieveByPk($request->getParameter('id')), sprintf('Object sfGuardUserProfile does not exist (%s).', $request->getParameter('id')));
+    $user_id = $this->getUser()->getGuardUser()->getId(); 
+    $criteria = new Criteria();
+    $criteria->add(SfGuardUserProfilePeer::USER_ID, $user_id);
+    $user = SfGuardUserProfilePeer::doSelectOne($criteria);
+    $this->forward404Unless($sfGuardUserProfile = SfGuardUserProfilePeer::retrieveByPk($user->getId()), sprintf('Object sfGuardUserProfile does not exist (%s).', $request->getParameter('id')));
     $this->form = new sfGuardUserProfileForm($sfGuardUserProfile);
   }
 
@@ -66,8 +70,8 @@ class profileActions extends sfActions
     if ($form->isValid())
     {
       $sfGuardUserProfile = $form->save();
-
-      $this->redirect('profile/edit?id='.$sfGuardUserProfile->getId());
+      $this->redirect('profile');
+      //$this->redirect('profile/edit?id='.$sfGuardUserProfile->getId());
     }
   }
 }
