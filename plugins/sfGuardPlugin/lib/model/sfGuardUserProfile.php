@@ -17,5 +17,11 @@
  * @package    plugins.sfGuardPlugin.lib.model
  */
 class sfGuardUserProfile extends BasesfGuardUserProfile {
+    
+  public function __toString()
+  {
+    return $this->getFirstName();
+  }
+  
 
 } // sfGuardUserProfile

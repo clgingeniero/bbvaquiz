@@ -1,6 +1,7 @@
 
 <?php
 
+var_dump($report); die;
 
 // require_once 'symfony.inc.php';
 $exc = '';

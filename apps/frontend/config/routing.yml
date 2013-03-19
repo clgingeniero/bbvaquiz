@@ -38,6 +38,14 @@ profile:
 newprofile:
   url:   /newprofile
   param: { module: profile, action: edit }
+  
+preparereport:
+  url:   /preparereport
+  param: { module: quizlog, action: preparereport }
+  
+preparereport:
+  url:   /preparereport
+  param: { module: quizlog, action: preparereport }
 
 # generic rules
 # please, remove them by adding more specific rules

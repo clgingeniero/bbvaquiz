@@ -72,48 +72,67 @@ class quizlogActions extends sfActions
   }
   
   // -- reports
+  
+  public function executePreparereport()
+  {
+     // $offices
+      //$zones
+      //$territorial
+      $this->activities = QuizPeer::doSelect(new Criteria());
+      $this->offices = DeptoPeer::doSelect(new Criteria());
+      $this->zones = ZonePeer::doSelect(new Criteria());
+      $this->territorial = AreaPeer::doSelect(new Criteria());
+      $this->setTemplate('preparereport');
+      
+  }
+  
     
     public function executeReport(sfWebRequest $request)
     {
         $type = $request->getParameter('t');
+        $status =  $request->getParameter('s');
         $id_quiz = $request->getParameter('id');
+        
         $c = new Criteria();
         $c->addJoin(QuizlogPeer::ID_USRQL, sfGuardUserProfilePeer::USER_ID);
         
         
+        
         switch ($type) {
             case 'u': // user
+                $id_depto = 3; // $request->getParameter('z');
+                $c->add(sfGuardUserProfilePeer::ID_DEPTO,  $id_depto);
                 
                 break;
             case 'o': // office
-               
+                $id_depto = $request->getParameter('offices'); // $request->getParameter('z');
+                $c->add(sfGuardUserProfilePeer::ID_DEPTO,  $id_depto);
                 break;
-            
+          
             case 'z': // zone
-                $zona = 3; // $request->getParameter('z');
+                $zona = $request->getParameter('zone');; // $request->getParameter('z');
                 $c->add(sfGuardUserProfilePeer::ID_ZONE,  $zona);
                 break;
             
             case 't': // territorial
-                $depto = 501; // $request->getParameter('z');
-               $c->add(sfGuardUserProfilePeer::ID_DEPTO,  $depto);
+                $area = $request->getParameter('ter');; // $request->getParameter('z');
+                $c->add(sfGuardUserProfilePeer::ID_AREA,  $area);
                 break;
             
-            case 'p': //
+            default : // Colombia
                 
                 break;
         }
         
         
         $c->add(QuizlogPeer::ID_QUIZLOG, $id_quiz);
-        $c->add(QuizlogPeer::STATUS, self::finish);
+        $c->add(QuizlogPeer::STATUS, $status);
         $c->addAscendingOrderByColumn(QuizlogPeer::RESULT);
         $this->report =  QuizlogPeer::doSelectJoinsfGuardUserProfile($c);
         
-        $this->setTemplate('report');
+        //$this->setTemplate('report');
         
     }
-    
     
     
 }
