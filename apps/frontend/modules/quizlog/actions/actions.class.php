@@ -92,44 +92,64 @@ class quizlogActions extends sfActions
         $type = $request->getParameter('t');
         $status =  $request->getParameter('s');
         $id_quiz = $request->getParameter('id');
+        $this->usersreport = null;
         
         $c = new Criteria();
-        $c->addJoin(QuizlogPeer::ID_USRQL, sfGuardUserProfilePeer::USER_ID);
+        $c->addJoin(QuizlogPeer::ID_USRQL, sfGuardUserProfilePeer::USER_ID, Criteria::INNER_JOIN);
         
         
         
         switch ($type) {
-            case 'u': // user
-                $id_depto = 3; // $request->getParameter('z');
-                $c->add(sfGuardUserProfilePeer::ID_DEPTO,  $id_depto);
-                
-                break;
+            
             case 'o': // office
-                $id_depto = $request->getParameter('offices'); // $request->getParameter('z');
-                $c->add(sfGuardUserProfilePeer::ID_DEPTO,  $id_depto);
+                $id_depto = $request->getParameter('office'); // $request->getParameter('z'); 
+               
+                $c->add(sfGuardUserProfilePeer::ID_DEPTO,  $id_depto, Criteria::IN);
                 break;
           
             case 'z': // zone
                 $zona = $request->getParameter('zone');; // $request->getParameter('z');
-                $c->add(sfGuardUserProfilePeer::ID_ZONE,  $zona);
+                $c->add(sfGuardUserProfilePeer::ID_ZONE,  $zona, Criteria::IN);
                 break;
             
             case 't': // territorial
-                $area = $request->getParameter('ter');; // $request->getParameter('z');
-                $c->add(sfGuardUserProfilePeer::ID_AREA,  $area);
+                $area = $request->getParameter('terr'); // $request->getParameter('z');
+                $c->add(sfGuardUserProfilePeer::ID_AREA,  $area, Criteria::IN);
                 break;
             
-            default : // Colombia
+            case 'u': // Colombia
+                /*$c->addJoin(QuizlogPeer::ID_USRQL, sfGuardUserProfilePeer::USER_ID, Criteria::RIGHT_JOIN);
+                
+                $area = $request->getParameter('users'); // $request->getParameter('z');
+                $c->add(sfGuardUserProfilePeer::ID_AREA,  $area, Criteria::IN);
+                $c->add(QuizlogPeer::ID_QUIZ_USR_LOG, Criteria::ISNULL);
+                $c->addOr(QuizlogPeer::ID_QUIZLOG, $id_quiz); */
+                
+                $con = Propel::getConnection();
+        $sql = "SELECT sf_guard_user_profile.*, quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, 
+quizlog.RESULT, quizlog.BONUS, quizlog.DATE_END FROM `quizlog` 
+right JOIN sf_guard_user_profile 
+ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) 
+WHERE quizlog.ID_QUIZ_USR_LOG is null  ";
+       
+                $stmt = $con->prepare($sql);
+                $stmt->execute();
+                $this->usersreport = sfGuardUserProfilePeer::populateObjects($stmt);
+                
+              
+                
                 
                 break;
         }
         
         
-        $c->add(QuizlogPeer::ID_QUIZLOG, $id_quiz);
-        $c->add(QuizlogPeer::STATUS, $status);
-        $c->addAscendingOrderByColumn(QuizlogPeer::RESULT);
-        $this->report =  QuizlogPeer::doSelectJoinsfGuardUserProfile($c);
         
+        $c->add(QuizlogPeer::ID_QUIZLOG, $id_quiz);
+        if($status != 2) { $c->add(QuizlogPeer::STATUS, $status); }
+        $c->addDescendingOrderByColumn(QuizlogPeer::RESULT);
+        $c->addAscendingOrderByColumn(QuizlogPeer::DATE_END);
+        $this->report =  QuizlogPeer::doSelect($c);
+        $this->llega = $request;
         //$this->setTemplate('report');
         
     }

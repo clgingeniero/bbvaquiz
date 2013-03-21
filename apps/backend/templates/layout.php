@@ -82,6 +82,9 @@
 <?php echo link_to('Puntaje', '@dificulty_quiz') ?>
 </div>
 <div class="menu-admin">
+<?php echo link_to('Bono', '@bonus_quiz') ?>
+</div>
+<div class="menu-admin">
 <?php echo link_to('Actividad', '@quiz') ?>
 </div>
               
@@ -92,15 +95,15 @@
 <?php echo link_to('Preguntas', '@question') ?>
 </div>
 <div class="menu-admin">
-<?php echo link_to('Opciones de respuestas', '@answer') ?>
+<?php echo link_to('Instrucciones', '@instructions') ?>
 </div>
               <div class="clear-boot"></div>
+<div class="menu-admin">
+<?php echo link_to('Opciones de respuestas', '@answer') ?>
+</div>
 <!--<div class="menu-admin">
 <?php //echo link_to('Respuesta correcta', '@correct_answer_question') ?>
 </div> -->
-<div class="menu-admin">
-<?php echo link_to('Instrucciones', '@instructions') ?>
-</div>
 <div class="menu-admin">
 <?php echo link_to('Grupos', '@sf_guard_group') ?>
 </div>

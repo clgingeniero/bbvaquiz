@@ -81,7 +81,7 @@ class quizActions extends sfActions
   
     public function executePending()
     {
-        $criteria = new Criteria();
+        /* $criteria = new Criteria();
         $criteria->add(QuizPeer::INICIAL_TIME, time(),Criteria::LESS_THAN);
         $criteria->add(QuizPeer::FINAL_TIME, time(),Criteria::GREATER_THAN);
         $criteria->addJoin(QuizusrPeer::ID_QUIZ, QuizPeer::ID_QUIZ);
@@ -91,30 +91,37 @@ class quizActions extends sfActions
         
         $criteria->addGroupByColumn(QuizusrPeer::ID_QUIZ);
         
-        $this->quiz_active_list = QuizPeer::doSelect($criteria);
+        $this->quiz_active_list = QuizPeer::doSelect($criteria); */
+        
+        $criteria = new Criteria();
+        //end by time
+        //$criteriaEnd->add(QuizPeer::FINAL_TIME, time(),Criteria::LESS_THAN);
+        //$this->quiz_end_list = QuizPeer::doSelect($criteriaEnd);
+        
+        $criteria->addJoin(QuizlogPeer::ID_QUIZLOG, QuizPeer::ID_QUIZ, Criteria::INNER_JOIN);
+        $criteria->add(QuizlogPeer::ID_USRQL, $this->getUserId());
+        $criteria->add(QuizlogPeer::STATUS, 0);
+        $this->quiz_active_list = QuizlogPeer::doSelect($criteria);
+        
+        
        
     }
     
     public function executeNew()
     {
-        $criteria = new Criteria();
         
-        $criteria->addAlias('quize', 'quizusr');
-        $criteria->add(QuizPeer::INICIAL_TIME, time(),Criteria::LESS_THAN);
-        $criteria->add(QuizPeer::FINAL_TIME, time(),Criteria::GREATER_THAN);
+        
+        $con = Propel::getConnection();
+        $sql = "SELECT quiz.ID_QUIZ, quiz.DESCRIPTION, quiz.INICIAL_TIME, quiz.FINAL_TIME, quizlog.* 
+                FROM quizlog
+                right JOIN quiz  ON (quiz.ID_QUIZ=quizlog.ID_QUIZLOG and quizlog.id_usrql = ".  $this->getUserId() . ")  
+                where quizlog.id_quizlog is null and quiz.final_time > now()";
        
-        $criteria->addJoin(QuizusrPeer::ID_QUIZ, QuizPeer::ID_QUIZ, Criteria::INNER_JOIN);
-        
-        $criteria->addJoin(QuizlogPeer::ID_QUIZLOG, 'quize.ID_QUIZ', Criteria::INNER_JOIN);
-        
-        $criteria->add(QuizlogPeer::ID_USRQL, $this->getUserId(), Criteria::NOT_EQUAL);
-        $criteria->add(QuizusrPeer::ID_USR_QU, $this->getUserId(), Criteria::NOT_EQUAL);
-        
-        
-        
-        $criteria->addGroupByColumn(QuizusrPeer::ID_QUIZ);
-        
-        $this->quiz_active_list = QuizPeer::doSelect($criteria);
+        $stmt = $con->prepare($sql);
+        $stmt->execute();
+        $this->quiz_active_list = QuizPeer::populateObjects($stmt);
+
+       
         
          $this->setTemplate('new');
        
@@ -127,9 +134,10 @@ class quizActions extends sfActions
         //$criteriaEnd->add(QuizPeer::FINAL_TIME, time(),Criteria::LESS_THAN);
         //$this->quiz_end_list = QuizPeer::doSelect($criteriaEnd);
         
-        $criteriaEnd->addJoin(QuizPeer::ID_QUIZ, QuizlogPeer::ID_QUIZLOG, Criteria::INNER_JOIN);
+        $criteriaEnd->addJoin(QuizlogPeer::ID_QUIZLOG, QuizPeer::ID_QUIZ, Criteria::INNER_JOIN);
         $criteriaEnd->add(QuizlogPeer::ID_USRQL, $this->getUserId());
-        $this->quiz_end_list = QuizPeer::doSelect($criteriaEnd);
+        $criteriaEnd->add(QuizlogPeer::STATUS, 1);
+        $this->quiz_end_list = QuizlogPeer::doSelect($criteriaEnd);
        
     }
   
@@ -150,7 +158,7 @@ class quizActions extends sfActions
             }
             else {
               $this->calculeResult($request->getParameter('id'));
-              $this->saveUserLog($request->getParameter('id'));
+              $this->updateUserLog($request->getParameter('id'));
               //calcula la posicion del usuario en el ranking
               $this->getUserPosition($request->getParameter('id'));
         
@@ -240,7 +248,7 @@ class quizActions extends sfActions
        echo "u: ". $this->getUser()->getGuardUser()->getId();
        echo "i: ". $request->getParameter('id'); */
         
-        $respond = $this->isRespond($this->getUser()->getGuardUser()->getId(), $request->getParameter('question'));
+       $respond = $this->isRespond($this->getUser()->getGuardUser()->getId(), $request->getParameter('question'));
       
        if($respond && $request->getParameter('question') != '' && $request->getParameter('answers') != '' &&
                 $this->getUser()->getGuardUser()->getId() != '' && $request->getParameter('id') != '') {
@@ -249,7 +257,9 @@ class quizActions extends sfActions
             $qusr->setIdAnswer($request->getParameter('answers'));
             $qusr->setIdUsrQu($this->getUser()->getGuardUser()->getId());
             $qusr->setIdQuiz($request->getParameter('id'));
-            $qusr->save(); 
+            $qusr->save();
+            
+            $this->saveUserLog($request->getParameter('id'));
         }
     }
     
@@ -286,11 +296,22 @@ class quizActions extends sfActions
         
         $dif = $this->getValueDif($quiz);
         
+        if(sizeof($dif)) {
+            $difValue = $dif[0];
+            $status = true;
+        } else{
+           $difValue = null; 
+           $status = false;
+        }
+       
+        $bonus = $this->getBonusQuiz($quiz); 
+        $valueBonus = (sizeof($bonus) > 0 ) ? $bonus->getBonus() : 0 ;
         //puntaje total en la actividad
-        $this->totalActividad = $this->getValueActividad($questions, $dif[0]); 
+        $this->totalActividad = $this->getValueActividad($questions, $difValue, $status) +  $valueBonus; 
+        
         
         //puntaje obtenido
-        return $this->totalUser = $this->getValueActividad($this->getUserResult($quiz), $dif[0]);
+        return $this->totalUser = $this->getValueActividad($this->getUserResult($quiz), $difValue, $status) +  $valueBonus;
         
         
         
@@ -351,12 +372,19 @@ class quizActions extends sfActions
          
      }
 
-     public function getValueActividad($questions, $valor){
+     public function getValueActividad($questions, $valor, $status = true){
         
          $vale = 0;
-         $easy = $valor->getEasy();
-         $medium = $valor->getMedium();
-         $hard = $valor->getHard(); 
+         if($status) {
+            $easy = $valor->getEasy();
+            $medium = $valor->getMedium();
+            $hard = $valor->getHard(); 
+         }else{ //asignar valores por defecto
+            $easy = 1;
+            $medium = 2;
+            $hard = 3; 
+         }
+         
         
          //var_dump($questions);
          
@@ -380,22 +408,44 @@ class quizActions extends sfActions
          
      }
      
-     
+    
+
      public function saveUserLog($quiz)
      {
          $rs = $this->isTotSave($this->getUserId(), $quiz); 
+         $rsT = (sizeof($rs) > 0) ? false : true ;
          
-         if(!$rs) return;
+         if(!$rsT) return;
          
          $qusr = new Quizlog();
             $qusr->setIdQuizlog($quiz);
             $qusr->setIdUsrql($this->getUser()->getGuardUser()->getId());
-            $qusr->setStatus(1);
+            $qusr->setStatus(0);
             $qusr->setResult($this->totalUser);
+            $qusr->setDateEnd(time());
             $qusr->save(); 
          //guardar puntaje de usuario
      }
      
+     
+     public function updateUserLog($quiz)
+     {
+            $rs = $this->isTotSave($this->getUserId(), $quiz); 
+            
+            $totBonus = $this->getBonusUser($quiz);
+            $bonus = ($totBonus != null) ? $totBonus->getBonus() : 0 ;
+            $total = $this->totalUser + $bonus;
+            
+            $qusr = QuizlogPeer::retrieveByPK($rs->getIdQuizUsrLog());
+            $qusr->setIdQuizlog($quiz);
+            $qusr->setIdUsrql($this->getUser()->getGuardUser()->getId());
+            $qusr->setStatus(1);
+            $qusr->setResult($total);
+            $qusr->setBonus($bonus);
+            $qusr->setDateEnd(time());
+            $qusr->save(); 
+         //guardar puntaje de usuario
+     }
      
      public function isTotSave($idUser, $idQuiz)
      {
@@ -405,7 +455,7 @@ class quizActions extends sfActions
         
         $res =  QuizlogPeer::doSelectOne($criteria);
         
-        return (sizeof($res) > 0) ? false : true ;
+        return $res;
      }
      
      
@@ -425,6 +475,40 @@ class quizActions extends sfActions
          return $this->getUser()->getGuardUser()->getId();
      }
     
+    public function getBonusQuiz($quiz)
+    {
+        $criteriaValor = new Criteria();
+        $criteriaValor->add(BonusQuizPeer::ID_QUIZ, $quiz);
+        $criteriaValor->addDescendingOrderByColumn(BonusQuizPeer::BONUS);
+        return BonusQuizPeer::doSelectOne($criteriaValor);
+    }
+
+
+
+     public function getBonusUser($quizId)
+     {
+        
+        $quiz = QuizPeer::retrieveByPk($quizId);
+         
+        
+        $inicial = new DateTime($quiz->getInicialTime());
+        $end = new DateTime(date("Y-m-d H:i:s"));
+        
+        $fecha = $inicial->diff($end);
+        $horas = 0;
+        if((int)$fecha->y == 0){
+            $horas = ((int)$fecha->d * 24) + (int)$fecha->h;
+            
+        }
+        
+        
+        $criteriaValor = new Criteria();
+        $criteriaValor->add(BonusQuizPeer::ID_QUIZ, $quizId);
+        $criteriaValor->add(BonusQuizPeer::BONUS, $horas, Criteria::LESS_EQUAL);
+        $criteriaValor->addDescendingOrderByColumn(BonusQuizPeer::BONUS);
+        return BonusQuizPeer::doSelectOne($criteriaValor);
+     
+     }
     
   
 }

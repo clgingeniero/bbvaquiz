@@ -1,70 +1,70 @@
 
 <?php
 
-var_dump($report); die;
+/*var_dump($report); 
+var_dump($llega); die; */
 
 // require_once 'symfony.inc.php';
-$exc = '';
+
 // Create new PHPExcel object
-echo date('H:i:s') . " Create new PHPExcel object\n";
+ini_set('memory_limit', '-1');
 $objPHPExcel = new sfPhpExcel();
 
 // Set properties
-echo date('H:i:s') . " Set properties\n";
-$objPHPExcel->getProperties()->setCreator("Maarten Balliauw");
-$objPHPExcel->getProperties()->setLastModifiedBy("Maarten Balliauw");
-$objPHPExcel->getProperties()->setTitle("Office 2007 XLSX Test Document");
-$objPHPExcel->getProperties()->setSubject("Office 2007 XLSX Test Document");
-$objPHPExcel->getProperties()->setDescription("Test document for Office 2007 XLSX, generated using PHP classes.");
-$objPHPExcel->getProperties()->setKeywords("office 2007 openxml php");
-$objPHPExcel->getProperties()->setCategory("Test result file");
+$objPHPExcel->getProperties()->setCreator("BBVA sistema de actividades");
+$objPHPExcel->getProperties()->setLastModifiedBy("BBVA sistema de actividades");
+
 
 
 // Add some data, we will use printing features
 echo date('H:i:s') . " Add some data\n";
-for ($i = 1; $i < 200; $i++) {
-	$objPHPExcel->getActiveSheet()->setCellValue('A' . $i, $i);
-	$objPHPExcel->getActiveSheet()->setCellValue('B' . $i, 'Test value');
-}	
+$i = 1;
+$objPHPExcel->getActiveSheet()->setCellValue('A1', 'Posición');
+$objPHPExcel->getActiveSheet()->setCellValue('B1', 'Código');
+$objPHPExcel->getActiveSheet()->setCellValue('C1', 'Nombre');
+$objPHPExcel->getActiveSheet()->setCellValue('D1', 'Oficina');
+$objPHPExcel->getActiveSheet()->setCellValue('E1', 'Zona');
+$objPHPExcel->getActiveSheet()->setCellValue('F1', 'Area');
+$objPHPExcel->getActiveSheet()->setCellValue('G1', 'Resultado');
+$objPHPExcel->getActiveSheet()->setCellValue('H1', 'Bono');
+$objPHPExcel->getActiveSheet()->setCellValue('I1', 'Fecha de finalización');
 
-// Set header and footer. When no different headers for odd/even are used, odd header is assumed.
-echo date('H:i:s') . " Set header/footer\n";
-$objPHPExcel->getActiveSheet()->getHeaderFooter()->setOddHeader('&L&G&C&HPlease treat this document as confidential!');
-$objPHPExcel->getActiveSheet()->getHeaderFooter()->setOddFooter('&L&B' . $objPHPExcel->getProperties()->getTitle() . '&RPage &P of &N');
 
-// Add a drawing to the header
-echo date('H:i:s') . " Add a drawing to the header\n";
-$objDrawing = new PHPExcel_Worksheet_HeaderFooterDrawing();
-$objDrawing->setName('PHPExcel logo');
-$objDrawing->setPath('images/phpexcel_logo.gif');
-$objDrawing->setHeight(36);
-$objPHPExcel->getActiveSheet()->getHeaderFooter()->addImage($objDrawing, PHPExcel_Worksheet_HeaderFooter::IMAGE_HEADER_LEFT);
+foreach($report as $rep): $i++;    
+    $objPHPExcel->getActiveSheet()->setCellValue('A' . $i, $i-1);
+    $objPHPExcel->getActiveSheet()->setCellValue('B' . $i, $rep->getsfGuardUserProfile()->getUserBankId());
+    $objPHPExcel->getActiveSheet()->setCellValue('C' . $i, $rep->getsfGuardUserProfile()->getFirstName() ." ". $rep->getsfGuardUserProfile()->getLastName() );
+    $objPHPExcel->getActiveSheet()->setCellValue('D' . $i, $rep->getsfGuardUserProfile()->getDepto()->getDepto());
+    $objPHPExcel->getActiveSheet()->setCellValue('E' . $i, $rep->getsfGuardUserProfile()->getZone()->getZone());
+    $objPHPExcel->getActiveSheet()->setCellValue('F' . $i, $rep->getsfGuardUserProfile()->getArea()->getArea());
+    $objPHPExcel->getActiveSheet()->setCellValue('G' . $i, $rep->getResult());
+    $objPHPExcel->getActiveSheet()->setCellValue('H' . $i, $rep->getBonus());
+    $objPHPExcel->getActiveSheet()->setCellValue('I' . $i, $rep->getDateEnd());
 
-// Set page orientation and size
-echo date('H:i:s') . " Set page orientation and size\n";
+ endforeach;  
+
+ if($usersreport != null) {
+ foreach($usersreport as $repo): $i++;    
+    $objPHPExcel->getActiveSheet()->setCellValue('A' . $i, $i-1);
+    $objPHPExcel->getActiveSheet()->setCellValue('B' . $i, $repo->getUserBankId());
+    $objPHPExcel->getActiveSheet()->setCellValue('C' . $i, $repo->getFirstName() ." ". $repo->getLastName() );
+    $objPHPExcel->getActiveSheet()->setCellValue('D' . $i, $repo->getDepto()->getDepto());
+    $objPHPExcel->getActiveSheet()->setCellValue('E' . $i, $repo->getZone()->getZone());
+    $objPHPExcel->getActiveSheet()->setCellValue('F' . $i, $repo->getArea()->getArea());
+
+ endforeach; 
+ }
+
+
 $objPHPExcel->getActiveSheet()->getPageSetup()->setOrientation(PHPExcel_Worksheet_PageSetup::ORIENTATION_LANDSCAPE);
 $objPHPExcel->getActiveSheet()->getPageSetup()->setPaperSize(PHPExcel_Worksheet_PageSetup::PAPERSIZE_A4);
 
-// Rename sheet
-echo date('H:i:s') . " Rename sheet\n";
-$objPHPExcel->getActiveSheet()->setTitle('Printing');
+
 
 
 // Set active sheet index to the first sheet, so Excel opens this as the first sheet
 $objPHPExcel->setActiveSheetIndex(0);
 
-		
-// Save Excel 2007 file
-echo date('H:i:s') . " Write to Excel2007 format\n";
-//$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-
-
-
-// Echo memory peak usage
-echo date('H:i:s') . " Peak memory usage: " . (memory_get_peak_usage(true) / 1024 / 1024) . " MB\r\n";
-
-// Echo done
-echo date('H:i:s') . " Done writing file.\r\n";
 
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 			header("Cache-Control: no-store, no-cache, must-revalidate");
@@ -76,15 +76,11 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 			$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
 			ob_end_clean();
 			
-			$objWriter->save('php://output');
-			$excel->disconnectWorksheets();
-			unset($excel);
+			$objWriter->save('php://output'); 
+			
 //$objWriter->save(str_replace('.php', '.xlsx', __FILE__));
 
 ?>
 
-<?php //print_r($report); die;
-foreach($report as $rep): ?>
-<p><?php echo $rep->getsfGuardUserProfile()->getFirstName() . ' ' .  $rep->getIdUsrql() . ' tot= ' . $rep->getResult() ?></p>
-<?php endforeach; ?>
+
 

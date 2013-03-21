@@ -13,6 +13,13 @@ propel:
     _attributes: { phpName: Area }
     id_area: { phpName: IdArea, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
     area: { phpName: Area, type: VARCHAR, size: '145', required: true }
+  bonus_quiz:
+    _attributes: { phpName: BonusQuiz }
+    id_bonus_quiz: { phpName: IdBonusQuiz, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    id_quiz: { phpName: IdQuiz, type: INTEGER, size: '11', required: false, foreignTable: quiz, foreignReference: id_quiz, onDelete: RESTRICT, onUpdate: RESTRICT }
+    hours: { phpName: Hours, type: FLOAT, required: false }
+    bonus: { phpName: Bonus, type: FLOAT, required: false }
+    _indexes: { id_bonus_idx: [id_quiz] }
   correct_answer_question:
     _attributes: { phpName: CorrectAnswerQuestion }
     id_correct_answer_question: { phpName: IdCorrectAnswerQuestion, type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
@@ -84,6 +91,8 @@ propel:
     id_usrql: { phpName: IdUsrql, type: INTEGER, size: '11', required: true, foreignTable: sf_guard_user_profile, foreignReference: user_id, onDelete: RESTRICT, onUpdate: RESTRICT }
     status: { phpName: Status, type: INTEGER, size: '11', required: false, defaultValue: '1' }
     result: { phpName: Result, type: FLOAT, required: false, defaultValue: '0' }
+    bonus: { phpName: Bonus, type: FLOAT, required: false }
+    date_end: { phpName: DateEnd, type: TIMESTAMP, required: false }
     _indexes: { id_usr_idx: [id_usrql], quiz_idx: [id_quizlog] }
   quizusr:
     _attributes: { phpName: Quizusr }

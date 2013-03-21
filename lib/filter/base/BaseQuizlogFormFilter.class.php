@@ -16,6 +16,7 @@ abstract class BaseQuizlogFormFilter extends BaseFormFilterPropel
       'id_usrql'        => new sfWidgetFormPropelChoice(array('model' => 'SfGuardUserProfile', 'add_empty' => true, 'key_method' => 'getUserId')),
       'status'          => new sfWidgetFormFilterInput(),
       'result'          => new sfWidgetFormFilterInput(),
+      'date_end'        => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
     ));
 
     $this->setValidators(array(
@@ -23,6 +24,7 @@ abstract class BaseQuizlogFormFilter extends BaseFormFilterPropel
       'id_usrql'        => new sfValidatorPropelChoice(array('required' => false, 'model' => 'SfGuardUserProfile', 'column' => 'user_id')),
       'status'          => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'result'          => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
+      'date_end'        => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
     ));
 
     $this->widgetSchema->setNameFormat('quizlog_filters[%s]');
@@ -45,6 +47,7 @@ abstract class BaseQuizlogFormFilter extends BaseFormFilterPropel
       'id_usrql'        => 'ForeignKey',
       'status'          => 'Number',
       'result'          => 'Number',
+      'date_end'        => 'Date',
     );
   }
 }

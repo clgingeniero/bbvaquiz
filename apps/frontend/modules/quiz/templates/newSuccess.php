@@ -10,6 +10,9 @@
   
 <div class="content-instru">
    <div class="pendientes">
+       <?php  if($quiz_active_list->count() == 0): ?>
+       <p class="subtit-inst">No tienes actividades Nuevas</p>
+       <?php else: ?>
        
        <div class="tit-act"><span><?php echo "Actividad" ?></span></div>
        <div class="restart"><a href=""><div class="restart">@</div></a></div>
@@ -31,13 +34,13 @@
                 <span><?php echo ($fecha->h > 0) ? $fecha->h . ' Horas' : '' ?></span>
                 <span><?php echo ($fecha->i > 0) ? $fecha->i . ' Minutos' : '' ?></span>
        </div>
-       <div class="avance-dv"><?php echo "Avance" ?></div>
+       <div class="avance-dv"><?php echo '0 %' ?></div>
        
 
 
 
 
 <?php endforeach; ?>
-
+<?php endif; ?>
 </div>
 </div>

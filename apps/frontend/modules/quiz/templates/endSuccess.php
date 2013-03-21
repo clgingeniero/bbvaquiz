@@ -10,16 +10,18 @@
   
 <div class="content-instru">
    <div class="pendientes">
-       
+      <?php  if($quiz_end_list->count() == 0): ?>
+       <p class="subtit-inst">No tienes actividades finalizadas</p>
+       <?php else: ?>
        <div class="tit-act"><span><?php echo "Actividad" ?></span></div>
        <div class="restart"><a href=""><div class="restart">@</div></a></div>
-       <div class="time"><?php echo "Tiempo restante" ?></div>
+       <div class="time"><?php echo "Fecha de finalización" ?></div>
        <div class="avance"><?php echo "Puntaje" ?></div>
 <?php foreach($quiz_end_list as $quiz): ?>
        <div class="clear-pending"></div>
-<div class="activi"><span><?php echo $quiz->getDescription()?></span></div>
-       <a href="<?php echo url_for('quiz/do?id=' . $quiz->getIdQuiz()) ?>"><div class="btn-restart">@</div></a>
-       <div class="time-dv">
+<div class="activi"><span><?php echo $quiz->getQuiz()->getDescription()?></span></div>
+       
+       <div class="time-dv"><?php echo $quiz->getDateEnd() ?>
            <?php /*
                 $fecha1 = new DateTime(date("d-m-Y H:i:s"));
                 $fecha2 = new DateTime($quiz->getFinalTime());
@@ -31,13 +33,13 @@
                 <span><?php echo ($fecha->h > 0) ? $fecha->h . ' H' : '' ?></span>
                 <span><?php echo ($fecha->i > 0) ? $fecha->i . ' M' : '' */?><!-- </span> -->
        </div>
-       <div class="avance-dv"><?php echo "Puntaje" ?></div>
-       
+       <div class="avance-dv"><?php echo $quiz->getResult() ?></div>
+      
 
 
 
 
 <?php endforeach; ?>
-
+ <?php endif;?>
 </div>
 </div>

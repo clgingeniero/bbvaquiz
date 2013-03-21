@@ -1,0 +1,28 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           BonusQuiz
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              BonusQuiz
+    plural:                BonusQuizs
+    route_prefix:          bonus_quiz
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields: ~
+      list: 
+        peer_method:  doSelectJoinQuiz
+        display:  [quiz, hours, bonus]
+      filter:  ~
+      form:    
+        display:
+          Content: [id_quiz, hours, bonus]
+      edit:   
+         title: Edición del bono para "%%id_quiz%%"
+      new:     
+        title: Nueva opción de bono para la actividad
+

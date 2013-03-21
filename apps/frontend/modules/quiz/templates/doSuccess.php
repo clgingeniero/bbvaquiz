@@ -134,12 +134,28 @@
     
     $('.btnSave').click(function()
     {
+        answ = $('input[name=answers]').val(); 
+        if(answ == "") {
+            alerta();
+            return;
+        }
+            
         $("#questionform").attr("action", '<?php echo url_for('quiz/save?id=' . $quiz->getIdQuiz()) ?>')
         $('form#questionform').submit();
     });
     
+    function alerta(){
+        alert("Aun no ha seleccionado una respuesta");
+    }
+    
     $('.btnView').click(function()
     {
+        answ = $('input[name=answers]').val(); 
+        if(answ == "") {
+            alerta();
+            return;
+        }
+        
         var data = $('form').serialize();
         $.ajax({
             type: "POST",
@@ -164,6 +180,12 @@
     
     $('.btnNext').click(function()
     {
+        answ = $('input[name=answers]').val(); 
+        if(answ == "") {
+            alerta();
+            return;
+        }
+        
         $("#questionform").attr("action", '<?php echo url_for('quiz/next?id=' . $quiz->getIdQuiz()) ?>')
         $('form#questionform').submit();
     });

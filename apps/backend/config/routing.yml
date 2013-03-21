@@ -1,3 +1,12 @@
+bonus_quiz:
+  class: sfPropelRouteCollection
+  options:
+    model:                BonusQuiz
+    module:               bonus_quiz
+    prefix_path:          /bonus_quiz
+    column:               id_bonus_quiz
+    with_wildcard_routes: true
+
 position:
   class: sfPropelRouteCollection
   options:
