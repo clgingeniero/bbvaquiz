@@ -2,20 +2,25 @@ a{
     text-decoration: none;
     color: #fff;
 }
+
 .menu-admin{
-   background: none repeat scroll 0 0 #094FA4;
-   
     float: left;
-    margin: 3px;
-    padding: 4px;
+    margin-bottom: 19px;
+    margin-left: 6px;
+}
+.menu-admin a{
+   background: none repeat scroll 0 0 #094FA4;
+   padding: 7px;
 }
 
 .menu-admin a:hover{
    background: none repeat scroll 0 0 #009FE0;
-   color: #fff;
-    float: left;
-  
-   
+   padding: 7px; 
+}
+
+.menu-admin a:active{
+   background: none repeat scroll 0 0 #009FE0;
+   padding: 7px; 
 }
 
 .menu-admin a:active{

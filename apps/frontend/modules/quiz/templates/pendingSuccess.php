@@ -23,7 +23,7 @@
        <a href="<?php echo url_for('quiz/do?id=' . $quiz->getQuiz()->getIdQuiz()) ?>"><div class="btn-restart">@</div></a>
        <div class="time-dv">
            <?php 
-                $fecha1 = new DateTime(date("d-m-Y H:i:s"));
+                /*$fecha1 = new DateTime(date("d-m-Y H:i:s"));
                 $fecha2 = new DateTime($quiz->getQuiz()->getFinalTime());
                 $fecha = $fecha1->diff($fecha2);
                 ?>
@@ -31,12 +31,16 @@
                 <span><?php echo ($fecha->m > 0) ? $fecha->m . ' Meses' : '' ?></span>
                 <span><?php echo ($fecha->d > 0) ? $fecha->d . ' Días' : '' ?></span>
                 <span><?php echo ($fecha->h > 0) ? $fecha->h . ' Horas' : '' ?></span>
-                <span><?php echo ($fecha->i > 0) ? $fecha->i . ' Minutos' : '' ?></span>
+                <span><?php echo ($fecha->i > 0) ? $fecha->i . ' Minutos' : '' */ ?>
+       <!--</span>
        </div>
        <!--<div class="avance-dv"><?php //echo quizActions::getAdvance($quiz->getQuiz()->getIdQuiz(), $quiz->getIdusrql()) . " %" ?></div> -->
        
 
-
+<span><?php echo '2 Días'?></span>
+                <span><?php echo '10 Horas'?></span>
+                <span><?php echo  '20 Minutos' ?></span>
+       </div>
 
 
 <?php endforeach; ?>

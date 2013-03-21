@@ -519,6 +519,32 @@ class quizActions extends sfActions
         $inicial = new DateTime($quiz->getInicialTime());
         $end = new DateTime(date("Y-m-d H:i:s"));
         
+        //$fecha = $inicial->diff($end);
+        $horas = 0;
+        if(0 == 0){
+            $horas = (1 * 24) + 12;
+            
+        }
+        
+        
+        $criteriaValor = new Criteria();
+        $criteriaValor->add(BonusQuizPeer::ID_QUIZ, $quizId);
+        $criteriaValor->add(BonusQuizPeer::HOURS, $horas, Criteria::GREATER_EQUAL);
+        $criteriaValor->addDescendingOrderByColumn(BonusQuizPeer::BONUS);
+        return BonusQuizPeer::doSelectOne($criteriaValor);
+     
+     }
+     
+     
+     public function getBonusUserphp53($quizId)
+     {
+        
+        $quiz = QuizPeer::retrieveByPk($quizId);
+         
+        
+        $inicial = new DateTime($quiz->getInicialTime());
+        $end = new DateTime(date("Y-m-d H:i:s"));
+        
         $fecha = $inicial->diff($end);
         $horas = 0;
         if((int)$fecha->y == 0){
@@ -542,7 +568,7 @@ class quizActions extends sfActions
          
          $tot = $this->getCountTotQuestions($quizId);
          $usr = $this->getCountAnsQuizResponse($quizId);
-         $this->adv = ($usr == 0) ? 0 : ($usr/$tot) * 100; 
+         $this->adv = ($usr == 0) ? 0 :  round((($usr/$tot) * 100), 2); 
          //echo $usr . '-' . $tot . '-' .$this->adv;
      }
      
