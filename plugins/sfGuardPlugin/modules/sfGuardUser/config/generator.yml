@@ -12,22 +12,45 @@ generator:
 
     config:
       fields:
-        password_again: { label: "Password (again)" }
+        password_again: { label: "Clave de red (confirmar)" }
 
       list:
         
-        title:   User list
-        display: [=username, created_at, last_login]
+        title:   Listado de usuarios
+        display: [=username,created_at, last_login]
+        fields:  
+            username: { label: Nombre de usuario}
+            created_at: { label: Creado }
+            
+            last_login: { label: Ultimo ingreso}
 
       form:
         class: sfGuardUserAdminForm
         display:
           "NONE":                   [username, password, password_again]
-          "Profile":                [email, gender, user_bank_id, id_position, id_center_cost, id_depto, id_area, id_zone]
+          "Profile":                [first_name, email, user_bank_id, id_position, id_depto, id_area, id_zone]
           "Permissions and groups": [is_active, is_super_admin, sf_guard_user_group_list, sf_guard_user_permission_list]
           
       edit:
         title: Editar usuario "%%username%%"
+        fields:  
+            username: { label: Nombre de usuario}
+            first_name: { label: Nombre }
+            email: { label: Correo }
+            user_bank_id: { label: Codigo }
+            id_position: { label: Cargo }
+            
+            id_depto: { label: Oficina }
+            id_area: { label: Area }
+            id_zone: { label: Zona }
+            is_active: { label: Activo }
+            is_super_admin: { label: Es administrador }
+            sf_guard_user_group_list: { label: Lista de usuarios }
+            sf_guard_user_permission_list: { label: Permisos }
+           
+                 
+            
+            
 
       new:
         title: Nuevo usuario

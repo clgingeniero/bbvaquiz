@@ -15,14 +15,28 @@ generator:
       actions: ~
       fields:  ~
       list:   
+        title: Listado de respuestas
         peer_method: doSelectJoinQuestion
         title: Administrador de respuestas
         display: [answer, question_name, correct]
+        fields:  
+          answer: { label: Respuesta}
+          question_name: { label: Pregunta}
+          correct: {label: Es la correcta}
       filter:  ~
       form:
         display:
           Content: [answer, id_question, correct]
       edit:    
         title: Edición de "%%answer%%"
+        fields:  
+          answer: { label: Respuesta}
+          id_question: { label: Pregunta}
+          correct: {label: Es la correcta}
+          
       new:     
         title: Nueva respuesta
+        fields:  
+          answer: { label: Respuesta}
+          id_question: { label: Pregunta}
+          correct: {label: Es la correcta}

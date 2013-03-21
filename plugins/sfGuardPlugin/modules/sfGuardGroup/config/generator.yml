@@ -12,10 +12,23 @@ generator:
 
     config:
       list:
-        title: Group list
+        title: Grupos
+        fields:  
+            name: { label: Nombre}
+            description: { label: Descripción }
+            
 
       edit:
-        title: Editing Group "%%name%%"
+        title: Editar grupo "%%name%%"
+        fields:  
+           name: { label: Nombre}
+           description: { label: Descripción }
+           sf_guard_group_permission_list: { label: Permisos }
+            
 
       new:
-        title: New Group
+        title: Nuevo grupo
+        fields:  
+           name: { label: Nombre}
+           description: { label: Descripción }
+           sf_guard_group_permission_list: { label: Permisos }

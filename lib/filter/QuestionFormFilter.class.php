@@ -11,5 +11,11 @@ class QuestionFormFilter extends BaseQuestionFormFilter
 {
   public function configure()
   {
+      $this->widgetSchema->setLabels(array(
+    'question'  => 'Pregunta',
+    'id_dificultad'   => 'Dificultad',
+    
+));
+     
   }
 }

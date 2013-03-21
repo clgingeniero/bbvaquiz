@@ -11,6 +11,6 @@
         </table>
 
         <input type="submit" value="Iniciar sesión" />
-        <a href="<?php echo url_for('@register') ?>" class="btn"> Registro </a>
+        <!--<a href="<?php //echo url_for('@register') ?>" class="btn"> Registro </a> -->
         </form>
     </div>

@@ -54,41 +54,47 @@ label{ line-height: 1.3em; color: #758087; }
     padding-left: 14px;
     width: 34px;}
 .over-men-home{ background: url("../images/over-menu-gral_03.jpg") no-repeat scroll 0 0 transparent;
+    display: none;
     float: right;
     height: 28px;
-    display: none;
-    padding-left: 14px;
+    margin-top: 5px;
+    padding-left: 210px;
     width: 30px; }
 .over-men-acco{ background: url("../images/over-menu-gral_05.jpg") no-repeat scroll 0 0 transparent;
+    display: none;
     float: right;
     height: 35px;
-    padding-left: 14px;
-    display: none;
+    margin-top: 5px;
+    padding-left: 162px;
     width: 30px;}
-.over-men-inst{ background: url("../images/over-menu-gral_07.jpg") no-repeat scroll 0 0 transparent;
+.over-men-inst{   background: url("../images/over-menu-gral_07.jpg") no-repeat scroll 0 0 transparent;
+    display: none;
     float: right;
     height: 34px;
-    display: none;
-    padding-left: 14px;
+    margin-top: 5px;
+    padding-left: 146px;
     width: 33px;}
-.over-men-help{ background: url("../images/over-menu-gral_09.jpg") no-repeat scroll 0 0 transparent;
+.over-men-help{   background: url("../images/over-menu-gral_09.jpg") no-repeat scroll 0 0 transparent;
+    display: none;
     float: right;
     height: 34px;
-    display: none;
-    padding-left: 14px;
+    margin-top: 5px;
+    padding-left: 70px;
     width: 34px;}
-.over-men-clos{background: url("../images/over-menu-gral_11.jpg") no-repeat scroll 0 0 transparent;
+.over-men-clos{  background: url("../images/over-menu-gral_11.jpg") no-repeat scroll 0 0 transparent;
+    display: none;
     float: right;
     height: 34px;
-    display: none;
-    padding-left: 14px;
+    margin-top: 5px;
+    padding-left: 22px;
     width: 34px;}
 
 .home{width: 900px; height: 500px; }
-.men-ppal {color: #FFFFFF;
+.men-ppal {   color: #FFFFFF;
     float: left;
-    padding-left: 47px;
+    left: 67%;
     padding-top: 222px;
+    position: absolute;
     text-decoration: none;}
 .men-ppal a {color:#fff; text-decoration: none;}
 .men-ppal a :visited{color:#fff; text-decoration: none;}
@@ -263,6 +269,7 @@ width: 329px; height: 44px;    margin-left: -5px;}
     position: absolute;
     top: 37px;}
 .menu-inicio{
+    text-align: left;
     float: left;
     margin-left: 220px;
     margin-top: -149px;
@@ -461,12 +468,32 @@ input[type="radio"]{
     margin-top: 15px;
     overflow: auto;
     width: 528px;}
-.type{float: left; padding-left: 20px; }
-.quiz{float: left;}
+.type{float: left; padding-right: 20px; }
+.quiz{float: left; padding-right: 20px;}
 .content-report {
     padding-right: 20px;
     padding-top: 80px;
     text-align: left;
 }
+.users{display: none;}
 .accion{float: left;
     padding-left: 19px;}
+.error_list{margin-left: -195px;
+    margin-top: -12px;
+    width: 300px;}
+.tit-admin{background: url("../images/admin.png") no-repeat scroll 0 0 transparent;
+width: 329px; height: 44px;}
+
+.tit-subadmin{ color: #86C82D;
+    font-size: 20px;
+    left: 440px;
+    margin-top: -36px;
+    position: absolute;
+     width: 345px;
+    }
+.pers-admin{  background: url("../images/3-22.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 1462px;
+    margin-left: -68px;
+    margin-top: 77px;
+    width: 320px;}

@@ -72,9 +72,9 @@
         <source>Description</source>
         <target>Descripción</target>
       </trans-unit>
-       <trans-unit>
-        <source>Content</source>
-        <target>Contenido</target>
+      <trans-unit>
+        <source>Required</source>
+        <target>Campo requerido</target>
       </trans-unit>
     </body>
   </file>

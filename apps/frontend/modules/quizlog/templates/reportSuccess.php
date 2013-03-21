@@ -1,8 +1,8 @@
 
 <?php
 
-/*var_dump($report); 
-var_dump($llega); die; */
+//var_dump($report); 
+//var_dump($llega); die; 
 
 // require_once 'symfony.inc.php';
 
@@ -29,7 +29,7 @@ $objPHPExcel->getActiveSheet()->setCellValue('G1', 'Resultado');
 $objPHPExcel->getActiveSheet()->setCellValue('H1', 'Bono');
 $objPHPExcel->getActiveSheet()->setCellValue('I1', 'Fecha de finalización');
 
-
+ if(!$usrf) {
 foreach($report as $rep): $i++;    
     $objPHPExcel->getActiveSheet()->setCellValue('A' . $i, $i-1);
     $objPHPExcel->getActiveSheet()->setCellValue('B' . $i, $rep->getsfGuardUserProfile()->getUserBankId());
@@ -42,7 +42,7 @@ foreach($report as $rep): $i++;
     $objPHPExcel->getActiveSheet()->setCellValue('I' . $i, $rep->getDateEnd());
 
  endforeach;  
-
+ }
  if($usersreport != null) {
  foreach($usersreport as $repo): $i++;    
     $objPHPExcel->getActiveSheet()->setCellValue('A' . $i, $i-1);

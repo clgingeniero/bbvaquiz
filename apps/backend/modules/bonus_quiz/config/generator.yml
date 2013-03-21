@@ -15,14 +15,28 @@ generator:
       actions: ~
       fields: ~
       list: 
+        fields:  
+          quiz: { label: Actividad}
+          hours: { label: Horas}
+          bonus: {label: Bono}
         peer_method:  doSelectJoinQuiz
         display:  [quiz, hours, bonus]
       filter:  ~
       form:    
         display:
+          
           Content: [id_quiz, hours, bonus]
-      edit:   
+      edit: 
+        
          title: Edición del bono para "%%id_quiz%%"
+         fields:  
+            id_quiz: { label: Actividad}
+            hours: { label: Horas}
+            bonus: {label: Bono}
       new:     
         title: Nueva opción de bono para la actividad
+        fields:  
+            id_quiz: { label: Actividad}
+            hours: { label: Horas}
+            bonus: {label: Bono}
 

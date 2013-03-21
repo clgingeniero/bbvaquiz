@@ -145,9 +145,10 @@ class quizActions extends sfActions
     {
         $this->forward404Unless($quiz = QuizPeer::retrieveByPk($request->getParameter('id')), 
                 sprintf('Object quiz does not exist (%s).', $request->getParameter('id')));
-
+        
         $this->finish = false;
-
+        $this->quiz = ($this->quiz == null) ? QuizPeer::retrieveByPK($request->getParameter('id')) : $this->quiz;
+        $this->getAdvance($request->getParameter('id'));
         if($action != 'save') {
             $question = $this->getQuestionStatus($request->getParameter('id')); 
             $this->question = $this->getQuestionActive($question, $request);
@@ -309,9 +310,10 @@ class quizActions extends sfActions
         //puntaje total en la actividad
         $this->totalActividad = $this->getValueActividad($questions, $difValue, $status) +  $valueBonus; 
         
-        
+        $bU = $this->getBonusUser($quiz);
+        $userBonus = (sizeof($bU)>0)  ? $bU->getBonus() : 0 ;
         //puntaje obtenido
-        return $this->totalUser = $this->getValueActividad($this->getUserResult($quiz), $difValue, $status) +  $valueBonus;
+        return $this->totalUser = $this->getValueActividad($this->getUserResult($quiz), $difValue, $status) +  $userBonus;
         
         
         
@@ -331,7 +333,22 @@ class quizActions extends sfActions
 
      public function getUserResult($quiz)
      {
+        
         $criteriaValor = new Criteria();
+        $criteriaValor->addJoin(QuizusrPeer::ID_ANSWER, AnswerPeer::ID_ANSWER, Criteria::INNER_JOIN)
+                ->addJoin(AnswerPeer::ID_QUESTION, QuestionPeer::ID_QUESTION, Criteria::INNER_JOIN)
+                ->add(AnswerPeer::CORRECT, '1')
+                ->add(QuizusrPeer::ID_USR_QU, $this->getUserId())
+                ->add(QuizusrPeer::ID_QUIZ, $quiz);
+        
+        return QuestionPeer::doSelect($criteriaValor);
+     }
+     
+     
+     public function executeUserResult($quiz)
+     {
+        $quiz = 1;
+         /*$criteriaValor = new Criteria();
         $criteriaValor->addAlias('questionalias', 'quizusr');
         
         $criteriaValor->addJoin(AnswerPeer::ID_ANSWER, 'questionalias.ID_ANSWER', Criteria::INNER_JOIN);
@@ -340,9 +357,17 @@ class quizActions extends sfActions
         $criteriaValor->add(QuizusrPeer::ID_USR_QU, $this->getUserId());
         $criteriaValor->add(QuizusrPeer::ID_QUIZ, $quiz);
         
-        $criteriaValor->addGroupByColumn(QuestionPeer::ID_QUESTION);
+        $criteriaValor->addGroupByColumn(QuestionPeer::ID_QUESTION);*/
         
-        return QuestionPeer::doSelect($criteriaValor);
+        $criteriaValor = new Criteria();
+        $criteriaValor->addJoin(QuizusrPeer::ID_ANSWER, AnswerPeer::ID_ANSWER, Criteria::INNER_JOIN)
+                ->addJoin(AnswerPeer::ID_QUESTION, QuestionPeer::ID_QUESTION, Criteria::INNER_JOIN)
+                ->add(AnswerPeer::CORRECT, '1')
+                ->add(QuizusrPeer::ID_USR_QU, $this->getUserId())
+                ->add(QuizusrPeer::ID_QUIZ, $quiz);
+        
+        $a =  QuestionPeer::doSelect($criteriaValor);
+        var_dump($a); die;
      }
 
      public function getUserPosition($quiz)
@@ -434,7 +459,7 @@ class quizActions extends sfActions
             
             $totBonus = $this->getBonusUser($quiz);
             $bonus = ($totBonus != null) ? $totBonus->getBonus() : 0 ;
-            $total = $this->totalUser + $bonus;
+            $total = $this->totalUser;
             
             $qusr = QuizlogPeer::retrieveByPK($rs->getIdQuizUsrLog());
             $qusr->setIdQuizlog($quiz);
@@ -504,11 +529,36 @@ class quizActions extends sfActions
         
         $criteriaValor = new Criteria();
         $criteriaValor->add(BonusQuizPeer::ID_QUIZ, $quizId);
-        $criteriaValor->add(BonusQuizPeer::BONUS, $horas, Criteria::LESS_EQUAL);
+        $criteriaValor->add(BonusQuizPeer::HOURS, $horas, Criteria::GREATER_EQUAL);
         $criteriaValor->addDescendingOrderByColumn(BonusQuizPeer::BONUS);
         return BonusQuizPeer::doSelectOne($criteriaValor);
      
      }
+     
+     
     
+     public function getAdvance($quizId)
+     {
+         
+         $tot = $this->getCountTotQuestions($quizId);
+         $usr = $this->getCountAnsQuizResponse($quizId);
+         $this->adv = ($usr == 0) ? 0 : ($usr/$tot) * 100; 
+         //echo $usr . '-' . $tot . '-' .$this->adv;
+     }
+     
+     public function getCountTotQuestions($quizId)
+     {
+        $c = new Criteria();
+        $c->add(QuestionsQuizPeer::ID_QUIZ, $quizId );
+        return QuestionsQuizPeer::doCount($c);
+    }
+     
+     public function getCountAnsQuizResponse($quizId)
+     {
+        $c = new Criteria();
+        $c->add(QuizusrPeer::ID_QUIZ, $quizId );
+        $c->add(QuizusrPeer::ID_USR_QU, $this->getUserId() );
+        return QuizusrPeer::doCount($c);
+     }
   
 }

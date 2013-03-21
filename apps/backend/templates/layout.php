@@ -114,7 +114,8 @@
 <?php echo link_to('Usuarios', '@sf_guard_user') ?>
 </div>
 <div class="menu-admin">
-<?php echo link_to('Ranking', '@sf_guard_user') ?>
+    <a href="/frontend.php/quizlog/preparereport">Ranking</a>
+
 </div>
     <!-- <div class="menu-admin"><?php //echo link_to('Logout', '@sf_guard_signout') ?></div> -->
 

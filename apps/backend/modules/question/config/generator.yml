@@ -18,11 +18,21 @@ generator:
         peer_method: doSelectJoinDificulty
         title: Administrador de preguntas
         display: [question, dificulty_name]
+        fields:  
+            question: { label: Pregunta}
+            dificulty_name: { label: Dificultad}
+           
       filter:  ~
       form:
         display:
           Content: [question, id_dificultad]
       edit:    
         title: Edición de "%%question%%"
+        fields:  
+            question: { label: Pregunta}
+            id_dificultad: { label: Dificultad}
       new:     
         title: Nueva pregunta
+        fields:  
+            question: { label: Pregunta}
+            id_dificultad: { label: Dificultad}

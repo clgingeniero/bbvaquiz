@@ -10,6 +10,12 @@ class sfGuardFormSignin extends BasesfGuardFormSignin
       'remember' => new sfWidgetFormInputCheckbox(),
     ));
 
+    $this->widgetSchema->setLabels(array(
+    'username'  => 'Nombre de Usuario',
+    'password'   => 'Clave de red',
+    'remember' => 'Recordarme',
+));
+    
     $this->setValidators(array(
       'username' => new sfValidatorString(),
       'password' => new sfValidatorString(),

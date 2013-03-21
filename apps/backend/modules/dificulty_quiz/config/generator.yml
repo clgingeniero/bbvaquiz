@@ -14,14 +14,31 @@ generator:
     config:
       actions: ~
       fields: ~
-      list: 
+      list:
+        title: Listado de dificultades por actividad
+        fields:  
+          quiz: { label: Actividad}
+          easy: { label: Facil}
+          medium: {label: Medio}
+          hard: {label: Duro}
         peer_method:  doSelectJoinQuiz
         display:  [quiz, easy, medium, hard]
       filter:  ~
       form:    
         display:
           Content: [id_quiz, easy, medium, hard]
+          
       edit:   
          title: Edición de dificultad para "%%id_quiz%%"
+         fields:  
+          id_quiz: { label: Actividad}
+          easy: { label: Facil}
+          medium: {label: Medio}
+          hard: {label: Duro}
       new:     
         title: Nueva opción de dificultad para la actividad
+        fields:  
+          id_quiz: { label: Actividad}
+          easy: { label: Facil}
+          medium: {label: Medio}
+          hard: {label: Duro}

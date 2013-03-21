@@ -181,6 +181,11 @@
         <source>Description</source>
         <target>Descripción</target>
       </trans-unit>
+      <trans-unit>
+        <source>Content</source>
+        <target>Contenido</target>
+      </trans-unit>
+      
     </body>
   </file>
 </xliff>

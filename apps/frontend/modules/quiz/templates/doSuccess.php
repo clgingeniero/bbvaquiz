@@ -69,7 +69,7 @@
             
 <div class="barra-fin">         
 <div id="progress-bar">
-    <div class="progreso"><span>70 %</span></div>
+    <div class="progreso"><span><?php echo $adv . ' %' ?></span></div>
     <div id="status"></div>
 </div>
 
@@ -92,31 +92,33 @@
 
 
 
-<?php foreach($quiz_active_list as $quiz): ?>
+<?php //echo var_dump($quiz); die;//foreach($quiz_active_list as $quiz): ?>
         
         <script>
 	
 		$(document).ready(function(){
 			$("#countdown").countdown({
-				date: "<?php echo strftime('%d %B %Y', strtotime($quiz->getFinalTime())) . ' 1:00:00' ?>",
+				date: "<?php echo strftime('%d %B %Y', strtotime($quiz->getFinalTime())) ?>",
 				format: "on"
 			},
 			
 			function() {
 				// callback function
 			});
-                        $("#status").animate( { width: "70%" }, 1500);
+                        $("#status").animate( { width: "<?php echo $adv . '%' ?>" }, 1500);
 		});
                 
                 
 	
 	</script>
 
-<?php endforeach; ?>
+<?php //endforeach; ?>
         
          
 
 <script>
+    
+    
     
     function oprime(id, value){
         $('#btn_resp_' + id).attr("class", "active_" + id);
@@ -134,14 +136,12 @@
     
     $('.btnSave').click(function()
     {
-        answ = $('input[name=answers]').val(); 
-        if(answ == "") {
-            alerta();
-            return;
-        }
-            
-        $("#questionform").attr("action", '<?php echo url_for('quiz/save?id=' . $quiz->getIdQuiz()) ?>')
-        $('form#questionform').submit();
+        
+            var c =  confirm('Estas a punto de guardar tu respuesta y salir, estas seguro ?');
+            if(c){ 
+                $(location).attr('href','<?php echo url_for('logout') ?>');
+            }
+         
     });
     
     function alerta(){
@@ -182,7 +182,7 @@
     {
         answ = $('input[name=answers]').val(); 
         if(answ == "") {
-            alerta();
+            alerta("Seleccione una respuesta entes de continuar");
             return;
         }
         

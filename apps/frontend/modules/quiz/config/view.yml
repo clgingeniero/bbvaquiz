@@ -14,7 +14,7 @@ default:
 
   stylesheets:    [main.css, styles.css, reset.css]
 
-  javascripts:    [jquery-1.8.2.min.js, http://code.jquery.com/jquery-latest.js, countdown.js]
+  javascripts:    [jquery-1.8.2.min.js, jquery-latest.js, countdown.js]
 
   has_layout:     true
   layout:         layout

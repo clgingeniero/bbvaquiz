@@ -17,7 +17,7 @@
        <div class="tit-act"><span><?php echo "Actividad" ?></span></div>
        <div class="restart"><a href=""><div class="restart">@</div></a></div>
        <div class="time"><?php echo "Tiempo restante" ?></div>
-       <div class="avance"><?php echo "Avance" ?></div>
+        <!--  <div class="avance"><?php // echo "Avance" ?></div>  -->
 <?php foreach($quiz_active_list as $quiz): ?>
        <div class="clear-pending"></div>
 <div class="activi"><span><?php echo $quiz->getDescription()?></span></div>
@@ -34,7 +34,7 @@
                 <span><?php echo ($fecha->h > 0) ? $fecha->h . ' Horas' : '' ?></span>
                 <span><?php echo ($fecha->i > 0) ? $fecha->i . ' Minutos' : '' ?></span>
        </div>
-       <div class="avance-dv"><?php echo '0 %' ?></div>
+      <!--  <div class="avance-dv"><?php //echo '0 %' ?></div> -->
        
 
 

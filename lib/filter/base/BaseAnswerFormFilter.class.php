@@ -16,6 +16,12 @@ abstract class BaseAnswerFormFilter extends BaseFormFilterPropel
       'id_question' => new sfWidgetFormPropelChoice(array('model' => 'Question', 'add_empty' => true)),
       'correct'     => new sfWidgetFormFilterInput(),
     ));
+    
+    $this->widgetSchema->setLabels(array(
+    'answer'  => 'Respuesta',
+    'id_question'   => 'Pregunta',
+    'correct' => 'Es correcta',
+));
 
     $this->setValidators(array(
       'answer'      => new sfValidatorPass(array('required' => false)),

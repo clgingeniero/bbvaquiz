@@ -4,23 +4,16 @@
         <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
           <div class="linea"></div>
         <p class="subtit-inst">Calidad eje fundamental del crecimiento</p>
-        <div class="tit-profile"></div>
+         <div class="tit-admin"></div>
         
     </div>
+    
   
 <div class="content-report">
     
     <form action="<?php echo url_for('quizlog/report')?>" id="reportform" method="post" enctype="multipart/form-data">
-<div class="quiz">
-<p>Actividad: </p> 
-<select name="id">
-    <?php foreach($activities as $activi): ?>
-    <option value="<?php echo $activi->getIdQuiz() ?>"><?php echo $activi->getDescription() ?></option>
-    <?php endforeach; ?>
-</select>
-</div>
 <div class="type">
-<p>Tipo de informe: </p>     
+<p>Tipo de informe</p>     
 <select class="informe" name="t" onchange="cambio(this)">
     <option>Seleccione</option>
     <option value="o">Oficina</option>
@@ -29,8 +22,16 @@
     <option value="u">Usuarios</option>
 </select>
 </div>
+<div class="quiz">
+<p>Actividad</p> 
+<select name="id">
+    <?php foreach($activities as $activi): ?>
+    <option value="<?php echo $activi->getIdQuiz() ?>"><?php echo $activi->getDescription() ?></option>
+    <?php endforeach; ?>
+</select>
+</div>
 <div class="type">
-<p>Estado: </p>     
+<p>Estado</p>     
 <select name="s">
     <option value="2">Todos</option>
     <option value="1">Finalizadas</option>
@@ -39,7 +40,7 @@
 </div>
 <div class="accion">
             <p>Acción</p>  
-            <input type="submit" value="Generar"> 
+            <input type="submit" value="Generar" disabled> 
 </div>
 
 <div class="users">
@@ -91,34 +92,60 @@
 
     
 <script>
+    
+    function valida()
+    {
+        if($('.informe').val()==""){
+            alert('Debe seleccionar la opcion del tipo de informe que desea');
+        } 
+    }
+    
     function cambio(val) {
     
         info = $('.informe').val(); 
         switch(info)
         {
             case 'o' : 
+                $('input[type="submit"]').removeAttr('disabled');
+                $('.users').hide(); 
                 $('.office').show(); 
                 $('.zone').hide(); 
                 $('.territorial').hide(); 
                 break;
            case 'z' : 
+                $('input[type="submit"]').removeAttr('disabled');
+               $('.users').hide(); 
                 $('.office').hide(); 
                 $('.zone').show(); 
                 $('.territorial').hide();
                 break;
                 
            case 't' : 
+                $('input[type="submit"]').removeAttr('disabled');
+               $('.users').hide(); 
                 $('.office').hide(); 
                 $('.zone').hide(); 
                 $('.territorial').show();
                 break;
-           default: 
+           case 'u' : 
+                $('input[type="submit"]').removeAttr('disabled');
+               $('.users').show(); 
                 $('.office').hide(); 
                 $('.zone').hide(); 
                 $('.territorial').hide();
+                break;
+           default: 
+               $('.users').hide(); 
+                $('.office').hide(); 
+                $('.zone').hide(); 
+                $('.territorial').hide();
+                $('input[type="submit"]').attr('disabled','disabled');
+               
                 break;     
             
-           
+               
+            
+
         }
         
    

@@ -12,10 +12,22 @@ generator:
 
     config:
       list:
-        title: Permission list
+        title: Permisos
+        fields:  
+           name: { label: Nombre}
+           description: { label: Descripción }
+           sf_guard_group_permission_list: { label: Permisos }
 
       edit:
-        title: Editing Permission "%%name%%"
+        title: Editar permiso "%%name%%"
+        fields:  
+           name: { label: Nombre}
+           description: { label: Descripción }
+           sf_guard_group_permission_list: { label: Permisos }
 
       new:
-        title: New Permission
+        title: Nuevo permiso
+        fields:  
+           name: { label: Nombre}
+           description: { label: Descripción }
+           sf_guard_group_permission_list: { label: Permisos }

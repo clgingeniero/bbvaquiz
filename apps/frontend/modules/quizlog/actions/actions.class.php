@@ -93,6 +93,10 @@ class quizlogActions extends sfActions
         $status =  $request->getParameter('s');
         $id_quiz = $request->getParameter('id');
         $this->usersreport = null;
+        $this->usrf = false;
+        $opusr = $request->getParameter('uo');
+        
+        
         
         $c = new Criteria();
         $c->addJoin(QuizlogPeer::ID_USRQL, sfGuardUserProfilePeer::USER_ID, Criteria::INNER_JOIN);
@@ -125,19 +129,24 @@ class quizlogActions extends sfActions
                 $c->add(QuizlogPeer::ID_QUIZ_USR_LOG, Criteria::ISNULL);
                 $c->addOr(QuizlogPeer::ID_QUIZLOG, $id_quiz); */
                 
-                $con = Propel::getConnection();
-        $sql = "SELECT sf_guard_user_profile.*, quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, 
-quizlog.RESULT, quizlog.BONUS, quizlog.DATE_END FROM `quizlog` 
-right JOIN sf_guard_user_profile 
-ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) 
-WHERE quizlog.ID_QUIZ_USR_LOG is null  ";
-       
-                $stmt = $con->prepare($sql);
-                $stmt->execute();
-                $this->usersreport = sfGuardUserProfilePeer::populateObjects($stmt);
+                if($opusr == 'ut' || $opusr == 'uf') {
+                    $con = Propel::getConnection();
+                    //no han presentado nada
+                    $sql = "SELECT sf_guard_user_profile.*, quizlog.ID_QUIZ_USR_LOG, quizlog.ID_QUIZLOG, quizlog.ID_USRQL, quizlog.STATUS, 
+                    quizlog.RESULT, quizlog.BONUS, quizlog.DATE_END FROM `quizlog` 
+                    right JOIN sf_guard_user_profile 
+                    ON (quizlog.ID_USRQL=sf_guard_user_profile.USER_ID) 
+                    WHERE quizlog.ID_QUIZ_USR_LOG is null  ";
+
+                    $stmt = $con->prepare($sql);
+                    $stmt->execute();
+                    $this->usersreport = sfGuardUserProfilePeer::populateObjects($stmt);
                 
-              
+                }
                 
+                 if($opusr == 'uf') {
+                     $this->usrf = true;
+                     return;}
                 
                 break;
         }

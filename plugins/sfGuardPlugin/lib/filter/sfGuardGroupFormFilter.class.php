@@ -15,5 +15,13 @@ class sfGuardGroupFormFilter extends BasesfGuardGroupFormFilter
     unset($this['sf_guard_user_group_list']);
 
     $this->widgetSchema['sf_guard_group_permission_list']->setLabel('Permissions');
+    
+    $this->widgetSchema->setLabels(array(
+    'description'  => 'Descripción',
+    'name'   => 'Nombre',
+    'sf_guard_group_permission_list'  => 'Permisos',
+    'sf_guard_user_group_list'   => 'Grupos',
+    
+));
   }
 }
