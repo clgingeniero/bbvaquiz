@@ -1,16 +1,17 @@
 <div class="fond-home"></div>
-    <div class="pers-activ"></div>
+    
     <div class="tit-instru">
         <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
           <div class="linea"></div>
         <p class="subtit-inst">Calidad eje fundamental del crecimiento</p>
         
     </div>
+<div class="pers-activ"></div>
   
 <div class="content-activi">
 
-<?php if($finish): ?>
-<span>finish congratulations</span>
+<?php if($sin_preguntas): ?>
+<span>La evaluación no tiene preguntas</span>
 <?php return;  ?>
 <?php endif; ?>
 

@@ -10,35 +10,31 @@
   </head>
     
   <body>
+      <?php $isAdmin = false;
+      if(sfContext::getInstance()->getUser()->getGuardUser()):
+      $isAdmin = sfContext::getInstance()->getUser()->getGuardUser()->getIsSuperAdmin(); 
+      endif;?>
       <div class="layout">
           <div class="logo"></div>
       <div class="menu">
         <a  class="confirmar" href="#">
                 <div class="men-clos"></div>
             </a>
-          <a href="<?php echo url_for('help') ?>">
+          <a href="<?php echo ($isAdmin) ? '/backend.php' : url_for('help') ?>">
                 <div class="men-help"></div>
             </a>
-           <a href="<?php echo url_for('instructions/index') ?>">
+          
+           <a href="<?php echo ($isAdmin) ? '/backend.php/instructions' : url_for('instructions/index') ?>">
                 <div class="men-inst"></div>
             </a>
-           <a href="<?php echo url_for('profile') ?>">
+           <a href="<?php echo ($isAdmin) ? '/backend.php/sf_guard_user' :  url_for('profile') ?>">
                 <div class="men-acco"></div>
             </a>
             
           
-            <a href="<?php echo url_for('/') ?>">
+            <a href="<?php echo ($isAdmin) ? '/backend.php' :  url_for('/') ?>">
                 <div class="men-home"></div>
             </a>
-            
-           
-           
-           
-            
-            
-           
-           
-      
       </div> 
         <div class="clear-boot"></div>
         <div class="over-smenu">

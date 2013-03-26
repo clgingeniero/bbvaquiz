@@ -18,21 +18,17 @@ a{
    padding: 7px; 
 }
 
-.menu-admin a:active{
-   background: none repeat scroll 0 0 #009FE0;
-   padding: 7px; 
-}
 
 .menu-admin a:active{
    background: none repeat scroll 0 0 #009FE0;
    color: #fff;
-   padding: 3px;
+   padding: 7px;
    
 }
 
 .fond-admin{  background-color: #D0D0CE;
     float: left;
-    height: 1604px;
+    height: 1636px;
     margin-top: -57px;
     width: 68px;}
 
@@ -42,7 +38,7 @@ a{
     margin-left: -68px;
     margin-top: 77px;
     width: 320px;}
-.menu-2{float: left; padding-top: 70px; margin-left: -36px;}
+.menu-2{float: left; padding-top: 12px; margin-left: -36px;}
 .content-admin{ width: 536px; float: left;}
 #sf_admin_content{
     min-height: 206px;
@@ -59,12 +55,14 @@ a{
 }
 
 .tit-admin{background: url("../images/admin.png") no-repeat scroll 0 0 transparent;
-width: 329px; height: 44px;}
+width: 335px; height: 44px;}
 
-.tit-subadmin{ color: #86C82D;
+.tit-subadmin{   color: #86C82D;
     font-size: 20px;
-    left: 440px;
     margin-top: -36px;
-    position: absolute;
-     width: 345px;
-    }
+    padding-left: 30%;
+}
+
+.home-admin{ min-height: 500px;
+    width: 900px;}
+.layout-admin{width: 900px; height: 1636px;/*height: 600px;*/  margin: 0 auto; border: 8px solid #094FA4; }

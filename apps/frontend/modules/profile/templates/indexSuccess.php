@@ -1,7 +1,7 @@
 
   
   <div class="fond-home"></div>
-    <div class="pers-gen"></div>
+    
     <div class="tit-instru">
         <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
           <div class="linea"></div>
@@ -9,6 +9,7 @@
         <div class="tit-profile"></div>
         
     </div>
+  <div class="pers-gen"></div>
   
 <div class="content-profile">
     <label>Nombre: </label><label><?php echo $sfGuardUserProfile->getFirstName() ?></label><br>

@@ -21,7 +21,7 @@
         <a href="<?php echo url_for('logout') ?>">
                 <div class="men-clos"></div>
             </a>
-          <a href="<?php echo url_for('help') ?>">
+          <a href="/frontend.php/help">
                 <div class="men-help"></div>
             </a>
            <a href="<?php echo url_for('instructions/index') ?>">
@@ -66,7 +66,7 @@
       <div class="home-admin">
           <?php if ($sf_user->isAuthenticated()): ?>
           <div class="fond-admin"></div>
-          <div class="pers-admin"></div>
+          
           <div class="tit-subadmin">
             <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
             <div class="linea"></div>
@@ -74,6 +74,8 @@
             <div class="tit-admin"></div>
 
         </div>
+          
+          <div class="pers-admin"></div>
           
           <div class="menu-2">
                
@@ -115,6 +117,10 @@
 </div>
 <div class="menu-admin">
     <a href="/frontend.php/quizlog/preparereport">Ranking</a>
+
+</div>
+<div class="menu-admin">
+    <a href="/frontend.php/quiz/prepareimport">Importar</a>
 
 </div>
     <!-- <div class="menu-admin"><?php //echo link_to('Logout', '@sf_guard_signout') ?></div> -->

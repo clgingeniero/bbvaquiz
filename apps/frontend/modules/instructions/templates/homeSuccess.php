@@ -1,10 +1,11 @@
 
     <div class="fond-home"></div>
-    <div class="pers-home"></div>
+    
    <div class="tit-ini">
         <p class="tit">¡ GANA EL MAYOR PUNTAJE !</p>
         <p class="subt-home">Calidad eje fundamental del crecimiento</p>
     </div>
+    <div class="pers-home"></div>
     <div class="men-ppal">
         <a href="<?php echo url_for('profile') ?>">
             <div class="btnhomeInicio">Inicio</div>

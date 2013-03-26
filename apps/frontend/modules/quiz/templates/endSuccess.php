@@ -1,5 +1,5 @@
 <div class="fond-home"></div>
-    <div class="pers-gen"></div>
+    
     <div class="tit-instru">
         <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
           <div class="linea"></div>
@@ -7,6 +7,7 @@
         <div class="tit-end"></div>
         
     </div>
+    <div class="pers-gen"></div>
   
 <div class="content-instru">
    <div class="pendientes">

@@ -16,7 +16,7 @@ class quizActions extends sfActions
     }
 
 
-    public function executeCreate(sfWebRequest $request)
+   /* public function executeCreate(sfWebRequest $request)
     {
       $this->forward404Unless($request->isMethod(sfRequest::POST));
 
@@ -42,7 +42,7 @@ class quizActions extends sfActions
       $this->processForm($request, $this->form);
 
       $this->setTemplate('edit');
-    }
+    } 
 
     public function executeDelete(sfWebRequest $request)
     {
@@ -63,7 +63,7 @@ class quizActions extends sfActions
 
         $this->redirect('quiz/edit?id_quiz='.$quiz->getIdQuiz());
       }
-    }
+    }*/
 
     public function executeList()
     {
@@ -145,14 +145,16 @@ class quizActions extends sfActions
     {
         $this->forward404Unless($quiz = QuizPeer::retrieveByPk($request->getParameter('id')), 
                 sprintf('Object quiz does not exist (%s).', $request->getParameter('id')));
-        
+        $this->sin_preguntas = false;
         $this->finish = false;
         $this->quiz = ($this->quiz == null) ? QuizPeer::retrieveByPK($request->getParameter('id')) : $this->quiz;
         $this->getAdvance($request->getParameter('id'));
+        
         if($action != 'save') {
+          
             $question = $this->getQuestionStatus($request->getParameter('id')); 
             $this->question = $this->getQuestionActive($question, $request);
-
+            
             if($this->question != null) {
               $this->answers = $this->getAnswers($this->question);
               
@@ -461,14 +463,19 @@ class quizActions extends sfActions
             $bonus = ($totBonus != null) ? $totBonus->getBonus() : 0 ;
             $total = $this->totalUser;
             
-            $qusr = QuizlogPeer::retrieveByPK($rs->getIdQuizUsrLog());
-            $qusr->setIdQuizlog($quiz);
-            $qusr->setIdUsrql($this->getUser()->getGuardUser()->getId());
-            $qusr->setStatus(1);
-            $qusr->setResult($total);
-            $qusr->setBonus($bonus);
-            $qusr->setDateEnd(time());
-            $qusr->save(); 
+            if($rs != null){
+                $qusr = QuizlogPeer::retrieveByPK($rs->getIdQuizUsrLog());
+                $qusr->setIdQuizlog($quiz);
+                $qusr->setIdUsrql($this->getUser()->getGuardUser()->getId());
+                $qusr->setStatus(1);
+                $qusr->setResult($total);
+                $qusr->setBonus($bonus);
+                $qusr->setDateEnd(time());
+                $qusr->save(); 
+            }else{
+                return $this->sin_preguntas = true;
+            }
+            
          //guardar puntaje de usuario
      }
      
@@ -586,5 +593,173 @@ class quizActions extends sfActions
         $c->add(QuizusrPeer::ID_USR_QU, $this->getUserId() );
         return QuizusrPeer::doCount($c);
      }
+     
+    public function import($inputFileName)
+    {
+       
+        ini_set('memory_limit', '-1');
+        error_reporting(E_ALL);
+        set_time_limit(0);
+
+        date_default_timezone_set('Europe/London');
+
+
+        set_include_path(get_include_path() . PATH_SEPARATOR . '../../../Classes/');
+
+        /** PHPExcel_IOFactory */
+        include 'PHPExcel/IOFactory.php';
+
+
+        //$inputFileName = 'example2.xlsx';
+        //echo 'Loading file ',pathinfo($inputFileName,PATHINFO_BASENAME),' using IOFactory to identify the format<br />';
+        try {
+                $objPHPExcel = PHPExcel_IOFactory::load($inputFileName);
+        } catch(Exception $e) {
+                die('Error loading file "'.pathinfo($inputFileName,PATHINFO_BASENAME).'": '.$e->getMessage());
+        }
+
+
+        echo '<hr />';
+
+        $sheetData = $objPHPExcel->getActiveSheet()->toArray(null,true,true,true);
+        //var_dump($sheetData);
+        $idAct = false;
+        $idQ = false;
+        $idQs = array();
+        for($i = 1; $i < (count($sheetData) + 1); $i++){
+            
+                switch($sheetData[$i][0]){
+                    case 'Pregunta':
+                        $idQ = $this->createQuestion($sheetData[$i]); 
+                        $idQs[] = $idQ;
+                    break;
+                
+                    case 'Respuesta Correcta':
+                        $this->createAnswer($sheetData[$i], 0, $idQ);
+                    break;
+                
+                    case 'Respuesta Incorrecta':
+                        $this->createAnswer($sheetData[$i], 1, $idQ);
+                    break;
+                
+                    case 'Actividad':
+                        $idAct = $this->createQuiz($sheetData[$i]);
+                    break;
+                
+                }
+             
+        }
+        
+        $this->createQuestionsQuiz($idAct, $idQs);
+        
+        
+
+    }
+    
+    public function createQuestion($question)
+    {
+        
+        $ques = $question[2];
+        $dif = ($question[1] == 1) ? 1 : 2;
+        $question = new Question();
+        $question->setQuestion($ques);
+        $question->setIdDificultad($dif);
+        $question->save();
+        return $question->getIdQuestion();
+    }
+    
+    public function createAnswer($answer, $type, $idQuestion)
+    {
+        $ans = $answer[2];
+        //var_dump($ans); die;
+        $answer = new Answer();
+        $answer->setAnswer($ans);
+        $answer->setIdQuestion($idQuestion);
+        $answer->setCorrect($type);
+        $answer->save();
+        //return $idQuestion;
+    }
+    
+    public function createQuiz($quiz)
+    {
+     
+       $q = $quiz[2];
+       $quiz = new Quiz();
+       $quiz->setDescription($q);
+       $quiz->setInicialTime(time());
+       $quiz->setFinalTime(time());
+       $quiz->save();
+       return $quiz->getIdQuiz();
+    }
+    
+    public function createQuestionsQuiz($idQuiz, $questions)
+    {
+        if(is_numeric($idQuiz)){
+        $ques = 0;
+        for($i=0; $i < count($questions); $i++){
+            $ques = $questions[$i];
+            $qAct = new QuestionsQuiz();
+            $qAct->setIdQuestion($ques);
+            $qAct->setIdQuiz($idQuiz);
+            $qAct->save();
+        }
+        }
+        return;
+        
+    }
+    
+    public function executePrepareimport(sfWebRequest $request)
+    {
+        //$this->error = false;
+        $this->setTemplate('prepareimport');
+    }
+    
+    public function executeLoadfile(sfWebRequest $request)
+    {
+        $filename = basename($_FILES['file']['name']);
+        $ext = substr($filename, strrpos($filename, '.') + 1);
+        $this->error = FALSE;
+        $this->msn = FALSE;
+        $ruta = '';
+       
+        if (($ext == "xls" || $ext == "xlsx") 
+            && ($_FILES["file"]["type"] == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            || $_FILES["file"]["type"] == "application/vnd.ms-excel")) 
+            {
+                if ($_FILES["file"]["error"] > 0)
+                  {
+                    $this->error = 'El archivo contiene errores, por favor verifiquelo y subalo de nuevo';
+                    $this->setTemplate('prepareimport');
+                  }
+                else
+                  {
+                 /* $this->msn =  "Upload: " . $_FILES["file"]["name"] . "<br>";
+                  $this->msn .= "Type: " . $_FILES["file"]["type"] . "<br>";
+                  $this->msn .=  "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+                  $this->msn .=  "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>"; */
+
+                  if (file_exists(sfConfig::get('sf_upload_dir') .'/' . $filename))
+                    {
+                        move_uploaded_file($_FILES["file"]["tmp_name"],
+                        sfConfig::get('sf_upload_dir') .'/2'. $_FILES["file"]["name"]);
+                        $ruta =  sfConfig::get('sf_upload_dir') .'/2'.  $_FILES["file"]["name"];
+                    }
+                  else
+                    {
+                    move_uploaded_file($_FILES["file"]["tmp_name"],
+                    sfConfig::get('sf_upload_dir') .'/'. $_FILES["file"]["name"]);
+                    $ruta =  sfConfig::get('sf_upload_dir') .'/'.  $_FILES["file"]["name"];
+                    }
+                  }
+                  $this->import($ruta);
+                  
+          }
+        else
+          {
+          $this->error =  'El archivo debe ser un archivo con extensión .xlsx o .xsl'; //no tiene la extensión
+          $this->setTemplate('prepareimport');
+          }
+    }
   
+
 }
