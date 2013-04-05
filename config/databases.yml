@@ -11,7 +11,7 @@ all:
     class:        sfPropelDatabase
     param:
       classname:  PropelPDO
-      dsn:        mysql:dbname=bbvaquiz;host=localhost
+      dsn:        mysql:dbname=actividad;host=localhost
       username:   root
       password:   root
       encoding:   utf8

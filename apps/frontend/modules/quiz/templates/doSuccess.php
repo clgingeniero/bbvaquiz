@@ -17,7 +17,7 @@
 
 	<!-- TIMER -->
 	<div class="timer-area">
-            <div class="dv-preg"><span class="pregunta"><?php echo $question->getQuestion(); ?></span> </div>
+            <div class="dv-preg"><span class="pregunta"><?php echo ucfirst($question->getQuestion()); ?></span> </div>
             <div class="dv-cd">
             <ul id="countdown">
 			<li>
@@ -146,7 +146,7 @@
     });
     
     function alerta(){
-        alert("Aun no ha seleccionado una respuesta");
+        alert("Aún no ha seleccionado una respuesta");
     }
     
     $('.btnView').click(function()

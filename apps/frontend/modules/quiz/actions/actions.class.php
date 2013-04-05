@@ -153,6 +153,7 @@ class quizActions extends sfActions
         if($action != 'save') {
           
             $question = $this->getQuestionStatus($request->getParameter('id')); 
+             
             $this->question = $this->getQuestionActive($question, $request);
             
             if($this->question != null) {
@@ -250,9 +251,9 @@ class quizActions extends sfActions
        echo "a: ". $request->getParameter('answers');
        echo "u: ". $this->getUser()->getGuardUser()->getId();
        echo "i: ". $request->getParameter('id'); */
-        
-       $respond = $this->isRespond($this->getUser()->getGuardUser()->getId(), $request->getParameter('question'));
-      
+        //echo $request->getParameter('question') . '--' . $this->getUser()->getGuardUser()->getId(); die;
+       $respond = $this->isRespond($this->getUser()->getGuardUser()->getId(), $request->getParameter('question'), $request->getParameter('id'));
+      //echo $respond; die;
        if($respond && $request->getParameter('question') != '' && $request->getParameter('answers') != '' &&
                 $this->getUser()->getGuardUser()->getId() != '' && $request->getParameter('id') != '') {
             
@@ -491,15 +492,16 @@ class quizActions extends sfActions
      }
      
      
-     public function isRespond($idUser, $idQuest)
+     public function isRespond($idUser, $idQuest, $idQuiz)
      {
         $criteria = new Criteria();
         $criteria->add(QuizusrPeer::ID_USR_QU, $idUser);
         $criteria->add(QuizusrPeer::ID_QUESTION, $idQuest);
+        $criteria->add(QuizusrPeer::ID_QUIZ, $idQuiz);
         
         $res =  QuizusrPeer::doSelectOne($criteria);
-        
-        return (sizeof($res) > 0) ? false : true ;
+        //echo count($res); die;
+        return (count($res) > 0) ? false : true ;
      }
     
      public function getUserId()
@@ -710,7 +712,7 @@ class quizActions extends sfActions
     
     public function executePrepareimport(sfWebRequest $request)
     {
-        //$this->error = false;
+        $this->error = false;
         $this->setTemplate('prepareimport');
     }
     

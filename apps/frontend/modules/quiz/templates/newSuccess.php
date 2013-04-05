@@ -4,7 +4,7 @@
         <p class="titulo-inst">¡ GANA EL MAYOR PUNTAJE !</p>
           <div class="linea"></div>
         <p class="subtit-inst">Calidad eje fundamental del crecimiento</p>
-        <div class="tit-pending"></div>
+        <div class="tit-new"></div>
         
     </div>
   
@@ -21,7 +21,7 @@
 <?php foreach($quiz_active_list as $quiz): ?>
        <div class="clear-pending"></div>
 <div class="activi"><span><?php echo $quiz->getDescription()?></span></div>
-       <a href="<?php echo url_for('quiz/do?id=' . $quiz->getIdQuiz()) ?>"><div class="btn-restart">@</div></a>
+      
        <div class="time-dv">
            <?php /* php v53
                 $fecha1 = new DateTime(date("d-m-Y H:i:s"));
@@ -43,6 +43,7 @@
                 <span><?php echo '10 Horas'?></span>
                 <span><?php echo  '20 Minutos' ?></span>
        </div>
+        <a href="<?php echo url_for('quiz/do?id=' . $quiz->getIdQuiz()) ?>"><div class="btn-restart">Iniciar</div></a>
       <!--  <div class="avance-dv"><?php //echo '0 %' ?></div> -->
 
 

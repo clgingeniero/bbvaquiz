@@ -1,4 +1,5 @@
 <div class="fond-home"></div>
+<div class="conoc"></div>
     
     <div class="tit-ini">
         <p class="tit">¡ GANA EL MAYOR PUNTAJE !</p>
