@@ -95,7 +95,7 @@ class quizlogActions extends sfActions
         $this->usersreport = null;
         $this->usrf = false;
         $opusr = $request->getParameter('uo');
-        
+        $name = 'Reporte';
         
         
         $c = new Criteria();
@@ -107,18 +107,20 @@ class quizlogActions extends sfActions
             
             case 'o': // office
                 $id_depto = $request->getParameter('office'); // $request->getParameter('z'); 
-               
+                $name .= '_oficina';
                 $c->add(sfGuardUserProfilePeer::ID_DEPTO,  $id_depto, Criteria::IN);
                 break;
           
             case 'z': // zone
                 $zona = $request->getParameter('zone');; // $request->getParameter('z');
                 $c->add(sfGuardUserProfilePeer::ID_ZONE,  $zona, Criteria::IN);
+                $name .= '_zona';
                 break;
             
             case 't': // territorial
                 $area = $request->getParameter('terr'); // $request->getParameter('z');
                 $c->add(sfGuardUserProfilePeer::ID_AREA,  $area, Criteria::IN);
+                $name .= '_area';
                 break;
             
             case 'u': // Colombia
@@ -143,7 +145,7 @@ class quizlogActions extends sfActions
                     $this->usersreport = sfGuardUserProfilePeer::populateObjects($stmt);
                 
                 }
-                
+                $name .= '_usuarios';
                  if($opusr == 'uf') {
                      $this->usrf = true;
                      return;}
@@ -151,6 +153,7 @@ class quizlogActions extends sfActions
                 break;
         }
         
+        $this->name = $name;
         
         
         $c->add(QuizlogPeer::ID_QUIZLOG, $id_quiz);

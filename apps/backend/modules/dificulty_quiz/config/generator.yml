@@ -18,12 +18,17 @@ generator:
         title: Listado de dificultades por actividad
         fields:  
           quiz: { label: Actividad}
-          easy: { label: Facil}
+          easy: { label: Facíl}
           medium: {label: Medio}
-          hard: {label: Duro}
+          hard: {label: Dificil}
         peer_method:  doSelectJoinQuiz
         display:  [quiz, easy, medium, hard]
-      filter:  ~
+      filter:  
+        fields:  
+          id_quiz: { label: Actividad}
+          easy: { label: Facíl}
+          medium: {label: Medio}
+          hard: {label: Dificil}
       form:    
         display:
           Content: [id_quiz, easy, medium, hard]
@@ -32,13 +37,13 @@ generator:
          title: Edición de dificultad para "%%id_quiz%%"
          fields:  
           id_quiz: { label: Actividad}
-          easy: { label: Facil}
+          easy: { label: Facíl}
           medium: {label: Medio}
-          hard: {label: Duro}
+          hard: {label: Dificil}
       new:     
         title: Nueva opción de dificultad para la actividad
         fields:  
           id_quiz: { label: Actividad}
-          easy: { label: Facil}
+          easy: { label: Facíl}
           medium: {label: Medio}
-          hard: {label: Duro}
+          hard: {label: Dificil}

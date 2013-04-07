@@ -17,6 +17,7 @@
 
 	<!-- TIMER -->
 	<div class="timer-area">
+            <div class="dv-act"><span class="actividad"><?php echo ucfirst($quiz->getDescription()); ?></span> </div>
             <div class="dv-preg"><span class="pregunta"><?php echo ucfirst($question->getQuestion()); ?></span> </div>
             <div class="dv-cd">
             <ul id="countdown">
@@ -138,9 +139,10 @@
     $('.btnSave').click(function()
     {
         
-            var c =  confirm('Estas a punto de guardar tu respuesta y salir, estas seguro ?');
+            var c =  confirm('Sus preguntas fueron guardadas satisfactoriamente. Deseas regresar al inicio  ?');
             if(c){ 
-                $(location).attr('href','<?php echo url_for('logout') ?>');
+                //$(location).attr('href','<?php //echo url_for('logout') ?>');
+                $(location).attr('href','<?php echo url_for('/') ?>');
             }
          
     });

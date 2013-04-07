@@ -12,7 +12,7 @@ generator:
 
     config:
       list:
-        title: Grupos
+        title: Gestión de grupos
         fields:  
             name: { label: Nombre}
             description: { label: Descripción }

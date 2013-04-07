@@ -15,6 +15,7 @@ generator:
       actions: ~
       fields: ~
       list: 
+        title: Listado de bonos por actividad
         fields:  
           quiz: { label: Actividad}
           hours: { label: Horas}

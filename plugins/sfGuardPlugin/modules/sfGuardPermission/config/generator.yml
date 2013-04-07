@@ -12,7 +12,7 @@ generator:
 
     config:
       list:
-        title: Permisos
+        title: Gestión de permisos
         fields:  
            name: { label: Nombre}
            description: { label: Descripción }

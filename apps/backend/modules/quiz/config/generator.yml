@@ -20,13 +20,19 @@ generator:
           final_time:                    
             { type: plain, params: date_format='dd/MM/yy' }
       list:
-        title: Administrador de examenes
+        title: Administrador de actividades
+        fields:  
+          id_quiz:   { label: Id }
+          description:   { label: Nombre }
+          inicial_time: { label: Inicio }
+          final_time:   { label: Fin }
       filter:  
         fields:  
+          description:   { label: Nombre }
           inicial_time:                 
-            { name: inicio,type: plain, params: date_format='dd/MM/yy' }
+            { label: inicio,type: plain, params: date_format='dd/MM/yy' }
           final_time:                    
-            { type: plain, params: date_format='dd/MM/yy' }
+            { label: fin, type: plain, params: date_format='dd/MM/yy' }
       form:    ~
       edit:
         title: Edición de "%%description%%"

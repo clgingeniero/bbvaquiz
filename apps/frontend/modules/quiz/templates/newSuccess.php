@@ -11,7 +11,7 @@
 <div class="content-instru">
    <div class="pendientes">
        <?php  if($quiz_active_list->count() == 0): ?>
-       <p class="subtit-inst">No tienes actividades Nuevas</p>
+       <p class="subtit-inst">No tienes actividades nuevas</p>
        <?php else: ?>
        
        <div class="tit-act"><span><?php echo "Actividad" ?></span></div>
@@ -50,5 +50,13 @@
 
 <?php endforeach; ?>
 <?php endif; ?>
+
 </div>
+    <a href="<?php echo url_for('profile') ?>">
+        <div class="btnActions">
+            <div id="btnBack" class="btnBack">Atras</div>
+
+        </div>
+    </a>
 </div>
+

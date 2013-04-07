@@ -4,6 +4,7 @@ a{
 }
 
 .menu-admin{
+    font-size: 13px;
     float: left;
     margin-bottom: 19px;
     margin-left: 6px;
@@ -38,8 +39,8 @@ a{
     margin-left: -68px;
     margin-top: 77px;
     width: 320px;}
-.menu-2{float: left; padding-top: 12px; margin-left: -36px;}
-.content-admin{ width: 536px; float: left;}
+.menu-2{float: left; padding-top: 12px; margin-left: -51px;}
+.content-admin{ width: 536px; float: left; min-height: 1400px;}
 #sf_admin_content{
     min-height: 206px;
    
@@ -66,3 +67,6 @@ width: 335px; height: 44px;}
 .home-admin{ min-height: 500px;
     width: 900px;}
 .layout-admin{width: 900px; height: 1636px;/*height: 600px;*/  margin: 0 auto; border: 8px solid #094FA4; }
+.men-active{ background: none repeat scroll 0 0 #009FE0 !important;
+   color: #fff;
+   padding: 7px;}

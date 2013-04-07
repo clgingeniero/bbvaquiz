@@ -14,7 +14,8 @@
     </head>
 
     <body>
-        <?php $clase = ($sf_user->isAuthenticated()) ? 'layout-admin' : 'layout'; ?>
+        <?php $action = sfContext::getInstance()->getRouting()->getCurrentRouteName();
+        $clase = ($sf_user->isAuthenticated()) ? 'layout-admin' : 'layout'; ?>
         <div class="<?php echo $clase ?>">
             <div class="logo"></div>
             <div class="menu">
@@ -27,9 +28,9 @@
                 <a href="<?php echo url_for('instructions/index') ?>">
                     <div class="men-inst"></div>
                 </a>
-                <a href="<?php echo url_for('profile') ?>">
+                <!--<a href="<?php //echo url_for('profile') ?>">
                     <div class="men-acco"></div>
-                </a>
+                </a> -->
 
 
                 <a href="<?php echo url_for('/') ?>">
@@ -82,39 +83,49 @@
 
 
                             <div class="menu-admin">
-                                <?php echo link_to('Puntaje', '@dificulty_quiz') ?>
+                                <?php $class =  ($action == 'dificulty_quiz' || $action == 'dificulty_quiz_new' || $action == 'dificulty_quiz_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Puntaje', '@dificulty_quiz', array('class'=>$class)) ?>
                             </div>
                             <div class="menu-admin">
-                                <?php echo link_to('Bono', '@bonus_quiz') ?>
+                                <?php $class =  ($action == 'bonus_quiz' || $action == 'bonus_quiz_new' || $action == 'bonus_quiz_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Bono', '@bonus_quiz', array('class'=>$class)) ?>
                             </div>
                             <div class="menu-admin">
-                                <?php echo link_to('Actividad', '@quiz') ?>
+                                <?php $class =  ($action == 'quiz'|| $action == 'quiz_new' || $action == 'quiz_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Actividad', '@quiz', array('class'=>$class)) ?>
                             </div>
 
                             <div class="menu-admin">
-                                <?php echo link_to('Gestionar actividad', '@questions_quiz') ?>
+                                <?php $class =  ($action == 'questions_quiz'|| $action == 'questions_quiz_new' || $action == 'questions_quiz_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Gestionar actividad', '@questions_quiz', array('class'=>$class)) ?>
                             </div>
                             <div class="menu-admin">
-                                <?php echo link_to('Preguntas', '@question') ?>
+                                <?php $class =  ($action == 'question'|| $action == 'question_new' || $action == 'question_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Preguntas', '@question', array('class'=>$class)) ?>
                             </div>
                             <div class="menu-admin">
-                                <?php echo link_to('Instrucciones', '@instructions') ?>
+                                <?php $class =  ($action == 'instructions'|| $action == 'instructions_new' || $action == 'instructions_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Instrucciones', '@instructions', array('class'=>$class)) ?>
                             </div>
                             <div class="clear-boot"></div>
                             <div class="menu-admin">
-                                <?php echo link_to('Opciones de respuestas', '@answer') ?>
+                                <?php $class =  ($action == 'answer'|| $action == 'answer_new' || $action == 'answer_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Gestionar respuestas', '@answer', array('class'=>$class)) ?>
                             </div>
                             <!--<div class="menu-admin">
                             <?php //echo link_to('Respuesta correcta', '@correct_answer_question') ?>
                             </div> -->
                             <div class="menu-admin">
-                                <?php echo link_to('Grupos', '@sf_guard_group') ?>
+                                <?php $class =  ($action == 'sf_guard_group'|| $action == 'sf_guard_group_new' || $action == 'sf_guard_group_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Grupos', '@sf_guard_group', array('class'=>$class)) ?>
                             </div>
                             <div class="menu-admin">
-                                <?php echo link_to('Permisos', '@sf_guard_permission') ?>
+                                <?php $class =  ($action == 'sf_guard_permission'|| $action == 'sf_guard_permission_new' || $action == 'sf_guard_permission_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Permisos', '@sf_guard_permission', array('class'=>$class)) ?>
                             </div>
                             <div class="menu-admin">
-                                <?php echo link_to('Usuarios', '@sf_guard_user') ?>
+                                <?php $class =  ($action == 'sf_guard_user'|| $action == 'sf_guard_user_new' || $action == 'sf_guard_user_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Usuarios', '@sf_guard_user', array('class'=>$class)) ?>
                             </div>
                             <div class="menu-admin">
                                 <a href="/frontend.php/quizlog/preparereport">Ranking</a>

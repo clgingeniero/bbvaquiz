@@ -8,7 +8,7 @@
         
     </div>
     
-       <div class="menu-2">
+       <div class="menu-2front">
                
 
 <div class="menu-admin">
@@ -32,7 +32,7 @@
 </div>
               <div class="clear-boot"></div>
 <div class="menu-admin">
-<?php echo link_to('Opciones de respuestas', '/backend.php/answer') ?>
+<?php echo link_to('Gestionar respuestas', '/backend.php/answer') ?>
 </div>
 <!--<div class="menu-admin">
 <?php //echo link_to('Respuesta correcta', '@correct_answer_question') ?>
@@ -51,7 +51,7 @@
 
 </div>
 <div class="menu-admin">
-    <a href="/frontend.php/quiz/prepareimport">Importar</a>
+    <a class="men-active" href="/frontend.php/quiz/prepareimport">Importar</a>
 
 </div>
     <!-- <div class="menu-admin"><?php //echo link_to('Logout', '@sf_guard_signout') ?></div> -->

@@ -8,7 +8,7 @@
         
     </div>
     
-     <div class="menu-2">
+     <div class="menu-2front">
                
 
 <div class="menu-admin">
@@ -47,7 +47,7 @@
 <?php echo link_to('Usuarios', '/backend.php/sf_guard_user') ?>
 </div>
 <div class="menu-admin">
-    <a href="/frontend.php/quizlog/preparereport">Ranking</a>
+    <a class="men-active" href="/frontend.php/quizlog/preparereport">Ranking</a>
 
 </div>
 <div class="menu-admin">
@@ -129,7 +129,7 @@
 </div>
 
 <div class="territorial">
-    <p>Area: </p> 
+    <p>Área: </p> 
     
     <?php foreach($territorial as $terri): ?>
     <input type="checkbox" name="terr[]" value="<?php echo $terri->getIdArea() ?>" />

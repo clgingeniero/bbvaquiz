@@ -48,4 +48,10 @@
 <?php endforeach; ?>
 <?php endif; ?>
 </div>
+      <a href="<?php echo url_for('profile') ?>">
+        <div class="btnActions">
+            <div id="btnBack" class="btnBack">Atras</div>
+
+        </div>
+    </a>
 </div>

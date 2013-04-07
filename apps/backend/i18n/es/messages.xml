@@ -8,6 +8,10 @@
         <source>Administrador de respuestas</source>
         <target/>
       </trans-unit>
+      <trans-unit>
+        <source>is empty</source>
+        <target>vacio</target>
+      </trans-unit>
       <trans-unit id="2">
         <source>Edición de "%%answer%%"</source>
         <target/>

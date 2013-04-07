@@ -13,9 +13,15 @@ generator:
 
     config:
       actions: ~
-      fields:  ~
-      list:    ~
+      fields:  
+          id_instruction:   { label: Id }
+          instruction:   { label: Instrucción }
+         
+      list:    
+        title: Instrucciones  
       filter:  ~
       form:    ~
-      edit:    ~
-      new:     ~
+      edit:    
+        title: Editar instrucción
+      new:     
+        title: Nueva instrucción

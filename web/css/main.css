@@ -11,9 +11,9 @@ body{
     background: #fff;
 }
 
-p { margin:0; line-height:22px; font-size:11pt; }
+p { margin:0; line-height:22px; font-size:11pt; color: #094FA4;}
 a {color: #fff;}
-span{}
+span{color: #094FA4;}
 a:hover{color: #fff; text-transform: none;}
 label{ line-height: 1.3em; color: #758087; }
 .menu{  padding-top: 22px;}
@@ -89,7 +89,7 @@ label{ line-height: 1.3em; color: #758087; }
                  padding-left: 38%;
                  width: 34px;}
 
-.home{width: 900px; min-height: 500px; }
+.home{width: 900px; min-height: 534px; }
 .men-ppal {   color: #FFFFFF;
               float: left;
               padding-left: 30px;
@@ -193,7 +193,7 @@ label{ line-height: 1.3em; color: #758087; }
 
 .content-activi{
     padding-right: 20px;
-    padding-top: 50px;
+    padding-top: 25px;
     text-align: justify;
 }
 
@@ -212,7 +212,7 @@ label{ line-height: 1.3em; color: #758087; }
 .footer{background: url("../images/logos.png") no-repeat scroll 0 0 transparent;
         float: right;
         height: 36px;
-        padding-right: 20px;
+        padding-right: 16px;
         width: 72px;}
 
 .back{background: url("../images/atras_13.jpg") no-repeat scroll 0 0 transparent;
@@ -353,11 +353,11 @@ input[type="submit"]{
          width: 329px; height: 44px;}
 .pregunta{color:#005485;}
 .dv-preg{float: left;
-         width: 552px;}
+         width: 611px;}
 .dv-cd{float: left;
-       margin-top: -20px; margin-left: -14px;}
-.dv-actividad{padding-top: 60px;}
-.desc-ans{}
+       margin-top: -20px; margin-left: -10px;}
+.dv-actividad{padding-top: 80px;}
+.desc-ans{color: #005485;}
 .preg_1{cursor: pointer; float:left; background: url("../images/opciones_03.png") no-repeat scroll 0 0 transparent;
         width: 60px; height: 59px; float: left;}
 .preg_2{cursor: pointer; float:left; background: url("../images/opciones_06.png") no-repeat scroll 0 0 transparent;
@@ -403,14 +403,14 @@ input[type="radio"]{
                 width: 330px;}
 .txt-puntaje{   color: #094FA4;
                 font-size: 32px;
-                padding-left: 12px;}
+                padding-left: 2px;}
 .linea-resulta{background: url("../images/linea-discontinua.jpg") no-repeat scroll 0 0 transparent;
                height: 4px;
                margin-bottom: 10px;
                margin-top: 10px;
-               width: 309px;}
-.dv-puntaje{padding-left: 8px;}
-.dv-puesto{padding-left: 42px;}
+               width: 327px;}
+.dv-puntaje{ text-align: center;}
+.dv-puesto{padding-left: 64px;}
 .subt-home{
     color: #1C51A2;
     font-size: 22px;
@@ -443,7 +443,7 @@ input[type="radio"]{
 .office{float: left;
         display: none;
         font-size: 11px;
-        height: 328px;
+        height: 276px;
         margin-bottom: 20px;
         margin-top: 20px;
         overflow: auto;
@@ -458,7 +458,7 @@ input[type="radio"]{
 .territorial{float: left;
              display: none;
              font-size: 11px;
-             height: 328px;
+             height: 304px;
              margin-top: 15px;
              overflow: auto;
              width: 528px;}
@@ -484,7 +484,7 @@ input[type="radio"]{
               margin-left: -68px;
               margin-top: 77px;
               width: 320px;}
-.pendientes{}
+.pendientes{min-height: 335px;}
 .upload{float: left;}
 .tit-act{
     float: left;
@@ -496,3 +496,10 @@ input[type="radio"]{
         margin-top: 2px;
         position: absolute;
         width: 221px;}
+.dv-act{padding-bottom: 5px;}
+.actividad{color: #86C82D; font-size: 18px;}
+.puntaje{  color: #86C82D;
+    font-size: 32px;}
+#btnBack{cursor: pointer; background-color: #094FA4; color: #FFFFFF; float: right; width: 88px;  font-size: 13px; padding: 7px; text-align: center; }
+.btnBack{ margin-right: -5px;}
+.menu-2front{float: left; padding-top: 12px; margin-left: -17px;}
