@@ -135,6 +135,15 @@
     
     
     
+    function disabledBtns(){
+        
+        for(i = 0; i < 5; i++){
+            
+                $('#btn_resp_' + i).attr('onclick','').unbind('click');
+        }
+    }
+    
+    
     
     $('.btnSave').click(function()
     {
@@ -170,7 +179,7 @@
                 <?php if($answer->getCorrect()){ ?>
                   
                     //$(".answer_<?php //echo $answer->getIdAnswer(); ?>").toggleClass('answer_<?php //echo $answer->getIdAnswer(); ?> answer_correct');
-                    $(".answer_<?php echo $answer->getIdAnswer(); ?>").attr('id', 'answer_correct');
+                    $(".answer_<?php echo $answer->getIdAnswer(); ?>").attr('id', 'answer_correct_front');
                     //alert('es correcta la ' + '<?php //echo $answer->getCorrect() . '<- esta ' . $answer->getAnswer() . ' ' . $answer->getIdAnswer()  ?>');
                 <?php }else { ?> 
                     $(".answer_<?php echo $answer->getIdAnswer(); ?>").attr('id', 'answer_incorrect');
@@ -179,6 +188,7 @@
                 <?php endforeach; ?>
             
         });
+        disabledBtns();
     });
     
     $('.btnNext').click(function()

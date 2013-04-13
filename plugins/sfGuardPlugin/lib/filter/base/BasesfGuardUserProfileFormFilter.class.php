@@ -18,7 +18,7 @@ abstract class BaseSfGuardUserProfileFormFilter extends BaseFormFilterPropel
       'birthday'       => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'id_zone'        => new sfWidgetFormPropelChoice(array('model' => 'Zone', 'add_empty' => true)),
       'email'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'gender'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'gender'         => new sfWidgetFormChoice(array('choices' => array('' => 'M / F', 'M' => 'M', 'F' => 'F'))),
       'user_bank_id'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'id_position'    => new sfWidgetFormPropelChoice(array('model' => 'Position', 'add_empty' => true)),
       'id_center_cost' => new sfWidgetFormFilterInput(array('with_empty' => false)),

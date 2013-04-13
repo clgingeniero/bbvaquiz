@@ -103,6 +103,14 @@ class quizActions extends sfActions
         $criteria->add(QuizlogPeer::STATUS, 0);
         $this->quiz_active_list = QuizlogPeer::doSelect($criteria);
         
+        $criteria->addDescendingOrderByColumn(QuizlogPeer::ID_QUIZLOG);
+       
+        $pager = new sfPropelPager('Quizlog', 5);
+        $pager->setCriteria($criteria);
+        $pager->setPage($this->getRequestParameter('page', 1));
+        $pager->init();
+        $this->pager = $pager;
+        
         
        
     }
@@ -137,7 +145,14 @@ class quizActions extends sfActions
         $criteriaEnd->addJoin(QuizlogPeer::ID_QUIZLOG, QuizPeer::ID_QUIZ, Criteria::INNER_JOIN);
         $criteriaEnd->add(QuizlogPeer::ID_USRQL, $this->getUserId());
         $criteriaEnd->add(QuizlogPeer::STATUS, 1);
-        $this->quiz_end_list = QuizlogPeer::doSelect($criteriaEnd);
+        //$this->quiz_end_list = QuizlogPeer::doSelect($criteriaEnd);
+        $criteriaEnd->addDescendingOrderByColumn(QuizlogPeer::ID_QUIZLOG);
+       
+        $pager = new sfPropelPager('Quizlog', 5);
+        $pager->setCriteria($criteriaEnd);
+        $pager->setPage($this->getRequestParameter('page', 1));
+        $pager->init();
+        $this->pager = $pager;
        
     }
   

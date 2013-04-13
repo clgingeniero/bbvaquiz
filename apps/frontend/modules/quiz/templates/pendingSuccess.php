@@ -48,10 +48,17 @@
 <?php endforeach; ?>
 <?php endif; ?>
 </div>
-      <a href="<?php echo url_for('profile') ?>">
-        <div class="btnActions">
-            <div id="btnBack" class="btnBack">Atras</div>
-
-        </div>
-    </a>
+    <div class="pagin">
+   <?php if ($pager->haveToPaginate()): ?>
+  <?php echo link_to('&laquo;', 'quiz/pending?page='.$pager->getFirstPage(), array('class'=>'pager')) ?>
+  <?php echo link_to('&lt;', 'quiz/pending?page='.$pager->getPreviousPage(), array('class'=>'pager')) ?>
+  <?php $links = $pager->getLinks(); foreach ($links as $page): ?>
+    <?php echo ($page == $pager->getPage()) ? '<span class="current">' . $page . '</span>' : link_to($page, 'quiz/pending?page='.$page, array('class'=>'pager')) ?>
+    <?php if ($page != $pager->getCurrentMaxLink()): ?> - <?php endif ?>
+  <?php endforeach ?>
+  <?php echo link_to('&gt;', 'quiz/pending?page='.$pager->getNextPage(), array('class'=>'pager')) ?>
+  <?php echo link_to('&raquo;', 'quiz/pending?page='.$pager->getLastPage(), array('class'=>'pager')) ?>
+<?php endif ?>
+    </div>
+      
 </div>

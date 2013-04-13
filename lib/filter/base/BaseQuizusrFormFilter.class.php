@@ -17,6 +17,7 @@ abstract class BaseQuizusrFormFilter extends BaseFormFilterPropel
       'id_answer'   => new sfWidgetFormPropelChoice(array('model' => 'Answer', 'add_empty' => true)),
       'id_quiz'     => new sfWidgetFormPropelChoice(array('model' => 'Quiz', 'add_empty' => true)),
     ));
+    
 
     $this->setValidators(array(
       'id_usr_qu'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),

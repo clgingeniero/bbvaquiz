@@ -14,8 +14,13 @@ abstract class BaseAnswerFormFilter extends BaseFormFilterPropel
     $this->setWidgets(array(
       'answer'      => new sfWidgetFormFilterInput(),
       'id_question' => new sfWidgetFormPropelChoice(array('model' => 'Question', 'add_empty' => true)),
-      'correct'     => new sfWidgetFormFilterInput(),
+      'correct'     => new sfWidgetFormChoice(array('choices' => array('' => 'Si / No', 1 => 'Si', 0 => 'No'))),
+                   
+      
     ));
+    
+    $this->widgetSchema["answer"] = new sfWidgetFormFilterInput(array('with_empty' => false));
+
     
     $this->widgetSchema->setLabels(array(
     'answer'  => 'Respuesta',
@@ -28,6 +33,9 @@ abstract class BaseAnswerFormFilter extends BaseFormFilterPropel
       'id_question' => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Question', 'column' => 'id_question')),
       'correct'     => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
+    
+     $this->widgetSchema["correct"] = new sfWidgetFormFilterInput(array('with_empty' => false));
+
 
     $this->widgetSchema->setNameFormat('answer_filters[%s]');
 

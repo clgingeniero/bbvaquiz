@@ -1,40 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <?php include_http_metas() ?>
-    <?php include_metas() ?>
-    <?php include_title() ?>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <?php include_stylesheets() ?>
-    <?php include_javascripts() ?>
-  </head>
-    
+  <?php echo sfYaml::dump(array(
+      'error'       => array(
+        'code'      => $code,
+        'message'   => $message,
+        'debug'     => array(
+        'name'    => $name,
+        'message' => $message,
+        'traces'  => $traces,
+), )), 4) ?>
   <body>
-      <?php $isAdmin = false;
-      if(sfContext::getInstance()->getUser()->getGuardUser()):
-      $isAdmin = sfContext::getInstance()->getUser()->getGuardUser()->getIsSuperAdmin(); 
-      endif;?>
       <div class="layout">
           <div class="logo"></div>
       <div class="menu">
         <a  class="confirmar" href="#">
                 <div class="men-clos"></div>
             </a>
-          <a href="<?php echo ($isAdmin) ? '/backend.php' : url_for('help') ?>">
+          <a href="<?php echo url_for('help') ?>">
                 <div class="men-help"></div>
             </a>
-          
-           <a href="<?php echo ($isAdmin) ? '/backend.php/instructions' : url_for('instructions/index') ?>">
+           <a href="<?php echo url_for('instructions/index') ?>">
                 <div class="men-inst"></div>
             </a>
-           <a href="<?php echo ($isAdmin) ? '/backend.php/sf_guard_user' :  url_for('profile') ?>">
+           <a href="<?php echo url_for('profile') ?>">
                 <div class="men-acco"></div>
             </a>
             
           
-            <a href="<?php echo ($isAdmin) ? '/backend.php' :  url_for('/') ?>">
+            <a href="<?php echo url_for('/') ?>">
                 <div class="men-home"></div>
             </a>
+            
+           
+           
+           
+            
+            
+           
+           
+      
       </div> 
         <div class="clear-boot"></div>
         <div class="over-smenu">
@@ -51,13 +55,11 @@
       </div>
  
       <div class="footer"></div>
-     <?php $action = sfContext::getInstance()->getRouting()->getCurrentRouteName();
-       ?>
-    <?php if($action == 'nuevas' || $action == 'pendientes' || $action == 'finalizadas' ): ?>
-      <a href="<?php echo url_for('profile') ?>">
-            <div id="btnBack" class="btnBack">Atrás</div>
-    </a>
-    <?php endif; ?>      
+      <?php //if() ?> 
+     <!-- <a href="<?php //echo url_for('/') ?>">
+        <div class="back"></div>
+      </a> -->
+          
   </div>
   </body>
 </html>

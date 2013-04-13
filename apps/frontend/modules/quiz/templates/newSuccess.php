@@ -16,7 +16,7 @@
        
        <div class="tit-act"><span><?php echo "Actividad" ?></span></div>
        <div class="restart"><a href=""><div class="restart">@</div></a></div>
-       <div class="time"><?php echo "Tiempo restante" ?></div>
+       <div class="time"><?php echo "Tiempo disponible" ?></div>
         <!--  <div class="avance"><?php // echo "Avance" ?></div>  -->
 <?php foreach($quiz_active_list as $quiz): ?>
        <div class="clear-pending"></div>
@@ -52,11 +52,6 @@
 <?php endif; ?>
 
 </div>
-    <a href="<?php echo url_for('profile') ?>">
-        <div class="btnActions">
-            <div id="btnBack" class="btnBack">Atras</div>
-
-        </div>
-    </a>
+    
 </div>
 

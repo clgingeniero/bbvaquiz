@@ -14,6 +14,14 @@
         <target>vacio</target>
       </trans-unit>
       <trans-unit>
+        <source>with_empty</source>
+        <target>vacio</target>
+      </trans-unit>
+       <trans-unit>
+        <source>with_empty</source>
+        <target>vacio</target>
+      </trans-unit>
+      <trans-unit>
         <source>Edit</source>
         <target>Editar</target>
       </trans-unit>

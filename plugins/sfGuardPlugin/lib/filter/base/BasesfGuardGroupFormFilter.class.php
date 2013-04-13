@@ -13,7 +13,7 @@ abstract class BasesfGuardGroupFormFilter extends BaseFormFilterPropel
   {
     $this->setWidgets(array(
       'name'                           => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'description'                    => new sfWidgetFormFilterInput(),
+      'description'                    => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'sf_guard_group_permission_list' => new sfWidgetFormPropelChoice(array('model' => 'sfGuardPermission', 'add_empty' => true)),
       'sf_guard_user_group_list'       => new sfWidgetFormPropelChoice(array('model' => 'sfGuardUser', 'add_empty' => true)),
     ));

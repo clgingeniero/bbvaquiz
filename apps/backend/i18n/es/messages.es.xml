@@ -12,6 +12,10 @@
         <source>is empty</source>
         <target>vacio</target>
       </trans-unit>
+      <trans-unit>
+        <source>with_empty</source>
+        <target>vacio</target>
+      </trans-unit>
       <trans-unit id="2">
         <source>Edición de "%%answer%%"</source>
         <target/>

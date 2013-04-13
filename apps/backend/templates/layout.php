@@ -42,12 +42,11 @@
             <div class="over-smenu">
 
 
-                <div class="over-men-home"></div>
+                <div class="over-men-home-admin"></div>
 
 
 
-                <div class="over-men-acco"></div>
-
+              
 
 
                 <div class="over-men-inst"></div>
@@ -80,7 +79,18 @@
 
                     <?php if (sfContext::getInstance()->getUser()->getGuardUser()->getIsSuperAdmin()) : ?>
                         <div class="menu-2">
-
+                            <div class="menu-admin">
+                                <?php $class =  ($action == 'quiz'|| $action == 'quiz_new' || $action == 'quiz_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Actividad', '@quiz', array('class'=>$class)) ?>
+                            </div>
+                            <div class="menu-admin">
+                                <?php $class =  ($action == 'question'|| $action == 'question_new' || $action == 'question_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Preguntas', '@question', array('class'=>$class)) ?>
+                            </div>
+                             <div class="menu-admin">
+                                <?php $class =  ($action == 'questions_quiz'|| $action == 'questions_quiz_new' || $action == 'questions_quiz_edit') ? 'men-active' : '' ?>
+                                <?php echo link_to('Gestionar actividad', '@questions_quiz', array('class'=>$class)) ?>
+                            </div>
 
                             <div class="menu-admin">
                                 <?php $class =  ($action == 'dificulty_quiz' || $action == 'dificulty_quiz_new' || $action == 'dificulty_quiz_edit') ? 'men-active' : '' ?>
@@ -89,19 +99,6 @@
                             <div class="menu-admin">
                                 <?php $class =  ($action == 'bonus_quiz' || $action == 'bonus_quiz_new' || $action == 'bonus_quiz_edit') ? 'men-active' : '' ?>
                                 <?php echo link_to('Bono', '@bonus_quiz', array('class'=>$class)) ?>
-                            </div>
-                            <div class="menu-admin">
-                                <?php $class =  ($action == 'quiz'|| $action == 'quiz_new' || $action == 'quiz_edit') ? 'men-active' : '' ?>
-                                <?php echo link_to('Actividad', '@quiz', array('class'=>$class)) ?>
-                            </div>
-
-                            <div class="menu-admin">
-                                <?php $class =  ($action == 'questions_quiz'|| $action == 'questions_quiz_new' || $action == 'questions_quiz_edit') ? 'men-active' : '' ?>
-                                <?php echo link_to('Gestionar actividad', '@questions_quiz', array('class'=>$class)) ?>
-                            </div>
-                            <div class="menu-admin">
-                                <?php $class =  ($action == 'question'|| $action == 'question_new' || $action == 'question_edit') ? 'men-active' : '' ?>
-                                <?php echo link_to('Preguntas', '@question', array('class'=>$class)) ?>
                             </div>
                             <div class="menu-admin">
                                 <?php $class =  ($action == 'instructions'|| $action == 'instructions_new' || $action == 'instructions_edit') ? 'men-active' : '' ?>
@@ -157,3 +154,93 @@
         </div>
     </body>
 </html>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+            
+    $('.confirmar').click(function() 
+    {
+       var c =  confirm(' Estas seguro que deseas salir ?');
+       if(c){ 
+           $(location).attr('href','<?php echo url_for('logout') ?>');
+       }
+    });  
+    
+    $('.men-home').mouseover(function() {
+        $('.over-men-home-admin').show(); 
+         
+        $('.over-men-help').hide();
+        $('.over-men-inst').hide();
+        $('.over-men-acco').hide(); 
+        $('.over-men-clos').hide();
+      });
+      
+      $('.men-help').mouseover(function() {
+        $('.over-men-help').show();
+        
+        $('.over-men-inst').hide();
+        $('.over-men-acco').hide(); 
+        $('.over-men-clos').hide(); 
+        $('.over-men-home-admin').hide(); 
+      });
+      
+      $('.men-inst').mouseover(function() {
+        $('.over-men-inst').show(); 
+        
+        $('.over-men-help').hide();
+        $('.over-men-acco').hide(); 
+        $('.over-men-clos').hide(); 
+        $('.over-men-home-admin').hide(); 
+      });
+      
+      $('.men-acco').mouseover(function() {
+        $('.over-men-acco').show(); 
+        
+        $('.over-men-help').hide();
+        $('.over-men-inst').hide();
+        $('.over-men-clos').hide(); 
+        $('.over-men-home-admin').hide(); 
+      });
+      
+      $('.men-clos').mouseover(function() {
+        $('.over-men-clos').show(); 
+        
+        $('.over-men-help').hide();
+        $('.over-men-inst').hide();
+        $('.over-men-acco').hide(); 
+        $('.over-men-home-admin').hide(); 
+      });
+      
+       
+        
+    $('.men-home').mouseout(function() {
+       fin();
+    });
+    $('.men-help').mouseout(function() {
+       fin();
+    });
+    $('.men-inst').mouseout(function() {
+       fin();
+    });
+    $('.men-acco').mouseout(function() {
+       fin();
+    });
+    $('.men-clos').mouseout(function() {
+       fin();
+    });
+    
+    function fin(){
+        $('.over-men-help').hide();
+        $('.over-men-inst').hide();
+        $('.over-men-acco').hide(); 
+        $('.over-men-home-admin').hide(); 
+        $('.over-men-clos').hide(); 
+    }
+    });
+    
+    
+   
+
+                
+            
+        </script>

@@ -11,14 +11,14 @@
   
 <div class="content-instru">
    <div class="pendientes">
-      <?php  if($quiz_end_list->count() == 0): ?>
+      <?php  if($pager->count() == 0): ?>
        <p class="subtit-inst">No tienes actividades finalizadas</p>
        <?php else: ?>
        <div class="tit-act"><span><?php echo "Actividad" ?></span></div>
        <div class="restart"><a href=""><div class="restart">@</div></a></div>
        <div class="time"><?php echo "Fecha de finalización" ?></div>
        <div class="avance"><?php echo "Puntaje" ?></div>
-<?php foreach($quiz_end_list as $quiz): ?>
+<?php foreach($pager->getResults() as $quiz): ?>
        <div class="clear-pending"></div>
 <div class="activi"><span><?php echo $quiz->getQuiz()->getDescription()?></span></div>
        
@@ -43,10 +43,17 @@
 <?php endforeach; ?>
  <?php endif;?>
 </div>
-     <a href="<?php echo url_for('profile') ?>">
-        <div class="btnActions">
-            <div id="btnBack" class="btnBack">Atras</div>
-
-        </div>
-    </a>
+    <div class="pagin">
+   <?php if ($pager->haveToPaginate()): ?>
+  <?php echo link_to('&laquo;', 'quiz/end?page='.$pager->getFirstPage(), array('class'=>'pager')) ?>
+  <?php echo link_to('&lt;', 'quiz/end?page='.$pager->getPreviousPage(), array('class'=>'pager')) ?>
+  <?php $links = $pager->getLinks(); foreach ($links as $page): ?>
+    <?php echo ($page == $pager->getPage()) ? '<span class="current">' . $page . '</span>' : link_to($page, 'quiz/end?page='.$page, array('class'=>'pager')) ?>
+    <?php if ($page != $pager->getCurrentMaxLink()): ?> - <?php endif ?>
+  <?php endforeach ?>
+  <?php echo link_to('&gt;', 'quiz/end?page='.$pager->getNextPage(), array('class'=>'pager')) ?>
+  <?php echo link_to('&raquo;', 'quiz/end?page='.$pager->getLastPage(), array('class'=>'pager')) ?>
+<?php endif ?>
+    </div>
+    
 </div>

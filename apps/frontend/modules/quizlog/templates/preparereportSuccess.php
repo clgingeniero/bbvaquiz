@@ -10,23 +10,25 @@
     
      <div class="menu-2front">
                
-
+<div class="menu-admin">
+<?php echo link_to('Actividad', '/backend.php/quiz') ?>
+</div>
+ <div class="menu-admin">
+<?php echo link_to('Preguntas', '/backend.php/question') ?>
+</div>
+ <div class="menu-admin">
+<?php echo link_to('Gestionar actividad', '/backend.php/questions_quiz') ?>
+</div>
 <div class="menu-admin">
 <?php echo link_to('Puntaje', '/backend.php/dificulty_quiz') ?>
 </div>
 <div class="menu-admin">
 <?php echo link_to('Bono', '/backend.php/bonus_quiz') ?>
 </div>
-<div class="menu-admin">
-<?php echo link_to('Actividad', '/backend.php/quiz') ?>
-</div>
+
               
-<div class="menu-admin">
-<?php echo link_to('Gestionar actividad', '/backend.php/questions_quiz') ?>
-</div>
-<div class="menu-admin">
-<?php echo link_to('Preguntas', '/backend.php/question') ?>
-</div>
+
+
 <div class="menu-admin">
 <?php echo link_to('Instrucciones', '/backend.php/instructions') ?>
 </div>

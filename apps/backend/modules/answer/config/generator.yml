@@ -14,7 +14,7 @@ generator:
     config:
       actions: ~
       fields:  
-        answer: { label: Respuesta}
+        answer: { label: Respuesta,with_empty: vacio}
         question_name: { label: Pregunta}
         id_question: { label: Pregunta}
         correct: {label: Respuesta correcta}
@@ -28,7 +28,7 @@ generator:
       filter:  ~
       form:
         display:
-          Content: [answer, id_question, correct]
+          Contenido: [answer, id_question, correct]
       edit:    
         title: Edición de "%%answer%%"
         

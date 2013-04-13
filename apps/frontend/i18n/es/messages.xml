@@ -12,6 +12,14 @@
         <source>Edición de "%%answer%%"</source>
         <target/>
       </trans-unit>
+      <trans-unit>
+        <source>is empty</source>
+        <target>vacio</target>
+      </trans-unit>
+      <trans-unit>
+        <source>with_empty</source>
+        <target>vacio</target>
+      </trans-unit>
       <trans-unit id="3">
         <source>Nueva respuesta</source>
         <target/>

@@ -14,6 +14,9 @@ abstract class BaseInstructionsFormFilter extends BaseFormFilterPropel
     $this->setWidgets(array(
       'instruction'    => new sfWidgetFormFilterInput(),
     ));
+    
+    $this->widgetSchema["instruction"] = new sfWidgetFormFilterInput(array('with_empty' => false));
+
 
     $this->setValidators(array(
       'instruction'    => new sfValidatorPass(array('required' => false)),

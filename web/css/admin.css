@@ -40,7 +40,7 @@ a{
     margin-top: 77px;
     width: 320px;}
 .menu-2{float: left; padding-top: 12px; margin-left: -51px;}
-.content-admin{ width: 536px; float: left; min-height: 1400px;}
+.content-admin{ width: 536px; float: left; min-height: 1396px;}
 #sf_admin_content{
     min-height: 206px;
    
@@ -70,3 +70,4 @@ width: 335px; height: 44px;}
 .men-active{ background: none repeat scroll 0 0 #009FE0 !important;
    color: #fff;
    padding: 7px;}
+#answer_correct{background: none !important; float: none !important;}

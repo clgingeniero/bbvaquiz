@@ -1,7 +1,7 @@
 #sf_admin_container a
 {
   color: #1C509D;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 #sf_admin_container a:hover
@@ -210,11 +210,12 @@
     font-size: 11px;
     margin: 0;
     padding: 3px;
+   
 }
 
 #sf_admin_container fieldset
 {
-  margin-bottom: 3px;
+  margin-bottom: -3px;
   border: 1px solid #1B50A0;
   border-bottom: 0px;
   background-color: #fff;

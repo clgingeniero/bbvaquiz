@@ -22,7 +22,12 @@ abstract class BaseBonusQuizFormFilter extends BaseFormFilterPropel
       'hours'         => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
       'bonus'         => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
     ));
+    
+    $this->widgetSchema["hours"] = new sfWidgetFormFilterInput(array('with_empty' => false));
 
+    $this->widgetSchema["bonus"] = new sfWidgetFormFilterInput(array('with_empty' => false));
+
+   
     $this->widgetSchema->setNameFormat('bonus_quiz_filters[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

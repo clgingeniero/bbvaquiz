@@ -6,7 +6,9 @@
 
 all:
   sf_guard_plugin:
+    #check_password_callable:   [LdapLogin, checkPassword]
     success_signin_url:  profile
     success_signout_url: /
+    
   
    

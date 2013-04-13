@@ -25,6 +25,12 @@ abstract class BaseDificultyQuizFormFilter extends BaseFormFilterPropel
       'id_quiz'     => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Quiz', 'column' => 'id_quiz')),
     ));
 
+    $this->widgetSchema["easy"] = new sfWidgetFormFilterInput(array('with_empty' => false));
+
+    $this->widgetSchema["medium"] = new sfWidgetFormFilterInput(array('with_empty' => false));
+
+    $this->widgetSchema["hard"] = new sfWidgetFormFilterInput(array('with_empty' => false));
+    
     $this->widgetSchema->setNameFormat('dificulty_quiz_filters[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

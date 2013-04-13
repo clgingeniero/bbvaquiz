@@ -6,6 +6,7 @@
 
 all:
   sf_guard_plugin:
+    check_password_callable: [ldapLogin, checkPassword]
     routes_register: on
     profile_class:      sfGuardUserProfile
     profile_field_name: user_id

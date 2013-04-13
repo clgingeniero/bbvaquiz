@@ -22,6 +22,9 @@ abstract class BaseQuizFormFilter extends BaseFormFilterPropel
       'inicial_time' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
       'final_time'   => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
     ));
+    
+    $this->widgetSchema["description"] = new sfWidgetFormFilterInput(array('with_empty' => false));
+
 
     $this->widgetSchema->setNameFormat('quiz_filters[%s]');
 

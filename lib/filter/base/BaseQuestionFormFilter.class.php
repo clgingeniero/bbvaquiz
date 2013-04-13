@@ -15,6 +15,9 @@ abstract class BaseQuestionFormFilter extends BaseFormFilterPropel
       'question'      => new sfWidgetFormFilterInput(),
       'id_dificultad' => new sfWidgetFormPropelChoice(array('model' => 'Dificulty', 'add_empty' => true)),
     ));
+    
+    $this->widgetSchema["question"] = new sfWidgetFormFilterInput(array('with_empty' => false));
+
 
     $this->setValidators(array(
       'question'      => new sfValidatorPass(array('required' => false)),

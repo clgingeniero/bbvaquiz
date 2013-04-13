@@ -18,8 +18,8 @@
 }
 
 .timer-area {
-  padding-left: 6.5%;
-  position: absolute;
+  padding-left: 83px;
+  position: absolute; width: 815px;
 }
 .timer-area h1 {
   color: white;
@@ -65,6 +65,6 @@ ul#countdown li p.timeRefSeconds {
 }
 
 #progress-bar {background:none repeat scroll 0 0 #009FE0; width:100px; height:34px; float:left; margin-right: 10px}
-#status {background:#0066cc; width:0%; height:34px; margin-bottom: 7px;}
+#status {background:#094FA4; width:0%; height:34px; margin-bottom: 7px;}
 
 ul#countdown li p{font-size: 11px !important; }

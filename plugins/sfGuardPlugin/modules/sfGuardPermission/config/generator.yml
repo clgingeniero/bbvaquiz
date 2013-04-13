@@ -23,11 +23,11 @@ generator:
         fields:  
            name: { label: Nombre}
            description: { label: Descripción }
-           sf_guard_group_permission_list: { label: Permisos }
+           sf_guard_group_permission_list: { label: Grupos }
 
       new:
         title: Nuevo permiso
         fields:  
            name: { label: Nombre}
            description: { label: Descripción }
-           sf_guard_group_permission_list: { label: Permisos }
+           sf_guard_group_permission_list: { label: Grupos }
