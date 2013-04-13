@@ -15,14 +15,16 @@ abstract class BaseQuizFormFilter extends BaseFormFilterPropel
       'description'  => new sfWidgetFormFilterInput(),
       'inicial_time' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'final_time'   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
+      'status'       => new sfWidgetFormChoice(array('choices' => array('' => 'Activa / Inactiva', 1 => 'Activa', 0 => 'Inactiva'))),
     ));
 
     $this->setValidators(array(
       'description'  => new sfValidatorPass(array('required' => false)),
       'inicial_time' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
       'final_time'   => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
+      'status'       => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
     ));
-    
+
     $this->widgetSchema["description"] = new sfWidgetFormFilterInput(array('with_empty' => false));
 
 
@@ -45,6 +47,7 @@ abstract class BaseQuizFormFilter extends BaseFormFilterPropel
       'description'  => 'Text',
       'inicial_time' => 'Date',
       'final_time'   => 'Date',
+      'status'       => 'Number',
     );
   }
 }

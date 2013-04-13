@@ -18,6 +18,7 @@ abstract class BaseQuizForm extends BaseFormPropel
       'description'  => new sfWidgetFormTextarea(),
       'inicial_time' => new sfWidgetFormDateTime(),
       'final_time'   => new sfWidgetFormDateTime(),
+      'status'       => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -25,6 +26,7 @@ abstract class BaseQuizForm extends BaseFormPropel
       'description'  => new sfValidatorString(array('required' => false)),
       'inicial_time' => new sfValidatorDateTime(array('required' => false)),
       'final_time'   => new sfValidatorDateTime(array('required' => false)),
+      'status'       => new sfValidatorInteger(array('min' => -2147483648, 'max' => 2147483647, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('quiz[%s]');

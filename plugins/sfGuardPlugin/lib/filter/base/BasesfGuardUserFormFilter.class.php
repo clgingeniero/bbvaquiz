@@ -18,8 +18,8 @@ abstract class BasesfGuardUserFormFilter extends BaseFormFilterPropel
       'password'                      => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'created_at'                    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'last_login'                    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
-      'is_active'                     => new sfWidgetFormChoice(array('choices' => array('' => 'Si / No', 1 => 'Si', 0 => 'No'))),
-      'is_super_admin'                => new sfWidgetFormChoice(array('choices' => array('' => 'Si / No', 1 => 'Si', 0 => 'No'))),
+      'is_active'                     => new sfWidgetFormChoice(array('choices' => array('' => 'si o no', 1 => 'si', 0 => 'no'))),
+      'is_super_admin'                => new sfWidgetFormChoice(array('choices' => array('' => 'si or no', 1 => 'si', 0 => 'no'))),
       'sf_guard_user_group_list'      => new sfWidgetFormPropelChoice(array('model' => 'sfGuardGroup', 'add_empty' => true)),
       'sf_guard_user_permission_list' => new sfWidgetFormPropelChoice(array('model' => 'sfGuardPermission', 'add_empty' => true)),
     ));

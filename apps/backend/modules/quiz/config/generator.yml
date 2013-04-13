@@ -13,12 +13,13 @@ generator:
 
     config:
       actions: ~
-      fields:  
-        fields:  
-          inicial_time:                 
-            { name: inicio,type: plain, params: date_format='dd/MM/yy' }
-          final_time:                    
-            { type: plain, params: date_format='dd/MM/yy' }
+      fields:   
+        inicial_time:                 
+          { name: inicio,type: plain, params: date_format='dd/MM/yy' }
+        final_time:                    
+          { type: plain, params: date_format='dd/MM/yy' }
+        status:
+         { label: Estado }
       list:
         title: Administrador de actividades
         fields:  

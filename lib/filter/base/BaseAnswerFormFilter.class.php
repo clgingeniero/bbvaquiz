@@ -18,7 +18,7 @@ abstract class BaseAnswerFormFilter extends BaseFormFilterPropel
                    
       
     ));
-    
+
     $this->widgetSchema["answer"] = new sfWidgetFormFilterInput(array('with_empty' => false));
 
     
@@ -33,7 +33,7 @@ abstract class BaseAnswerFormFilter extends BaseFormFilterPropel
       'id_question' => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Question', 'column' => 'id_question')),
       'correct'     => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
-    
+
      $this->widgetSchema["correct"] = new sfWidgetFormFilterInput(array('with_empty' => false));
 
 
